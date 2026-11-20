@@ -1,0 +1,86 @@
+{
+  "db_name": "SQLite",
+  "query": "SELECT vault_id, account_id, role, state, rver, leave FROM members WHERE (vault_id, account_id) >= (?, ?) AND (vault_id, account_id) <= (?, ?) ORDER BY vault_id DESC, account_id DESC LIMIT 1",
+  "describe": {
+    "columns": [
+      {
+        "name": "vault_id",
+        "ordinal": 0,
+        "type_info": "Blob",
+        "origin": {
+          "Table": {
+            "table": "members",
+            "name": "vault_id"
+          }
+        }
+      },
+      {
+        "name": "account_id",
+        "ordinal": 1,
+        "type_info": "Blob",
+        "origin": {
+          "Table": {
+            "table": "members",
+            "name": "account_id"
+          }
+        }
+      },
+      {
+        "name": "role",
+        "ordinal": 2,
+        "type_info": "Integer",
+        "origin": {
+          "Table": {
+            "table": "members",
+            "name": "role"
+          }
+        }
+      },
+      {
+        "name": "state",
+        "ordinal": 3,
+        "type_info": "Integer",
+        "origin": {
+          "Table": {
+            "table": "members",
+            "name": "state"
+          }
+        }
+      },
+      {
+        "name": "rver",
+        "ordinal": 4,
+        "type_info": "Integer",
+        "origin": {
+          "Table": {
+            "table": "members",
+            "name": "rver"
+          }
+        }
+      },
+      {
+        "name": "leave",
+        "ordinal": 5,
+        "type_info": "Blob",
+        "origin": {
+          "Table": {
+            "table": "members",
+            "name": "leave"
+          }
+        }
+      }
+    ],
+    "parameters": {
+      "Right": 4
+    },
+    "nullable": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      true
+    ]
+  },
+  "hash": "972850a16ead8bbf98d0951c6935d5669b23d5bd70f1d5782b22ef692c5df86b"
+}

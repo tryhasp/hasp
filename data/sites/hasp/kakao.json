@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "entries": [
+    {
+      "match": {
+        "domain": "kakao.com"
+      },
+      "change_password_url": "https://accounts.kakao.com/weblogin/account/security/change_password",
+      "related": [
+        "daum.net"
+      ],
+      "sources": [
+        "https://github.com/apple/password-manager-resources/blob/8a7fed384b20b023ccaedd4dd35ba01111f554d9/quirks/change-password-URLs.json"
+      ]
+    },
+    {
+      "match": {
+        "domain": "daum.net"
+      },
+      "change_password_url": "https://member.daum.net/change/password.daum",
+      "related": [
+        "kakao.com"
+      ],
+      "sources": [
+        "https://github.com/apple/password-manager-resources/blob/8a7fed384b20b023ccaedd4dd35ba01111f554d9/quirks/change-password-URLs.json"
+      ]
+    }
+  ]
+}

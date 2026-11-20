@@ -1,0 +1,12 @@
+{
+  "db_name": "SQLite",
+  "query": "INSERT INTO recovery_sessions (recovery_id, account_id, rgen, started, release_at, state, source, token_hash) VALUES (?, ?, ?, ?, ?, ?, ?, ?) ON CONFLICT (recovery_id) DO UPDATE SET account_id = excluded.account_id, rgen = excluded.rgen, started = excluded.started, release_at = excluded.release_at, state = excluded.state, source = excluded.source, token_hash = excluded.token_hash",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Right": 8
+    },
+    "nullable": []
+  },
+  "hash": "44b0e311e87136b6e184c2dd206c5de00d0c9226da1e93d7844330330ad405dc"
+}

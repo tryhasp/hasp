@@ -1,0 +1,38 @@
+{
+  "db_name": "SQLite",
+  "query": "SELECT login, account_id FROM logins WHERE (login) >= (?) AND (login) <= (?) ORDER BY login",
+  "describe": {
+    "columns": [
+      {
+        "name": "login",
+        "ordinal": 0,
+        "type_info": "Blob",
+        "origin": {
+          "Table": {
+            "table": "logins",
+            "name": "login"
+          }
+        }
+      },
+      {
+        "name": "account_id",
+        "ordinal": 1,
+        "type_info": "Blob",
+        "origin": {
+          "Table": {
+            "table": "logins",
+            "name": "account_id"
+          }
+        }
+      }
+    ],
+    "parameters": {
+      "Right": 2
+    },
+    "nullable": [
+      false,
+      false
+    ]
+  },
+  "hash": "a976bf64e8f12c5ac1273540c9f259e8e4b3f224fd14ae81f85277e0328a75c1"
+}

@@ -1,0 +1,12 @@
+{
+  "db_name": "SQLite",
+  "query": "INSERT INTO notices (account_id, notice_id, kind, created, vault_id, at) VALUES (?, ?, ?, ?, ?, ?) ON CONFLICT (account_id, notice_id) DO UPDATE SET kind = excluded.kind, created = excluded.created, vault_id = excluded.vault_id, at = excluded.at",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Right": 6
+    },
+    "nullable": []
+  },
+  "hash": "816e63b1a4a851129c30b17eac16fce7e6dad8e86dfc3bb0acb1e95071d374c4"
+}

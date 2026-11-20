@@ -1,0 +1,28 @@
+@import '../confirm/confirm.css';
+
+.passkey-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-s6);
+}
+
+.passkey-option {
+  width: 100%;
+  min-height: var(--size-row-height);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: var(--space-s6) var(--space-s14);
+  border: var(--border-hairline) solid var(--color-control-border);
+  border-radius: var(--radius-card);
+}
+
+.passkey-option[aria-checked='true'] {
+  border-width: var(--border-emphasis);
+  font-weight: var(--font-weight-semibold);
+}
+
+.accent-icon {
+  background: var(--color-accent);
+  color: var(--color-on-accent);
+}

@@ -1,0 +1,12 @@
+{
+  "db_name": "SQLite",
+  "query": "INSERT INTO commit_log (vault_id, base_seq, manifest_hash) VALUES (?, ?, ?) ON CONFLICT (vault_id, base_seq) DO UPDATE SET manifest_hash = excluded.manifest_hash",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Right": 3
+    },
+    "nullable": []
+  },
+  "hash": "8400086500c4e86dae3088f8ec83a60f7156bb0a800ce778f546e67f74721efd"
+}

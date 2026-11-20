@@ -1,0 +1,50 @@
+{
+  "db_name": "SQLite",
+  "query": "DELETE FROM account_records WHERE account_id = ? AND seq = ? RETURNING account_id, seq, record",
+  "describe": {
+    "columns": [
+      {
+        "name": "account_id",
+        "ordinal": 0,
+        "type_info": "Blob",
+        "origin": {
+          "Table": {
+            "table": "account_records",
+            "name": "account_id"
+          }
+        }
+      },
+      {
+        "name": "seq",
+        "ordinal": 1,
+        "type_info": "Integer",
+        "origin": {
+          "Table": {
+            "table": "account_records",
+            "name": "seq"
+          }
+        }
+      },
+      {
+        "name": "record",
+        "ordinal": 2,
+        "type_info": "Blob",
+        "origin": {
+          "Table": {
+            "table": "account_records",
+            "name": "record"
+          }
+        }
+      }
+    ],
+    "parameters": {
+      "Right": 2
+    },
+    "nullable": [
+      false,
+      false,
+      false
+    ]
+  },
+  "hash": "4e18358767a0dc737b128a01639aa16d496be1587bf9f62ea94110be4cad27f6"
+}

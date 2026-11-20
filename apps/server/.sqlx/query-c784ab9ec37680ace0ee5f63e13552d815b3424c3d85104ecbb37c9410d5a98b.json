@@ -1,0 +1,50 @@
+{
+  "db_name": "SQLite",
+  "query": "SELECT vault_id, base_seq, manifest_hash FROM commit_log WHERE vault_id = ? AND base_seq = ?",
+  "describe": {
+    "columns": [
+      {
+        "name": "vault_id",
+        "ordinal": 0,
+        "type_info": "Blob",
+        "origin": {
+          "Table": {
+            "table": "commit_log",
+            "name": "vault_id"
+          }
+        }
+      },
+      {
+        "name": "base_seq",
+        "ordinal": 1,
+        "type_info": "Integer",
+        "origin": {
+          "Table": {
+            "table": "commit_log",
+            "name": "base_seq"
+          }
+        }
+      },
+      {
+        "name": "manifest_hash",
+        "ordinal": 2,
+        "type_info": "Blob",
+        "origin": {
+          "Table": {
+            "table": "commit_log",
+            "name": "manifest_hash"
+          }
+        }
+      }
+    ],
+    "parameters": {
+      "Right": 2
+    },
+    "nullable": [
+      false,
+      false,
+      false
+    ]
+  },
+  "hash": "c784ab9ec37680ace0ee5f63e13552d815b3424c3d85104ecbb37c9410d5a98b"
+}

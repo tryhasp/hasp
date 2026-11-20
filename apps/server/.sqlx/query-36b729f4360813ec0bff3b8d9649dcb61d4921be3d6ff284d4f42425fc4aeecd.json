@@ -1,0 +1,98 @@
+{
+  "db_name": "SQLite",
+  "query": "SELECT token_hash, creator, target, expires, used_by, kind, makes_admin FROM signup_tokens WHERE (token_hash) >= (?) AND (token_hash) <= (?) ORDER BY token_hash DESC LIMIT 1",
+  "describe": {
+    "columns": [
+      {
+        "name": "token_hash",
+        "ordinal": 0,
+        "type_info": "Blob",
+        "origin": {
+          "Table": {
+            "table": "signup_tokens",
+            "name": "token_hash"
+          }
+        }
+      },
+      {
+        "name": "creator",
+        "ordinal": 1,
+        "type_info": "Blob",
+        "origin": {
+          "Table": {
+            "table": "signup_tokens",
+            "name": "creator"
+          }
+        }
+      },
+      {
+        "name": "target",
+        "ordinal": 2,
+        "type_info": "Blob",
+        "origin": {
+          "Table": {
+            "table": "signup_tokens",
+            "name": "target"
+          }
+        }
+      },
+      {
+        "name": "expires",
+        "ordinal": 3,
+        "type_info": "Integer",
+        "origin": {
+          "Table": {
+            "table": "signup_tokens",
+            "name": "expires"
+          }
+        }
+      },
+      {
+        "name": "used_by",
+        "ordinal": 4,
+        "type_info": "Blob",
+        "origin": {
+          "Table": {
+            "table": "signup_tokens",
+            "name": "used_by"
+          }
+        }
+      },
+      {
+        "name": "kind",
+        "ordinal": 5,
+        "type_info": "Integer",
+        "origin": {
+          "Table": {
+            "table": "signup_tokens",
+            "name": "kind"
+          }
+        }
+      },
+      {
+        "name": "makes_admin",
+        "ordinal": 6,
+        "type_info": "Integer",
+        "origin": {
+          "Table": {
+            "table": "signup_tokens",
+            "name": "makes_admin"
+          }
+        }
+      }
+    ],
+    "parameters": {
+      "Right": 2
+    },
+    "nullable": [
+      false,
+      true,
+      true,
+      false,
+      true,
+      false,
+      false
+    ]
+  },
+  "hash": "36b729f4360813ec0bff3b8d9649dcb61d4921be3d6ff284d4f42425fc4aeecd"
+}

@@ -1,0 +1,98 @@
+{
+  "db_name": "SQLite",
+  "query": "SELECT att_id, vault_id, size, chunks, state, created, refs FROM attachments WHERE (att_id) >= (?) AND (att_id) <= (?) ORDER BY att_id DESC LIMIT 1",
+  "describe": {
+    "columns": [
+      {
+        "name": "att_id",
+        "ordinal": 0,
+        "type_info": "Blob",
+        "origin": {
+          "Table": {
+            "table": "attachments",
+            "name": "att_id"
+          }
+        }
+      },
+      {
+        "name": "vault_id",
+        "ordinal": 1,
+        "type_info": "Blob",
+        "origin": {
+          "Table": {
+            "table": "attachments",
+            "name": "vault_id"
+          }
+        }
+      },
+      {
+        "name": "size",
+        "ordinal": 2,
+        "type_info": "Integer",
+        "origin": {
+          "Table": {
+            "table": "attachments",
+            "name": "size"
+          }
+        }
+      },
+      {
+        "name": "chunks",
+        "ordinal": 3,
+        "type_info": "Integer",
+        "origin": {
+          "Table": {
+            "table": "attachments",
+            "name": "chunks"
+          }
+        }
+      },
+      {
+        "name": "state",
+        "ordinal": 4,
+        "type_info": "Integer",
+        "origin": {
+          "Table": {
+            "table": "attachments",
+            "name": "state"
+          }
+        }
+      },
+      {
+        "name": "created",
+        "ordinal": 5,
+        "type_info": "Integer",
+        "origin": {
+          "Table": {
+            "table": "attachments",
+            "name": "created"
+          }
+        }
+      },
+      {
+        "name": "refs",
+        "ordinal": 6,
+        "type_info": "Integer",
+        "origin": {
+          "Table": {
+            "table": "attachments",
+            "name": "refs"
+          }
+        }
+      }
+    ],
+    "parameters": {
+      "Right": 2
+    },
+    "nullable": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+    ]
+  },
+  "hash": "e7cdc4f4615096c2124f76c4c8d75d1d6d6c941eaa2c169c2b458d8f4d23c7e7"
+}

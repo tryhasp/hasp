@@ -1,0 +1,74 @@
+{
+  "db_name": "SQLite",
+  "query": "DELETE FROM recovery_enrolments WHERE account_id = ? AND rgen = ? RETURNING account_id, rgen, enrolment, rc_wrap, h_auth",
+  "describe": {
+    "columns": [
+      {
+        "name": "account_id",
+        "ordinal": 0,
+        "type_info": "Blob",
+        "origin": {
+          "Table": {
+            "table": "recovery_enrolments",
+            "name": "account_id"
+          }
+        }
+      },
+      {
+        "name": "rgen",
+        "ordinal": 1,
+        "type_info": "Integer",
+        "origin": {
+          "Table": {
+            "table": "recovery_enrolments",
+            "name": "rgen"
+          }
+        }
+      },
+      {
+        "name": "enrolment",
+        "ordinal": 2,
+        "type_info": "Blob",
+        "origin": {
+          "Table": {
+            "table": "recovery_enrolments",
+            "name": "enrolment"
+          }
+        }
+      },
+      {
+        "name": "rc_wrap",
+        "ordinal": 3,
+        "type_info": "Blob",
+        "origin": {
+          "Table": {
+            "table": "recovery_enrolments",
+            "name": "rc_wrap"
+          }
+        }
+      },
+      {
+        "name": "h_auth",
+        "ordinal": 4,
+        "type_info": "Blob",
+        "origin": {
+          "Table": {
+            "table": "recovery_enrolments",
+            "name": "h_auth"
+          }
+        }
+      }
+    ],
+    "parameters": {
+      "Right": 2
+    },
+    "nullable": [
+      false,
+      false,
+      false,
+      false,
+      false
+    ]
+  },
+  "hash": "918a4518c3d4c58eee671c519aabca80010b091bbbf2477ead517568bf707837"
+}

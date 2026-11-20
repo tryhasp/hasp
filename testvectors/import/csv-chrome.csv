@@ -1,0 +1,4 @@
+name,url,username,password,note
+Example,https://example.com/login,alice,pw1,"line1
+line2"
+NoNote,https://sub.example.org,bob,pw2,

@@ -1,0 +1,86 @@
+{
+  "id": "outdoor-license",
+  "version": 1,
+  "name": {
+    "en": "Outdoor License",
+    "ko": "야외 활동 면허"
+  },
+  "icon": "tree",
+  "import_codes": {
+    "1pux": "104"
+  },
+  "sections": [
+    {
+      "key": "license",
+      "fields": [
+        {
+          "key": "full-name",
+          "label": {
+            "en": "full name",
+            "ko": "이름"
+          },
+          "kind": "text",
+          "purpose": "name"
+        },
+        {
+          "key": "valid-from",
+          "label": {
+            "en": "valid from",
+            "ko": "시작일"
+          },
+          "kind": "date"
+        },
+        {
+          "key": "expires",
+          "label": {
+            "en": "expires",
+            "ko": "만료일"
+          },
+          "kind": "date",
+          "expires_alert_default": true
+        },
+        {
+          "key": "approved-wildlife",
+          "label": {
+            "en": "approved wildlife",
+            "ko": "허용 대상"
+          },
+          "kind": "text"
+        },
+        {
+          "key": "maximum-quota",
+          "label": {
+            "en": "maximum quota",
+            "ko": "최대 수량"
+          },
+          "kind": "text"
+        },
+        {
+          "key": "state",
+          "label": {
+            "en": "state",
+            "ko": "주 / 도"
+          },
+          "kind": "text",
+          "purpose": "region"
+        },
+        {
+          "key": "country",
+          "label": {
+            "en": "country",
+            "ko": "국가"
+          },
+          "kind": "text",
+          "purpose": "country"
+        }
+      ]
+    }
+  ],
+  "capabilities": {
+    "autofill": "none",
+    "watchtower": [
+      "expiring"
+    ],
+    "expiry_window_days": 60
+  }
+}

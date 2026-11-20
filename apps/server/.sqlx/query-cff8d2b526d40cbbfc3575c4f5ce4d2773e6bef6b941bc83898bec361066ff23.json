@@ -1,0 +1,12 @@
+{
+  "db_name": "SQLite",
+  "query": "INSERT INTO signup_tokens (token_hash, creator, target, expires, used_by, kind, makes_admin) VALUES (?, ?, ?, ?, ?, ?, ?) ON CONFLICT (token_hash) DO UPDATE SET creator = excluded.creator, target = excluded.target, expires = excluded.expires, used_by = excluded.used_by, kind = excluded.kind, makes_admin = excluded.makes_admin",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Right": 7
+    },
+    "nullable": []
+  },
+  "hash": "cff8d2b526d40cbbfc3575c4f5ce4d2773e6bef6b941bc83898bec361066ff23"
+}

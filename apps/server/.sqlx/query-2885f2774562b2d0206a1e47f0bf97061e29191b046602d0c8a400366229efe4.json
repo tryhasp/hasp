@@ -1,0 +1,110 @@
+{
+  "db_name": "SQLite",
+  "query": "SELECT recovery_id, account_id, rgen, started, release_at, state, source, token_hash FROM recovery_sessions WHERE recovery_id = ?",
+  "describe": {
+    "columns": [
+      {
+        "name": "recovery_id",
+        "ordinal": 0,
+        "type_info": "Blob",
+        "origin": {
+          "Table": {
+            "table": "recovery_sessions",
+            "name": "recovery_id"
+          }
+        }
+      },
+      {
+        "name": "account_id",
+        "ordinal": 1,
+        "type_info": "Blob",
+        "origin": {
+          "Table": {
+            "table": "recovery_sessions",
+            "name": "account_id"
+          }
+        }
+      },
+      {
+        "name": "rgen",
+        "ordinal": 2,
+        "type_info": "Integer",
+        "origin": {
+          "Table": {
+            "table": "recovery_sessions",
+            "name": "rgen"
+          }
+        }
+      },
+      {
+        "name": "started",
+        "ordinal": 3,
+        "type_info": "Integer",
+        "origin": {
+          "Table": {
+            "table": "recovery_sessions",
+            "name": "started"
+          }
+        }
+      },
+      {
+        "name": "release_at",
+        "ordinal": 4,
+        "type_info": "Integer",
+        "origin": {
+          "Table": {
+            "table": "recovery_sessions",
+            "name": "release_at"
+          }
+        }
+      },
+      {
+        "name": "state",
+        "ordinal": 5,
+        "type_info": "Integer",
+        "origin": {
+          "Table": {
+            "table": "recovery_sessions",
+            "name": "state"
+          }
+        }
+      },
+      {
+        "name": "source",
+        "ordinal": 6,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "recovery_sessions",
+            "name": "source"
+          }
+        }
+      },
+      {
+        "name": "token_hash",
+        "ordinal": 7,
+        "type_info": "Blob",
+        "origin": {
+          "Table": {
+            "table": "recovery_sessions",
+            "name": "token_hash"
+          }
+        }
+      }
+    ],
+    "parameters": {
+      "Right": 1
+    },
+    "nullable": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      true,
+      true
+    ]
+  },
+  "hash": "2885f2774562b2d0206a1e47f0bf97061e29191b046602d0c8a400366229efe4"
+}

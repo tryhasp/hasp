@@ -1,0 +1,12 @@
+{
+  "db_name": "SQLite",
+  "query": "INSERT INTO account_records (account_id, seq, record) VALUES (?, ?, ?) ON CONFLICT (account_id, seq) DO UPDATE SET record = excluded.record",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Right": 3
+    },
+    "nullable": []
+  },
+  "hash": "d8c992eb8a972af6d44701633b4ce5f2db817bdc210cb33b42d3fbf099fb7221"
+}

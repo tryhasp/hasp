@@ -1,0 +1,50 @@
+{
+  "db_name": "SQLite",
+  "query": "SELECT account_id, record, cred_gen FROM opaque_records WHERE (account_id) >= (?) AND (account_id) <= (?) ORDER BY account_id DESC LIMIT 1",
+  "describe": {
+    "columns": [
+      {
+        "name": "account_id",
+        "ordinal": 0,
+        "type_info": "Blob",
+        "origin": {
+          "Table": {
+            "table": "opaque_records",
+            "name": "account_id"
+          }
+        }
+      },
+      {
+        "name": "record",
+        "ordinal": 1,
+        "type_info": "Blob",
+        "origin": {
+          "Table": {
+            "table": "opaque_records",
+            "name": "record"
+          }
+        }
+      },
+      {
+        "name": "cred_gen",
+        "ordinal": 2,
+        "type_info": "Integer",
+        "origin": {
+          "Table": {
+            "table": "opaque_records",
+            "name": "cred_gen"
+          }
+        }
+      }
+    ],
+    "parameters": {
+      "Right": 2
+    },
+    "nullable": [
+      false,
+      false,
+      false
+    ]
+  },
+  "hash": "27810ea272fe99da217fc5b26c4c7e224d11fd7acde70827487073232f0dd3a3"
+}

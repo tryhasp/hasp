@@ -1,0 +1,89 @@
+{
+  "id": "reward-program",
+  "version": 1,
+  "name": {
+    "en": "Reward Program",
+    "ko": "리워드 프로그램"
+  },
+  "icon": "gift",
+  "import_codes": {
+    "1pux": "107"
+  },
+  "sections": [
+    {
+      "key": "program",
+      "fields": [
+        {
+          "key": "company",
+          "label": {
+            "en": "company name",
+            "ko": "회사 이름"
+          },
+          "kind": "text",
+          "purpose": "organization"
+        },
+        {
+          "key": "member-name",
+          "label": {
+            "en": "member name",
+            "ko": "회원 이름"
+          },
+          "kind": "text",
+          "purpose": "name"
+        },
+        {
+          "key": "member-id",
+          "label": {
+            "en": "membership number",
+            "ko": "회원 번호"
+          },
+          "kind": "text"
+        },
+        {
+          "key": "pin",
+          "label": {
+            "en": "PIN",
+            "ko": "PIN"
+          },
+          "kind": "concealed"
+        }
+      ]
+    },
+    {
+      "key": "more",
+      "title": {
+        "en": "More Information",
+        "ko": "추가 정보"
+      },
+      "fields": [
+        {
+          "key": "customer-phone",
+          "label": {
+            "en": "customer service phone",
+            "ko": "고객센터 전화"
+          },
+          "kind": "phone"
+        },
+        {
+          "key": "reservations-phone",
+          "label": {
+            "en": "phone for reservations",
+            "ko": "예약 전화"
+          },
+          "kind": "phone"
+        },
+        {
+          "key": "website",
+          "label": {
+            "en": "website",
+            "ko": "웹사이트"
+          },
+          "kind": "url"
+        }
+      ]
+    }
+  ],
+  "capabilities": {
+    "autofill": "none"
+  }
+}

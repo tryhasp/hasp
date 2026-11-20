@@ -1,0 +1,74 @@
+{
+  "db_name": "SQLite",
+  "query": "SELECT account_id, rgen, enrolment, rc_wrap, h_auth FROM recovery_enrolments WHERE (account_id, rgen) >= (?, ?) AND (account_id, rgen) <= (?, ?) ORDER BY account_id, rgen",
+  "describe": {
+    "columns": [
+      {
+        "name": "account_id",
+        "ordinal": 0,
+        "type_info": "Blob",
+        "origin": {
+          "Table": {
+            "table": "recovery_enrolments",
+            "name": "account_id"
+          }
+        }
+      },
+      {
+        "name": "rgen",
+        "ordinal": 1,
+        "type_info": "Integer",
+        "origin": {
+          "Table": {
+            "table": "recovery_enrolments",
+            "name": "rgen"
+          }
+        }
+      },
+      {
+        "name": "enrolment",
+        "ordinal": 2,
+        "type_info": "Blob",
+        "origin": {
+          "Table": {
+            "table": "recovery_enrolments",
+            "name": "enrolment"
+          }
+        }
+      },
+      {
+        "name": "rc_wrap",
+        "ordinal": 3,
+        "type_info": "Blob",
+        "origin": {
+          "Table": {
+            "table": "recovery_enrolments",
+            "name": "rc_wrap"
+          }
+        }
+      },
+      {
+        "name": "h_auth",
+        "ordinal": 4,
+        "type_info": "Blob",
+        "origin": {
+          "Table": {
+            "table": "recovery_enrolments",
+            "name": "h_auth"
+          }
+        }
+      }
+    ],
+    "parameters": {
+      "Right": 4
+    },
+    "nullable": [
+      false,
+      false,
+      false,
+      false,
+      false
+    ]
+  },
+  "hash": "95668cad29a7566225cc01e24fda2ace768727376d4562bdbdf8f4423b6f1187"
+}

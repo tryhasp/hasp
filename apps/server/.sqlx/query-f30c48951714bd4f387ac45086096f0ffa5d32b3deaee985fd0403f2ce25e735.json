@@ -1,0 +1,38 @@
+{
+  "db_name": "SQLite",
+  "query": "SELECT login, account_id FROM logins WHERE login = ?",
+  "describe": {
+    "columns": [
+      {
+        "name": "login",
+        "ordinal": 0,
+        "type_info": "Blob",
+        "origin": {
+          "Table": {
+            "table": "logins",
+            "name": "login"
+          }
+        }
+      },
+      {
+        "name": "account_id",
+        "ordinal": 1,
+        "type_info": "Blob",
+        "origin": {
+          "Table": {
+            "table": "logins",
+            "name": "account_id"
+          }
+        }
+      }
+    ],
+    "parameters": {
+      "Right": 1
+    },
+    "nullable": [
+      false,
+      false
+    ]
+  },
+  "hash": "f30c48951714bd4f387ac45086096f0ffa5d32b3deaee985fd0403f2ce25e735"
+}

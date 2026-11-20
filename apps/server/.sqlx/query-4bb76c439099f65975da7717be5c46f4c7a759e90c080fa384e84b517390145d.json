@@ -1,0 +1,12 @@
+{
+  "db_name": "SQLite",
+  "query": "INSERT INTO sessions (session_id, account_id, token_hash, device_id, platform, label, created, last_seen, idle_expires, abs_expires, reauth_until) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) ON CONFLICT (session_id) DO UPDATE SET account_id = excluded.account_id, token_hash = excluded.token_hash, device_id = excluded.device_id, platform = excluded.platform, label = excluded.label, created = excluded.created, last_seen = excluded.last_seen, idle_expires = excluded.idle_expires, abs_expires = excluded.abs_expires, reauth_until = excluded.reauth_until",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Right": 11
+    },
+    "nullable": []
+  },
+  "hash": "4bb76c439099f65975da7717be5c46f4c7a759e90c080fa384e84b517390145d"
+}

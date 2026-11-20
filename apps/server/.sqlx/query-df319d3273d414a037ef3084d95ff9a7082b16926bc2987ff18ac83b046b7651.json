@@ -1,0 +1,12 @@
+{
+  "db_name": "SQLite",
+  "query": "INSERT INTO rosters (vault_id, rver, roster, seq) VALUES (?, ?, ?, ?) ON CONFLICT (vault_id, rver) DO UPDATE SET roster = excluded.roster, seq = excluded.seq",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Right": 4
+    },
+    "nullable": []
+  },
+  "hash": "df319d3273d414a037ef3084d95ff9a7082b16926bc2987ff18ac83b046b7651"
+}

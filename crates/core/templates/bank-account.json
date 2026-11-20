@@ -1,0 +1,120 @@
+{
+  "id": "bank-account",
+  "version": 1,
+  "name": {
+    "en": "Bank Account",
+    "ko": "은행 계좌"
+  },
+  "icon": "bank",
+  "import_codes": {
+    "1pux": "101"
+  },
+  "sections": [
+    {
+      "key": "account",
+      "fields": [
+        {
+          "key": "bank-name",
+          "label": {
+            "en": "bank name",
+            "ko": "은행 이름"
+          },
+          "kind": "text"
+        },
+        {
+          "key": "owner",
+          "label": {
+            "en": "name on account",
+            "ko": "예금주"
+          },
+          "kind": "text",
+          "purpose": "name"
+        },
+        {
+          "key": "type",
+          "label": {
+            "en": "type",
+            "ko": "종류"
+          },
+          "kind": "menu",
+          "options": [
+            "Checking",
+            "Savings",
+            "Money Market",
+            "Other"
+          ]
+        },
+        {
+          "key": "routing-number",
+          "label": {
+            "en": "routing number",
+            "ko": "은행 코드"
+          },
+          "kind": "text"
+        },
+        {
+          "key": "account-number",
+          "label": {
+            "en": "account number",
+            "ko": "계좌 번호"
+          },
+          "kind": "text",
+          "concealed": true
+        },
+        {
+          "key": "swift",
+          "label": {
+            "en": "SWIFT",
+            "ko": "SWIFT"
+          },
+          "kind": "text"
+        },
+        {
+          "key": "iban",
+          "label": {
+            "en": "IBAN",
+            "ko": "IBAN"
+          },
+          "kind": "text",
+          "concealed": true
+        },
+        {
+          "key": "pin",
+          "label": {
+            "en": "PIN",
+            "ko": "PIN"
+          },
+          "kind": "concealed"
+        }
+      ]
+    },
+    {
+      "key": "branch",
+      "title": {
+        "en": "Branch Information",
+        "ko": "지점 정보"
+      },
+      "fields": [
+        {
+          "key": "branch-phone",
+          "label": {
+            "en": "phone",
+            "ko": "전화번호"
+          },
+          "kind": "phone"
+        },
+        {
+          "key": "branch-address",
+          "label": {
+            "en": "address",
+            "ko": "주소"
+          },
+          "kind": "address"
+        }
+      ]
+    }
+  ],
+  "capabilities": {
+    "autofill": "none"
+  }
+}

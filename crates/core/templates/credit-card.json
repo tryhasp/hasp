@@ -1,0 +1,182 @@
+{
+  "id": "credit-card",
+  "version": 1,
+  "name": {
+    "en": "Credit Card",
+    "ko": "신용카드"
+  },
+  "icon": "credit-card",
+  "import_codes": {
+    "1pux": "002",
+    "bitwarden": "3"
+  },
+  "sections": [
+    {
+      "key": "card",
+      "fields": [
+        {
+          "key": "cardholder",
+          "label": {
+            "en": "cardholder name",
+            "ko": "카드 소유자"
+          },
+          "kind": "text",
+          "purpose": "card-holder"
+        },
+        {
+          "key": "type",
+          "label": {
+            "en": "type",
+            "ko": "종류"
+          },
+          "kind": "menu",
+          "purpose": "card-type",
+          "options": [
+            "Visa",
+            "Mastercard",
+            "American Express",
+            "Discover",
+            "Diners Club",
+            "JCB",
+            "UnionPay",
+            "Other"
+          ]
+        },
+        {
+          "key": "number",
+          "label": {
+            "en": "number",
+            "ko": "카드 번호"
+          },
+          "kind": "text",
+          "purpose": "card-number",
+          "concealed": true
+        },
+        {
+          "key": "cvc",
+          "label": {
+            "en": "verification number",
+            "ko": "보안 코드"
+          },
+          "kind": "concealed",
+          "purpose": "card-cvc"
+        },
+        {
+          "key": "expiry",
+          "label": {
+            "en": "expiry date",
+            "ko": "유효 기간"
+          },
+          "kind": "month-year",
+          "purpose": "card-expiry",
+          "expires_alert_default": true
+        },
+        {
+          "key": "valid-from",
+          "label": {
+            "en": "valid from",
+            "ko": "시작일"
+          },
+          "kind": "month-year"
+        }
+      ]
+    },
+    {
+      "key": "contact",
+      "title": {
+        "en": "Contact Information",
+        "ko": "연락처"
+      },
+      "fields": [
+        {
+          "key": "issuing-bank",
+          "label": {
+            "en": "issuing bank",
+            "ko": "카드사"
+          },
+          "kind": "text"
+        },
+        {
+          "key": "phone-local",
+          "label": {
+            "en": "phone (local)",
+            "ko": "전화번호"
+          },
+          "kind": "phone"
+        },
+        {
+          "key": "phone-international",
+          "label": {
+            "en": "phone (international)",
+            "ko": "해외 전화번호"
+          },
+          "kind": "phone"
+        },
+        {
+          "key": "website",
+          "label": {
+            "en": "website",
+            "ko": "웹사이트"
+          },
+          "kind": "url"
+        }
+      ]
+    },
+    {
+      "key": "additional",
+      "title": {
+        "en": "Additional Details",
+        "ko": "추가 정보"
+      },
+      "fields": [
+        {
+          "key": "pin",
+          "label": {
+            "en": "PIN",
+            "ko": "PIN"
+          },
+          "kind": "concealed"
+        },
+        {
+          "key": "credit-limit",
+          "label": {
+            "en": "credit limit",
+            "ko": "한도"
+          },
+          "kind": "text"
+        },
+        {
+          "key": "cash-limit",
+          "label": {
+            "en": "cash withdrawal limit",
+            "ko": "현금 인출 한도"
+          },
+          "kind": "text"
+        },
+        {
+          "key": "interest-rate",
+          "label": {
+            "en": "interest rate",
+            "ko": "이자율"
+          },
+          "kind": "text"
+        },
+        {
+          "key": "issue-number",
+          "label": {
+            "en": "issue number",
+            "ko": "발급 번호"
+          },
+          "kind": "text"
+        }
+      ]
+    }
+  ],
+  "capabilities": {
+    "autofill": "card",
+    "watchtower": [
+      "expiring"
+    ],
+    "expiry_window_days": 60
+  }
+}

@@ -1,0 +1,70 @@
+[package]
+name = "hasp-nmh"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license = "Apache-2.0"
+repository.workspace = true
+publish.workspace = true
+
+[lib]
+name = "hasp_nmh"
+path = "src/lib.rs"
+
+[[bin]]
+name = "hasp-nmh"
+path = "src/main.rs"
+
+[lints.rust]
+unsafe_code = "deny"
+missing_debug_implementations = "deny"
+unreachable_pub = "deny"
+unused_qualifications = "deny"
+rust_2018_idioms = { level = "deny", priority = -1 }
+
+[lints.clippy]
+all = { level = "deny", priority = -1 }
+pedantic = { level = "deny", priority = -1 }
+missing_errors_doc = "allow"
+missing_panics_doc = "allow"
+must_use_candidate = "allow"
+module_name_repetitions = "allow"
+allow_attributes = "deny"
+allow_attributes_without_reason = "deny"
+dbg_macro = "deny"
+exit = "deny"
+expect_used = "deny"
+let_underscore_must_use = "deny"
+mem_forget = "deny"
+mod_module_files = "deny"
+multiple_unsafe_ops_per_block = "deny"
+panic = "deny"
+panic_in_result_fn = "deny"
+print_stderr = "deny"
+print_stdout = "deny"
+todo = "deny"
+undocumented_unsafe_blocks = "deny"
+unimplemented = "deny"
+unreachable = "deny"
+unwrap_in_result = "deny"
+unwrap_used = "deny"
+
+[features]
+dev-extension = []
+test-double = []
+
+[dependencies]
+hasp-core.workspace = true
+hasp-crypto.workspace = true
+hasp-proto.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+thiserror.workspace = true
+tokio-util.workspace = true
+zeroize.workspace = true
+
+[target.'cfg(target_os = "macos")'.dependencies]
+core-foundation.workspace = true
+core-foundation-sys.workspace = true
+libc.workspace = true
+security-framework-sys.workspace = true

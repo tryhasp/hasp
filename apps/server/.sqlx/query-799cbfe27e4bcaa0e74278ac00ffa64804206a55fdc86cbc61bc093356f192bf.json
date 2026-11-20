@@ -1,0 +1,12 @@
+{
+  "db_name": "SQLite",
+  "query": "INSERT INTO manifests (vault_id, seq, manifest, author) VALUES (?, ?, ?, ?) ON CONFLICT (vault_id, seq) DO UPDATE SET manifest = excluded.manifest, author = excluded.author",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Right": 4
+    },
+    "nullable": []
+  },
+  "hash": "799cbfe27e4bcaa0e74278ac00ffa64804206a55fdc86cbc61bc093356f192bf"
+}

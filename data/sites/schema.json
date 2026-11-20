@@ -1,0 +1,70 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/tryhasp/hasp/data/sites/schema.json",
+  "title": "Hasp sites file",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["version", "entries"],
+  "properties": {
+    "version": { "const": 1 },
+    "entries": { "type": "array", "items": { "$ref": "#/$defs/entry" } }
+  },
+  "$defs": {
+    "domain": { "type": "string", "pattern": "^[a-z0-9]([a-z0-9-]*[a-z0-9])?(\\.[a-z0-9]([a-z0-9-]*[a-z0-9])?)+$" },
+    "css": { "type": "string", "minLength": 1 },
+    "entry": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["match", "sources"],
+      "properties": {
+        "match": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["domain"],
+          "properties": {
+            "domain": { "$ref": "#/$defs/domain" },
+            "paths": { "type": "array", "items": { "type": "string", "pattern": "^/" } }
+          }
+        },
+        "flow": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["pages"],
+          "properties": {
+            "pages": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": ["path"],
+                "properties": {
+                  "path": { "type": "string", "pattern": "^/" },
+                  "username": { "$ref": "#/$defs/css" },
+                  "password": { "$ref": "#/$defs/css" },
+                  "otp": { "$ref": "#/$defs/css" },
+                  "advance": { "$ref": "#/$defs/css" }
+                }
+              }
+            }
+          }
+        },
+        "password_rules": { "type": "string", "description": "Apple Password Rules language" },
+        "change_password_url": { "type": "string", "pattern": "^https://" },
+        "quirks": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "append_2fa": { "type": "boolean" },
+            "no_autosubmit": { "type": "boolean" },
+            "per_char_events": { "type": "boolean" },
+            "skip_save": { "type": "boolean" },
+            "iframe_login": { "type": "boolean" },
+            "blocks_autofill": { "type": "boolean", "description": "Site public pages say a keyboard-security program or virtual keypad is required for password entry; programmatic fill is expected to fail, UI should say copy the password" }
+          }
+        },
+        "sources": { "type": "array", "minItems": 1, "items": { "type": "string", "pattern": "^https://" } },
+        "related": { "type": "array", "items": { "$ref": "#/$defs/domain" } }
+      }
+    }
+  }
+}

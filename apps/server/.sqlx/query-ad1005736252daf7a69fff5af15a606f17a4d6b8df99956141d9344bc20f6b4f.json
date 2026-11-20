@@ -1,0 +1,12 @@
+{
+  "db_name": "SQLite",
+  "query": "INSERT INTO members (vault_id, account_id, role, state, rver, leave) VALUES (?, ?, ?, ?, ?, ?) ON CONFLICT (vault_id, account_id) DO UPDATE SET role = excluded.role, state = excluded.state, rver = excluded.rver, leave = excluded.leave",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Right": 6
+    },
+    "nullable": []
+  },
+  "hash": "ad1005736252daf7a69fff5af15a606f17a4d6b8df99956141d9344bc20f6b4f"
+}

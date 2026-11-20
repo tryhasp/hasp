@@ -1,0 +1,86 @@
+{
+  "db_name": "SQLite",
+  "query": "DELETE FROM members WHERE vault_id = ? AND account_id = ? RETURNING vault_id, account_id, role, state, rver, leave",
+  "describe": {
+    "columns": [
+      {
+        "name": "vault_id",
+        "ordinal": 0,
+        "type_info": "Blob",
+        "origin": {
+          "Table": {
+            "table": "members",
+            "name": "vault_id"
+          }
+        }
+      },
+      {
+        "name": "account_id",
+        "ordinal": 1,
+        "type_info": "Blob",
+        "origin": {
+          "Table": {
+            "table": "members",
+            "name": "account_id"
+          }
+        }
+      },
+      {
+        "name": "role",
+        "ordinal": 2,
+        "type_info": "Integer",
+        "origin": {
+          "Table": {
+            "table": "members",
+            "name": "role"
+          }
+        }
+      },
+      {
+        "name": "state",
+        "ordinal": 3,
+        "type_info": "Integer",
+        "origin": {
+          "Table": {
+            "table": "members",
+            "name": "state"
+          }
+        }
+      },
+      {
+        "name": "rver",
+        "ordinal": 4,
+        "type_info": "Integer",
+        "origin": {
+          "Table": {
+            "table": "members",
+            "name": "rver"
+          }
+        }
+      },
+      {
+        "name": "leave",
+        "ordinal": 5,
+        "type_info": "Blob",
+        "origin": {
+          "Table": {
+            "table": "members",
+            "name": "leave"
+          }
+        }
+      }
+    ],
+    "parameters": {
+      "Right": 2
+    },
+    "nullable": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      true
+    ]
+  },
+  "hash": "a46f70ad341063b07acb9fa85820a9a047e908c5dacc27ee636059a0facd022e"
+}

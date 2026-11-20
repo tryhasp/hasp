@@ -1,0 +1,11 @@
+@import '../confirm/confirm.css';
+
+.code-value {
+  font-size: var(--type-title-confirm-size);
+  font-weight: var(--font-weight-bold);
+  letter-spacing: var(--space-s4);
+  text-align: center;
+  padding: var(--space-s14);
+  border: var(--border-emphasis) solid var(--color-control-border);
+  border-radius: var(--radius-card);
+}

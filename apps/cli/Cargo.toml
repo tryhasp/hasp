@@ -1,0 +1,46 @@
+[package]
+name = "hasp-cli"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license = "Apache-2.0"
+repository.workspace = true
+publish.workspace = true
+
+[lib]
+name = "hasp_cli"
+path = "src/lib.rs"
+
+[[bin]]
+name = "hasp"
+path = "src/main.rs"
+
+[lints]
+workspace = true
+
+[dependencies]
+hasp-core.workspace = true
+hasp-net.workspace = true
+hasp-crypto.workspace = true
+hasp-proto.workspace = true
+clap.workspace = true
+tokio = { workspace = true, features = ["rt", "time"] }
+tokio-util.workspace = true
+secrecy.workspace = true
+zeroize.workspace = true
+thiserror.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+rpassword.workspace = true
+qrcode.workspace = true
+
+[target.'cfg(target_os = "macos")'.dependencies]
+security-framework = { workspace = true, features = ["OSX_10_15"] }
+
+[dev-dependencies]
+hasp-core = { workspace = true, features = ["testing"] }
+hasp-testsupport = { path = "../../crates/testsupport", version = "0.1.0" }
+hasp-server = { path = "../server", version = "0.1.0", features = ["testing"] }
+assert_cmd.workspace = true
+tokio = { workspace = true, features = ["rt-multi-thread", "net", "time", "macros"] }
+tempfile.workspace = true

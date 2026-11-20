@@ -1,0 +1,40 @@
+{
+  "encrypted": false,
+  "collections": [
+    {
+      "id": "c1",
+      "organizationId": "11111111-2222-3333-4444-555555555555",
+      "name": "Infra",
+      "externalId": null
+    }
+  ],
+  "items": [
+    {
+      "id": "o1",
+      "organizationId": "11111111-2222-3333-4444-555555555555",
+      "folderId": null,
+      "type": 1,
+      "reprompt": 0,
+      "name": "Shared Router",
+      "notes": null,
+      "favorite": false,
+      "login": {
+        "uris": [
+          {
+            "match": null,
+            "uri": "http://192.168.0.1"
+          }
+        ],
+        "username": "admin",
+        "password": "admin-pass",
+        "totp": null
+      },
+      "revisionDate": "2024-06-01T00:00:00.000Z",
+      "creationDate": "2024-01-01T00:00:00.000Z",
+      "deletedDate": null,
+      "collectionIds": [
+        "c1"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1205 @@
+{
+  "login-017": {
+    "forms": [
+      {
+        "selector": "[data-k=\"login\"]",
+        "kind": "login",
+        "fields": {
+          "[data-c=\"u\"]": "username",
+          "[data-c=\"p\"]": "password"
+        }
+      }
+    ],
+    "path": "",
+    "lang": "ko"
+  },
+  "login-018": {
+    "forms": [
+      {
+        "selector": "[data-k=\"login\"]",
+        "kind": "login",
+        "fields": {
+          "[data-c=\"u\"]": "username",
+          "[data-c=\"p\"]": "password"
+        }
+      }
+    ],
+    "path": "",
+    "lang": "ko"
+  },
+  "login-019": {
+    "forms": [
+      {
+        "selector": "[data-k=\"login\"]",
+        "kind": "login",
+        "fields": {
+          "[data-c=\"u\"]": "username",
+          "[data-c=\"p\"]": "password"
+        }
+      }
+    ],
+    "path": "",
+    "lang": "ko"
+  },
+  "login-020": {
+    "forms": [
+      {
+        "selector": "[data-k=\"login\"]",
+        "kind": "login",
+        "fields": {
+          "[data-c=\"u\"]": "username",
+          "[data-c=\"p\"]": "password"
+        }
+      }
+    ],
+    "path": "",
+    "lang": "ko"
+  },
+  "login-021": {
+    "forms": [
+      {
+        "selector": "[data-k=\"login\"]",
+        "kind": "login",
+        "fields": {
+          "[data-c=\"u\"]": "username",
+          "[data-c=\"p\"]": "password"
+        }
+      }
+    ],
+    "path": "",
+    "lang": "ko"
+  },
+  "login-022": {
+    "forms": [
+      {
+        "selector": "[data-k=\"login\"]",
+        "kind": "login",
+        "fields": {
+          "[data-c=\"u\"]": "username",
+          "[data-c=\"p\"]": "password"
+        }
+      }
+    ],
+    "path": "",
+    "lang": "ko"
+  },
+  "login-023": {
+    "forms": [
+      {
+        "selector": "[data-k=\"login\"]",
+        "kind": "login",
+        "fields": {
+          "[data-c=\"u\"]": "username",
+          "[data-c=\"p\"]": "password"
+        }
+      }
+    ],
+    "path": "",
+    "lang": "ko"
+  },
+  "login-024": {
+    "forms": [
+      {
+        "selector": "[data-k=\"login\"]",
+        "kind": "login",
+        "fields": {
+          "[data-c=\"u\"]": "username",
+          "[data-c=\"p\"]": "password"
+        }
+      }
+    ],
+    "path": "",
+    "lang": "ko"
+  },
+  "login-041": {
+    "forms": [
+      {
+        "selector": "[data-k=\"login\"]",
+        "kind": "login",
+        "fields": {
+          "[data-c=\"u\"]": "username",
+          "[data-c=\"p\"]": "password"
+        }
+      }
+    ],
+    "path": "",
+    "lang": "en"
+  },
+  "login-042": {
+    "forms": [
+      {
+        "selector": "[data-k=\"login\"]",
+        "kind": "login",
+        "fields": {
+          "[data-c=\"u\"]": "username",
+          "[data-c=\"p\"]": "password"
+        }
+      }
+    ],
+    "path": "",
+    "lang": "en"
+  },
+  "login-043": {
+    "forms": [
+      {
+        "selector": "[data-k=\"login\"]",
+        "kind": "login",
+        "fields": {
+          "[data-c=\"u\"]": "username",
+          "[data-c=\"p\"]": "password"
+        }
+      }
+    ],
+    "path": "",
+    "lang": "en"
+  },
+  "login-044": {
+    "forms": [
+      {
+        "selector": "[data-k=\"login\"]",
+        "kind": "login",
+        "fields": {
+          "[data-c=\"u\"]": "username",
+          "[data-c=\"p\"]": "password"
+        }
+      }
+    ],
+    "path": "",
+    "lang": "en"
+  },
+  "login-045": {
+    "forms": [
+      {
+        "selector": "[data-k=\"login\"]",
+        "kind": "login",
+        "fields": {
+          "[data-c=\"u\"]": "username",
+          "[data-c=\"p\"]": "password"
+        }
+      }
+    ],
+    "path": "",
+    "lang": "en"
+  },
+  "login-046": {
+    "forms": [
+      {
+        "selector": "[data-k=\"login\"]",
+        "kind": "login",
+        "fields": {
+          "[data-c=\"u\"]": "username",
+          "[data-c=\"p\"]": "password"
+        }
+      }
+    ],
+    "path": "",
+    "lang": "en"
+  },
+  "login-047": {
+    "forms": [
+      {
+        "selector": "[data-k=\"login\"]",
+        "kind": "login",
+        "fields": {
+          "[data-c=\"u\"]": "username",
+          "[data-c=\"p\"]": "password"
+        }
+      }
+    ],
+    "path": "",
+    "lang": "en"
+  },
+  "login-048": {
+    "forms": [
+      {
+        "selector": "[data-k=\"login\"]",
+        "kind": "login",
+        "fields": {
+          "[data-c=\"u\"]": "username",
+          "[data-c=\"p\"]": "password"
+        }
+      }
+    ],
+    "path": "",
+    "lang": "en"
+  },
+  "login-065": {
+    "forms": [
+      {
+        "selector": "[data-k=\"login\"]",
+        "kind": "login",
+        "fields": {
+          "[data-c=\"u\"]": "username",
+          "[data-c=\"p\"]": "password"
+        }
+      }
+    ],
+    "path": "",
+    "lang": "ko"
+  },
+  "login-066": {
+    "forms": [
+      {
+        "selector": "[data-k=\"login\"]",
+        "kind": "login",
+        "fields": {
+          "[data-c=\"u\"]": "username",
+          "[data-c=\"p\"]": "password"
+        }
+      }
+    ],
+    "path": "",
+    "lang": "ko"
+  },
+  "login-067": {
+    "forms": [
+      {
+        "selector": "[data-k=\"login\"]",
+        "kind": "login",
+        "fields": {
+          "[data-c=\"u\"]": "username",
+          "[data-c=\"p\"]": "password"
+        }
+      }
+    ],
+    "path": "",
+    "lang": "ko"
+  },
+  "login-068": {
+    "forms": [
+      {
+        "selector": "[data-k=\"login\"]",
+        "kind": "login",
+        "fields": {
+          "[data-c=\"u\"]": "username",
+          "[data-c=\"p\"]": "password"
+        }
+      }
+    ],
+    "path": "",
+    "lang": "ko"
+  },
+  "login-069": {
+    "forms": [
+      {
+        "selector": "[data-k=\"login\"]",
+        "kind": "login",
+        "fields": {
+          "[data-c=\"u\"]": "username",
+          "[data-c=\"p\"]": "password"
+        }
+      }
+    ],
+    "path": "",
+    "lang": "ko"
+  },
+  "login-070": {
+    "forms": [
+      {
+        "selector": "[data-k=\"login\"]",
+        "kind": "login",
+        "fields": {
+          "[data-c=\"u\"]": "username",
+          "[data-c=\"p\"]": "password"
+        }
+      }
+    ],
+    "path": "",
+    "lang": "ko"
+  },
+  "login-071": {
+    "forms": [
+      {
+        "selector": "[data-k=\"login\"]",
+        "kind": "login",
+        "fields": {
+          "[data-c=\"u\"]": "username",
+          "[data-c=\"p\"]": "password"
+        }
+      }
+    ],
+    "path": "",
+    "lang": "ko"
+  },
+  "login-072": {
+    "forms": [
+      {
+        "selector": "[data-k=\"login\"]",
+        "kind": "login",
+        "fields": {
+          "[data-c=\"u\"]": "username",
+          "[data-c=\"p\"]": "password"
+        }
+      }
+    ],
+    "path": "",
+    "lang": "ko"
+  },
+  "username-only-01": {
+    "forms": [
+      {
+        "selector": "[data-k=\"username-only\"]",
+        "kind": "username-only",
+        "fields": {
+          "[data-c=\"u\"]": "username"
+        }
+      }
+    ],
+    "path": "",
+    "lang": "en"
+  },
+  "username-only-02": {
+    "forms": [
+      {
+        "selector": "[data-k=\"username-only\"]",
+        "kind": "username-only",
+        "fields": {
+          "[data-c=\"u\"]": "username"
+        }
+      }
+    ],
+    "path": "",
+    "lang": "en"
+  },
+  "username-only-03": {
+    "forms": [
+      {
+        "selector": "[data-k=\"username-only\"]",
+        "kind": "username-only",
+        "fields": {
+          "[data-c=\"u\"]": "username"
+        }
+      }
+    ],
+    "path": "",
+    "lang": "ko"
+  },
+  "username-only-04": {
+    "forms": [
+      {
+        "selector": "[data-k=\"username-only\"]",
+        "kind": "username-only",
+        "fields": {
+          "[data-c=\"u\"]": "username"
+        }
+      }
+    ],
+    "path": "",
+    "lang": "ko"
+  },
+  "username-only-05": {
+    "forms": [
+      {
+        "selector": "[data-k=\"username-only\"]",
+        "kind": "username-only",
+        "fields": {
+          "[data-c=\"u\"]": "username"
+        }
+      }
+    ],
+    "path": "",
+    "lang": "en"
+  },
+  "username-only-06": {
+    "forms": [
+      {
+        "selector": "[data-k=\"username-only\"]",
+        "kind": "username-only",
+        "fields": {
+          "[data-c=\"u\"]": "username"
+        }
+      }
+    ],
+    "path": "",
+    "lang": "en"
+  },
+  "password-only-01": {
+    "forms": [
+      {
+        "selector": "[data-k=\"password-only\"]",
+        "kind": "password-only",
+        "fields": {
+          "[data-c=\"p\"]": "password"
+        }
+      }
+    ],
+    "path": "",
+    "lang": "en"
+  },
+  "password-only-02": {
+    "forms": [
+      {
+        "selector": "[data-k=\"password-only\"]",
+        "kind": "password-only",
+        "fields": {
+          "[data-c=\"p\"]": "password"
+        }
+      }
+    ],
+    "path": "",
+    "lang": "en"
+  },
+  "password-only-03": {
+    "forms": [
+      {
+        "selector": "[data-k=\"password-only\"]",
+        "kind": "password-only",
+        "fields": {
+          "[data-c=\"p\"]": "password"
+        }
+      }
+    ],
+    "path": "",
+    "lang": "en"
+  },
+  "password-only-04": {
+    "forms": [
+      {
+        "selector": "[data-k=\"password-only\"]",
+        "kind": "password-only",
+        "fields": {
+          "[data-c=\"p\"]": "password"
+        }
+      }
+    ],
+    "path": "",
+    "lang": "en"
+  },
+  "password-only-05": {
+    "forms": [
+      {
+        "selector": "[data-k=\"password-only\"]",
+        "kind": "password-only",
+        "fields": {
+          "[data-c=\"p\"]": "password"
+        }
+      }
+    ],
+    "path": "",
+    "lang": "en"
+  },
+  "password-only-06": {
+    "forms": [
+      {
+        "selector": "[data-k=\"password-only\"]",
+        "kind": "password-only",
+        "fields": {
+          "[data-c=\"p\"]": "password"
+        }
+      }
+    ],
+    "path": "",
+    "lang": "en"
+  },
+  "otp-01": {
+    "forms": [
+      {
+        "selector": "[data-k=\"otp\"]",
+        "kind": "otp",
+        "fields": {
+          "[data-c=\"o\"]": "otp"
+        }
+      }
+    ],
+    "path": "",
+    "lang": "en"
+  },
+  "otp-02": {
+    "forms": [
+      {
+        "selector": "[data-k=\"otp\"]",
+        "kind": "otp",
+        "fields": {
+          "[data-c=\"o\"]": "otp"
+        }
+      }
+    ],
+    "path": "",
+    "lang": "ko"
+  },
+  "otp-03": {
+    "forms": [
+      {
+        "selector": "[data-k=\"otp\"]",
+        "kind": "otp",
+        "fields": {
+          "[data-c=\"o\"]": "otp"
+        }
+      }
+    ],
+    "path": "",
+    "lang": "en"
+  },
+  "otp-04": {
+    "forms": [
+      {
+        "selector": "[data-k=\"otp\"]",
+        "kind": "otp",
+        "fields": {
+          "[data-c=\"o\"]": "otp"
+        }
+      }
+    ],
+    "path": "",
+    "lang": "ko"
+  },
+  "otp-05": {
+    "forms": [
+      {
+        "selector": "[data-k=\"otp\"]",
+        "kind": "otp",
+        "fields": {
+          "[data-c=\"o\"]": "otp"
+        }
+      }
+    ],
+    "path": "",
+    "lang": "en"
+  },
+  "otp-06": {
+    "forms": [
+      {
+        "selector": "[data-k=\"otp\"]",
+        "kind": "otp",
+        "fields": {
+          "[data-c=\"o\"]": "otp"
+        }
+      }
+    ],
+    "path": "",
+    "lang": "ko"
+  },
+  "otp-split-4": {
+    "forms": [
+      {
+        "selector": "[data-k=\"otp-split\"]",
+        "kind": "otp-split",
+        "fields": {
+          "[data-cell=\"0\"]": "otp-cell",
+          "[data-cell=\"1\"]": "otp-cell",
+          "[data-cell=\"2\"]": "otp-cell",
+          "[data-cell=\"3\"]": "otp-cell"
+        }
+      }
+    ],
+    "path": "",
+    "lang": "en"
+  },
+  "otp-split-5": {
+    "forms": [
+      {
+        "selector": "[data-k=\"otp-split\"]",
+        "kind": "otp-split",
+        "fields": {
+          "[data-cell=\"0\"]": "otp-cell",
+          "[data-cell=\"1\"]": "otp-cell",
+          "[data-cell=\"2\"]": "otp-cell",
+          "[data-cell=\"3\"]": "otp-cell",
+          "[data-cell=\"4\"]": "otp-cell"
+        }
+      }
+    ],
+    "path": "",
+    "lang": "en"
+  },
+  "otp-split-6": {
+    "forms": [
+      {
+        "selector": "[data-k=\"otp-split\"]",
+        "kind": "otp-split",
+        "fields": {
+          "[data-cell=\"0\"]": "otp-cell",
+          "[data-cell=\"1\"]": "otp-cell",
+          "[data-cell=\"2\"]": "otp-cell",
+          "[data-cell=\"3\"]": "otp-cell",
+          "[data-cell=\"4\"]": "otp-cell",
+          "[data-cell=\"5\"]": "otp-cell"
+        }
+      }
+    ],
+    "path": "",
+    "lang": "en"
+  },
+  "otp-split-8": {
+    "forms": [
+      {
+        "selector": "[data-k=\"otp-split\"]",
+        "kind": "otp-split",
+        "fields": {
+          "[data-cell=\"0\"]": "otp-cell",
+          "[data-cell=\"1\"]": "otp-cell",
+          "[data-cell=\"2\"]": "otp-cell",
+          "[data-cell=\"3\"]": "otp-cell",
+          "[data-cell=\"4\"]": "otp-cell",
+          "[data-cell=\"5\"]": "otp-cell",
+          "[data-cell=\"6\"]": "otp-cell",
+          "[data-cell=\"7\"]": "otp-cell"
+        }
+      }
+    ],
+    "path": "",
+    "lang": "en"
+  },
+  "otp-split-ko-narrow": {
+    "forms": [
+      {
+        "selector": "[data-k=\"otp-split\"]",
+        "kind": "otp-split",
+        "fields": {
+          "[data-cell=\"0\"]": "otp-cell",
+          "[data-cell=\"1\"]": "otp-cell",
+          "[data-cell=\"2\"]": "otp-cell",
+          "[data-cell=\"3\"]": "otp-cell",
+          "[data-cell=\"4\"]": "otp-cell",
+          "[data-cell=\"5\"]": "otp-cell"
+        }
+      }
+    ],
+    "path": "",
+    "lang": "ko"
+  },
+  "signup-01": {
+    "forms": [
+      {
+        "selector": "[data-k=\"signup\"]",
+        "kind": "signup",
+        "fields": {
+          "[data-c=\"n\"]": "new-password"
+        }
+      }
+    ],
+    "path": "/signup",
+    "lang": "en"
+  },
+  "signup-02": {
+    "forms": [
+      {
+        "selector": "[data-k=\"signup\"]",
+        "kind": "signup",
+        "fields": {
+          "[data-c=\"n\"]": "new-password"
+        }
+      }
+    ],
+    "path": "/signup",
+    "lang": "en"
+  },
+  "signup-03": {
+    "forms": [
+      {
+        "selector": "[data-k=\"signup\"]",
+        "kind": "signup",
+        "fields": {
+          "[data-c=\"n\"]": "new-password"
+        }
+      }
+    ],
+    "path": "/signup",
+    "lang": "ko"
+  },
+  "signup-04": {
+    "forms": [
+      {
+        "selector": "[data-k=\"signup\"]",
+        "kind": "signup",
+        "fields": {
+          "[data-c=\"n\"]": "new-password"
+        }
+      }
+    ],
+    "path": "/signup",
+    "lang": "en"
+  },
+  "signup-05": {
+    "forms": [
+      {
+        "selector": "[data-k=\"signup\"]",
+        "kind": "signup",
+        "fields": {
+          "[data-c=\"n\"]": "new-password"
+        }
+      }
+    ],
+    "path": "/signup",
+    "lang": "en"
+  },
+  "signup-06": {
+    "forms": [
+      {
+        "selector": "[data-k=\"signup\"]",
+        "kind": "signup",
+        "fields": {
+          "[data-c=\"n\"]": "new-password"
+        }
+      }
+    ],
+    "path": "/signup",
+    "lang": "en"
+  },
+  "change-password-01": {
+    "forms": [
+      {
+        "selector": "[data-k=\"change-password\"]",
+        "kind": "change-password",
+        "fields": {
+          "[data-c=\"o\"]": "current-password",
+          "[data-c=\"n\"]": "new-password"
+        }
+      }
+    ],
+    "path": "",
+    "lang": "en"
+  },
+  "change-password-02": {
+    "forms": [
+      {
+        "selector": "[data-k=\"change-password\"]",
+        "kind": "change-password",
+        "fields": {
+          "[data-c=\"o\"]": "current-password",
+          "[data-c=\"n\"]": "new-password"
+        }
+      }
+    ],
+    "path": "",
+    "lang": "ko"
+  },
+  "change-password-03": {
+    "forms": [
+      {
+        "selector": "[data-k=\"change-password\"]",
+        "kind": "change-password",
+        "fields": {
+          "[data-c=\"o\"]": "current-password",
+          "[data-c=\"n\"]": "new-password"
+        }
+      }
+    ],
+    "path": "",
+    "lang": "en"
+  },
+  "card-01": {
+    "forms": [
+      {
+        "selector": "[data-k=\"card\"]",
+        "kind": "card",
+        "fields": {
+          "[data-c=\"n\"]": "cc-number",
+          "[data-c=\"s\"]": "cc-csc",
+          "[data-c=\"e\"]": "cc-exp"
+        }
+      }
+    ],
+    "path": "",
+    "lang": "en"
+  },
+  "card-02": {
+    "forms": [
+      {
+        "selector": "[data-k=\"card\"]",
+        "kind": "card",
+        "fields": {
+          "[data-c=\"n\"]": "cc-number",
+          "[data-c=\"s\"]": "cc-csc",
+          "[data-c=\"e\"]": "cc-exp"
+        }
+      }
+    ],
+    "path": "",
+    "lang": "ko"
+  },
+  "card-03": {
+    "forms": [
+      {
+        "selector": "[data-k=\"card\"]",
+        "kind": "card",
+        "fields": {
+          "[data-c=\"n\"]": "cc-number",
+          "[data-c=\"s\"]": "cc-csc",
+          "[data-c=\"m\"]": "cc-exp-month",
+          "[data-c=\"y\"]": "cc-exp-year"
+        }
+      }
+    ],
+    "path": "",
+    "lang": "en"
+  },
+  "card-split-4": {
+    "forms": [
+      {
+        "selector": "[data-k=\"card\"]",
+        "kind": "card",
+        "fields": {
+          "[data-part=\"0\"]": "cc-number-part",
+          "[data-part=\"1\"]": "cc-number-part",
+          "[data-part=\"2\"]": "cc-number-part",
+          "[data-part=\"3\"]": "cc-number-part",
+          "[data-c=\"s\"]": "cc-csc"
+        }
+      }
+    ],
+    "path": "",
+    "lang": "ko"
+  },
+  "none-search": {
+    "forms": [],
+    "path": "",
+    "lang": "en"
+  },
+  "none-search-ko": {
+    "forms": [],
+    "path": "",
+    "lang": "ko"
+  },
+  "none-newsletter": {
+    "forms": [],
+    "path": "",
+    "lang": "en"
+  },
+  "none-newsletter-ko": {
+    "forms": [],
+    "path": "",
+    "lang": "ko"
+  },
+  "none-coupon": {
+    "forms": [],
+    "path": "",
+    "lang": "en"
+  },
+  "none-coupon-ko": {
+    "forms": [],
+    "path": "",
+    "lang": "ko"
+  },
+  "none-chat": {
+    "forms": [],
+    "path": "",
+    "lang": "en"
+  },
+  "none-captcha": {
+    "forms": [],
+    "path": "",
+    "lang": "en"
+  },
+  "none-captcha-ko": {
+    "forms": [],
+    "path": "",
+    "lang": "ko"
+  },
+  "none-empty": {
+    "forms": [],
+    "path": "",
+    "lang": "en"
+  },
+  "none-comment": {
+    "forms": [],
+    "path": "",
+    "lang": "en"
+  },
+  "none-referral": {
+    "forms": [],
+    "path": "",
+    "lang": "ko"
+  },
+  "none-hidden-login": {
+    "forms": [],
+    "path": "",
+    "lang": "en"
+  },
+  "none-disabled-login": {
+    "forms": [],
+    "path": "",
+    "lang": "en"
+  },
+  "none-quantity": {
+    "forms": [],
+    "path": "",
+    "lang": "en"
+  },
+  "none-date": {
+    "forms": [],
+    "path": "",
+    "lang": "en"
+  },
+  "none-zeroSize": {
+    "forms": [],
+    "path": "",
+    "lang": "en"
+  },
+  "none-contact": {
+    "forms": [],
+    "path": "",
+    "lang": "en"
+  },
+  "none-profile-settings": {
+    "forms": [],
+    "path": "",
+    "lang": "en"
+  },
+  "none-admin-user-lookup": {
+    "forms": [],
+    "path": "",
+    "lang": "en"
+  },
+  "none-pin-cells": {
+    "forms": [],
+    "path": "",
+    "lang": "en"
+  },
+  "none-account-number": {
+    "forms": [],
+    "path": "",
+    "lang": "en"
+  },
+  "none-invite-code": {
+    "forms": [],
+    "path": "",
+    "lang": "en"
+  },
+  "none-terms-only": {
+    "forms": [],
+    "path": "",
+    "lang": "en"
+  },
+  "none-quantity-select": {
+    "forms": [],
+    "path": "",
+    "lang": "en"
+  },
+  "login-id-placeholders": {
+    "forms": [
+      {
+        "selector": "[data-k=\"login\"]",
+        "kind": "login",
+        "fields": {
+          "[data-c=\"u\"]": "username",
+          "[data-c=\"p\"]": "password"
+        }
+      }
+    ],
+    "path": "",
+    "lang": "en"
+  },
+  "login-naver-like": {
+    "forms": [
+      {
+        "selector": "[data-k=\"login\"]",
+        "kind": "login",
+        "fields": {
+          "[data-c=\"u\"]": "username",
+          "[data-c=\"p\"]": "password"
+        }
+      }
+    ],
+    "path": "",
+    "lang": "ko"
+  },
+  "login-kakao-like": {
+    "forms": [
+      {
+        "selector": "[data-k=\"login\"]",
+        "kind": "login",
+        "fields": {
+          "[data-c=\"u\"]": "username",
+          "[data-c=\"p\"]": "password"
+        }
+      }
+    ],
+    "path": "",
+    "lang": "ko"
+  },
+  "login-with-captcha-field": {
+    "forms": [
+      {
+        "selector": "[data-k=\"login\"]",
+        "kind": "login",
+        "fields": {
+          "[data-c=\"u\"]": "username",
+          "[data-c=\"p\"]": "password"
+        }
+      }
+    ],
+    "path": "",
+    "lang": "en"
+  },
+  "login-company-code": {
+    "forms": [
+      {
+        "selector": "[data-k=\"login\"]",
+        "kind": "login",
+        "fields": {
+          "[data-c=\"u\"]": "username",
+          "[data-c=\"p\"]": "password"
+        }
+      }
+    ],
+    "path": "",
+    "lang": "en"
+  },
+  "login-path-hint": {
+    "forms": [
+      {
+        "selector": "[data-k=\"login\"]",
+        "kind": "login",
+        "fields": {
+          "[data-c=\"u\"]": "username",
+          "[data-c=\"p\"]": "password"
+        }
+      }
+    ],
+    "path": "/login",
+    "lang": "en"
+  },
+  "username-only-lookup-hint": {
+    "forms": [
+      {
+        "selector": "[data-k=\"username-only\"]",
+        "kind": "username-only",
+        "fields": {
+          "[data-c=\"u\"]": "username"
+        }
+      }
+    ],
+    "path": "/login",
+    "lang": "en"
+  },
+  "identity-basic": {
+    "forms": [
+      {
+        "selector": "[data-k=\"identity\"]",
+        "kind": "identity",
+        "fields": {
+          "[data-c=\"g\"]": "given-name",
+          "[data-c=\"f\"]": "family-name",
+          "[data-c=\"t\"]": "tel"
+        }
+      }
+    ],
+    "path": "",
+    "lang": "en"
+  },
+  "identity-ko": {
+    "forms": [
+      {
+        "selector": "[data-k=\"identity\"]",
+        "kind": "identity",
+        "fields": {
+          "[data-c=\"n\"]": "name",
+          "[data-c=\"t\"]": "tel"
+        }
+      }
+    ],
+    "path": "",
+    "lang": "ko"
+  },
+  "address-basic": {
+    "forms": [
+      {
+        "selector": "[data-k=\"address\"]",
+        "kind": "address",
+        "fields": {
+          "[data-c=\"s\"]": "street-address",
+          "[data-c=\"z\"]": "postal-code",
+          "[data-c=\"c\"]": "country"
+        }
+      }
+    ],
+    "path": "",
+    "lang": "en"
+  },
+  "address-ko": {
+    "forms": [
+      {
+        "selector": "[data-k=\"address\"]",
+        "kind": "address",
+        "fields": {
+          "[data-c=\"z\"]": "postal-code",
+          "[data-c=\"a\"]": "address-line2"
+        }
+      }
+    ],
+    "path": "",
+    "lang": "ko"
+  },
+  "ko-bank-virtual-keypad": {
+    "forms": [
+      {
+        "selector": "[data-k=\"login\"]",
+        "kind": "login",
+        "fields": {
+          "[data-c=\"u\"]": "username",
+          "[data-c=\"p\"]": "password"
+        }
+      }
+    ],
+    "path": "",
+    "lang": "ko"
+  },
+  "ko-masked-text-password": {
+    "forms": [
+      {
+        "selector": "[data-k=\"login\"]",
+        "kind": "login",
+        "fields": {
+          "[data-c=\"u\"]": "username",
+          "[data-c=\"p\"]": "password"
+        }
+      }
+    ],
+    "path": "",
+    "lang": "ko"
+  },
+  "ko-portal-tabs": {
+    "forms": [
+      {
+        "selector": "[data-k=\"login\"]",
+        "kind": "login",
+        "fields": {
+          "[data-c=\"u\"]": "username",
+          "[data-c=\"p\"]": "password"
+        }
+      }
+    ],
+    "path": "",
+    "lang": "ko"
+  },
+  "ko-signup-id-pw": {
+    "forms": [
+      {
+        "selector": "[data-k=\"signup\"]",
+        "kind": "signup",
+        "fields": {
+          "[data-c=\"n\"]": "new-password"
+        }
+      }
+    ],
+    "path": "/join",
+    "lang": "ko"
+  },
+  "ko-sms-otp-with-timer": {
+    "forms": [
+      {
+        "selector": "[data-k=\"otp\"]",
+        "kind": "otp",
+        "fields": {
+          "[data-c=\"o\"]": "otp"
+        }
+      }
+    ],
+    "path": "",
+    "lang": "ko"
+  },
+  "ko-sso-step-1": {
+    "forms": [
+      {
+        "selector": "[data-k=\"username-only\"]",
+        "kind": "username-only",
+        "fields": {
+          "[data-c=\"u\"]": "username"
+        }
+      }
+    ],
+    "path": "",
+    "lang": "ko"
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "db_name": "SQLite",
+  "query": "DELETE FROM attachment_chunks WHERE att_id = ? AND idx = ? RETURNING len, digest",
+  "describe": {
+    "columns": [
+      {
+        "name": "len",
+        "ordinal": 0,
+        "type_info": "Integer",
+        "origin": {
+          "Table": {
+            "table": "attachment_chunks",
+            "name": "len"
+          }
+        }
+      },
+      {
+        "name": "digest",
+        "ordinal": 1,
+        "type_info": "Blob",
+        "origin": {
+          "Table": {
+            "table": "attachment_chunks",
+            "name": "digest"
+          }
+        }
+      }
+    ],
+    "parameters": {
+      "Right": 2
+    },
+    "nullable": [
+      false,
+      false
+    ]
+  },
+  "hash": "32f8e18dbdac486a700226cb6c1b7424c1d743114e1c8b7824a810302cadcbb4"
+}

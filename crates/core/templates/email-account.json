@@ -1,0 +1,164 @@
+{
+  "id": "email-account",
+  "version": 1,
+  "name": {
+    "en": "Email Account",
+    "ko": "이메일 계정"
+  },
+  "icon": "mail",
+  "import_codes": {
+    "1pux": "111"
+  },
+  "sections": [
+    {
+      "key": "account",
+      "fields": [
+        {
+          "key": "type",
+          "label": {
+            "en": "type",
+            "ko": "종류"
+          },
+          "kind": "menu",
+          "options": [
+            "POP3",
+            "IMAP",
+            "Exchange",
+            "Other"
+          ]
+        },
+        {
+          "key": "username",
+          "label": {
+            "en": "username",
+            "ko": "사용자 이름"
+          },
+          "kind": "text",
+          "purpose": "username"
+        },
+        {
+          "key": "server",
+          "label": {
+            "en": "server",
+            "ko": "서버"
+          },
+          "kind": "text",
+          "purpose": "hostname"
+        },
+        {
+          "key": "port",
+          "label": {
+            "en": "port",
+            "ko": "포트"
+          },
+          "kind": "text"
+        },
+        {
+          "key": "password",
+          "label": {
+            "en": "password",
+            "ko": "비밀번호"
+          },
+          "kind": "concealed",
+          "purpose": "password"
+        }
+      ]
+    },
+    {
+      "key": "smtp",
+      "title": {
+        "en": "SMTP",
+        "ko": "SMTP"
+      },
+      "fields": [
+        {
+          "key": "smtp-server",
+          "label": {
+            "en": "SMTP server",
+            "ko": "SMTP 서버"
+          },
+          "kind": "text"
+        },
+        {
+          "key": "smtp-port",
+          "label": {
+            "en": "port number",
+            "ko": "포트"
+          },
+          "kind": "text"
+        },
+        {
+          "key": "smtp-username",
+          "label": {
+            "en": "username",
+            "ko": "사용자 이름"
+          },
+          "kind": "text"
+        },
+        {
+          "key": "smtp-password",
+          "label": {
+            "en": "password",
+            "ko": "비밀번호"
+          },
+          "kind": "concealed"
+        },
+        {
+          "key": "smtp-security",
+          "label": {
+            "en": "security",
+            "ko": "보안"
+          },
+          "kind": "menu",
+          "options": [
+            "None",
+            "STARTTLS",
+            "SSL/TLS"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "contact",
+      "title": {
+        "en": "Contact Information",
+        "ko": "연락처"
+      },
+      "fields": [
+        {
+          "key": "provider",
+          "label": {
+            "en": "provider",
+            "ko": "제공업체"
+          },
+          "kind": "text"
+        },
+        {
+          "key": "provider-website",
+          "label": {
+            "en": "provider's website",
+            "ko": "웹사이트"
+          },
+          "kind": "url"
+        },
+        {
+          "key": "phone-local",
+          "label": {
+            "en": "phone (local)",
+            "ko": "전화번호"
+          },
+          "kind": "phone"
+        }
+      ]
+    }
+  ],
+  "capabilities": {
+    "autofill": "none",
+    "watchtower": [
+      "vulnerable",
+      "reused",
+      "weak"
+    ],
+    "supports_urls": true
+  }
+}

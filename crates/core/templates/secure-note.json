@@ -1,0 +1,17 @@
+{
+  "id": "secure-note",
+  "version": 1,
+  "name": {
+    "en": "Secure Note",
+    "ko": "보안 메모"
+  },
+  "icon": "note",
+  "import_codes": {
+    "1pux": "003",
+    "bitwarden": "2"
+  },
+  "sections": [],
+  "capabilities": {
+    "autofill": "none"
+  }
+}

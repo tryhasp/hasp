@@ -1,0 +1,62 @@
+{
+  "db_name": "SQLite",
+  "query": "DELETE FROM manifests WHERE vault_id = ? AND seq = ? RETURNING vault_id, seq, manifest, author",
+  "describe": {
+    "columns": [
+      {
+        "name": "vault_id",
+        "ordinal": 0,
+        "type_info": "Blob",
+        "origin": {
+          "Table": {
+            "table": "manifests",
+            "name": "vault_id"
+          }
+        }
+      },
+      {
+        "name": "seq",
+        "ordinal": 1,
+        "type_info": "Integer",
+        "origin": {
+          "Table": {
+            "table": "manifests",
+            "name": "seq"
+          }
+        }
+      },
+      {
+        "name": "manifest",
+        "ordinal": 2,
+        "type_info": "Blob",
+        "origin": {
+          "Table": {
+            "table": "manifests",
+            "name": "manifest"
+          }
+        }
+      },
+      {
+        "name": "author",
+        "ordinal": 3,
+        "type_info": "Blob",
+        "origin": {
+          "Table": {
+            "table": "manifests",
+            "name": "author"
+          }
+        }
+      }
+    ],
+    "parameters": {
+      "Right": 2
+    },
+    "nullable": [
+      false,
+      false,
+      false,
+      false
+    ]
+  },
+  "hash": "5719863a0b990161a3e55a0a0b80b62e095924e6dff720a7d9d735d1a17a0fe9"
+}

@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "lineBreakBeforeEachArgument": true,
+  "lineBreakBeforeEachGenericRequirement": true,
+  "multilineTrailingCommaBehavior": "alwaysUsed",
+  "rules": {
+    "NeverForceUnwrap": true,
+    "NeverUseForceTry": true,
+    "NeverUseImplicitlyUnwrappedOptionals": true,
+    "NoLeadingUnderscores": true,
+    "OmitExplicitReturns": true,
+    "UseEarlyExits": true,
+    "UseWhereClausesInForLoops": true,
+    "ValidateDocumentationComments": true,
+    "AlwaysUseLiteralForEmptyCollectionInit": true
+  }
+}

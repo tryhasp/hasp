@@ -1,0 +1,50 @@
+{
+  "db_name": "SQLite",
+  "query": "DELETE FROM commit_log WHERE vault_id = ? AND base_seq = ? RETURNING vault_id, base_seq, manifest_hash",
+  "describe": {
+    "columns": [
+      {
+        "name": "vault_id",
+        "ordinal": 0,
+        "type_info": "Blob",
+        "origin": {
+          "Table": {
+            "table": "commit_log",
+            "name": "vault_id"
+          }
+        }
+      },
+      {
+        "name": "base_seq",
+        "ordinal": 1,
+        "type_info": "Integer",
+        "origin": {
+          "Table": {
+            "table": "commit_log",
+            "name": "base_seq"
+          }
+        }
+      },
+      {
+        "name": "manifest_hash",
+        "ordinal": 2,
+        "type_info": "Blob",
+        "origin": {
+          "Table": {
+            "table": "commit_log",
+            "name": "manifest_hash"
+          }
+        }
+      }
+    ],
+    "parameters": {
+      "Right": 2
+    },
+    "nullable": [
+      false,
+      false,
+      false
+    ]
+  },
+  "hash": "95ebe30b437779e6a146d5c98061b9a917b5369b271718df4a3c6c4005598b9e"
+}

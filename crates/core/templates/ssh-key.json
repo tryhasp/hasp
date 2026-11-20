@@ -1,0 +1,72 @@
+{
+  "id": "ssh-key",
+  "version": 1,
+  "name": {
+    "en": "SSH Key",
+    "ko": "SSH 키"
+  },
+  "icon": "terminal",
+  "import_codes": {
+    "1pux": "114",
+    "bitwarden": "5"
+  },
+  "sections": [
+    {
+      "key": "key",
+      "fields": [
+        {
+          "key": "private-key",
+          "label": {
+            "en": "private key",
+            "ko": "개인 키"
+          },
+          "kind": "concealed",
+          "purpose": "ssh-private-key"
+        },
+        {
+          "key": "public-key",
+          "label": {
+            "en": "public key",
+            "ko": "공개 키"
+          },
+          "kind": "text",
+          "purpose": "ssh-public-key"
+        },
+        {
+          "key": "fingerprint",
+          "label": {
+            "en": "fingerprint",
+            "ko": "지문"
+          },
+          "kind": "text"
+        },
+        {
+          "key": "key-type",
+          "label": {
+            "en": "key type",
+            "ko": "키 종류"
+          },
+          "kind": "menu",
+          "options": [
+            "RSA",
+            "Ed25519",
+            "ECDSA",
+            "DSA",
+            "Other"
+          ]
+        },
+        {
+          "key": "passphrase",
+          "label": {
+            "en": "passphrase",
+            "ko": "암호 문구"
+          },
+          "kind": "concealed"
+        }
+      ]
+    }
+  ],
+  "capabilities": {
+    "autofill": "none"
+  }
+}

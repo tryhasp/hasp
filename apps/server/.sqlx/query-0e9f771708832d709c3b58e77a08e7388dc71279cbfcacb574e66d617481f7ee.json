@@ -1,0 +1,62 @@
+{
+  "db_name": "SQLite",
+  "query": "DELETE FROM rosters WHERE vault_id = ? AND rver = ? RETURNING vault_id, rver, roster, seq",
+  "describe": {
+    "columns": [
+      {
+        "name": "vault_id",
+        "ordinal": 0,
+        "type_info": "Blob",
+        "origin": {
+          "Table": {
+            "table": "rosters",
+            "name": "vault_id"
+          }
+        }
+      },
+      {
+        "name": "rver",
+        "ordinal": 1,
+        "type_info": "Integer",
+        "origin": {
+          "Table": {
+            "table": "rosters",
+            "name": "rver"
+          }
+        }
+      },
+      {
+        "name": "roster",
+        "ordinal": 2,
+        "type_info": "Blob",
+        "origin": {
+          "Table": {
+            "table": "rosters",
+            "name": "roster"
+          }
+        }
+      },
+      {
+        "name": "seq",
+        "ordinal": 3,
+        "type_info": "Integer",
+        "origin": {
+          "Table": {
+            "table": "rosters",
+            "name": "seq"
+          }
+        }
+      }
+    ],
+    "parameters": {
+      "Right": 2
+    },
+    "nullable": [
+      false,
+      false,
+      false,
+      false
+    ]
+  },
+  "hash": "0e9f771708832d709c3b58e77a08e7388dc71279cbfcacb574e66d617481f7ee"
+}

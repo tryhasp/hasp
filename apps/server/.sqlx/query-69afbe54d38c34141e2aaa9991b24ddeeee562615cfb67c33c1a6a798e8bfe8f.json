@@ -1,0 +1,74 @@
+{
+  "db_name": "SQLite",
+  "query": "SELECT vault_id, epoch, account_id, share, seq FROM shares WHERE (vault_id, epoch, account_id) >= (?, ?, ?) AND (vault_id, epoch, account_id) <= (?, ?, ?) ORDER BY vault_id DESC, epoch DESC, account_id DESC LIMIT 1",
+  "describe": {
+    "columns": [
+      {
+        "name": "vault_id",
+        "ordinal": 0,
+        "type_info": "Blob",
+        "origin": {
+          "Table": {
+            "table": "shares",
+            "name": "vault_id"
+          }
+        }
+      },
+      {
+        "name": "epoch",
+        "ordinal": 1,
+        "type_info": "Integer",
+        "origin": {
+          "Table": {
+            "table": "shares",
+            "name": "epoch"
+          }
+        }
+      },
+      {
+        "name": "account_id",
+        "ordinal": 2,
+        "type_info": "Blob",
+        "origin": {
+          "Table": {
+            "table": "shares",
+            "name": "account_id"
+          }
+        }
+      },
+      {
+        "name": "share",
+        "ordinal": 3,
+        "type_info": "Blob",
+        "origin": {
+          "Table": {
+            "table": "shares",
+            "name": "share"
+          }
+        }
+      },
+      {
+        "name": "seq",
+        "ordinal": 4,
+        "type_info": "Integer",
+        "origin": {
+          "Table": {
+            "table": "shares",
+            "name": "seq"
+          }
+        }
+      }
+    ],
+    "parameters": {
+      "Right": 6
+    },
+    "nullable": [
+      false,
+      false,
+      false,
+      false,
+      false
+    ]
+  },
+  "hash": "69afbe54d38c34141e2aaa9991b24ddeeee562615cfb67c33c1a6a798e8bfe8f"
+}

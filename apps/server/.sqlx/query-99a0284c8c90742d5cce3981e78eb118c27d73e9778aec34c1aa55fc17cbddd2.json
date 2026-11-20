@@ -1,0 +1,12 @@
+{
+  "db_name": "SQLite",
+  "query": "INSERT INTO invites (invite_id, vault_id, inviter, role, expires, state, invitee, accept) VALUES (?, ?, ?, ?, ?, ?, ?, ?) ON CONFLICT (invite_id) DO UPDATE SET vault_id = excluded.vault_id, inviter = excluded.inviter, role = excluded.role, expires = excluded.expires, state = excluded.state, invitee = excluded.invitee, accept = excluded.accept",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Right": 8
+    },
+    "nullable": []
+  },
+  "hash": "99a0284c8c90742d5cce3981e78eb118c27d73e9778aec34c1aa55fc17cbddd2"
+}

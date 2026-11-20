@@ -1,0 +1,15 @@
+id           <id>
+vault        <id>
+category     login
+title        GitHub
+subtitle     
+state        active
+tags         
+urls         https://example.com
+notes        -
+created      1000000
+modified     1000000
+attachments  
+LABEL     KIND       VALUE
+username  text       ada
+password  concealed  <concealed>

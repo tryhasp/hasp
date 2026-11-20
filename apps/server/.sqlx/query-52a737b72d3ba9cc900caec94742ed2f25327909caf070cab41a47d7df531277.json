@@ -1,0 +1,38 @@
+{
+  "db_name": "SQLite",
+  "query": "SELECT att_id, idx FROM attachment_chunks",
+  "describe": {
+    "columns": [
+      {
+        "name": "att_id",
+        "ordinal": 0,
+        "type_info": "Blob",
+        "origin": {
+          "Table": {
+            "table": "attachment_chunks",
+            "name": "att_id"
+          }
+        }
+      },
+      {
+        "name": "idx",
+        "ordinal": 1,
+        "type_info": "Integer",
+        "origin": {
+          "Table": {
+            "table": "attachment_chunks",
+            "name": "idx"
+          }
+        }
+      }
+    ],
+    "parameters": {
+      "Right": 0
+    },
+    "nullable": [
+      false,
+      false
+    ]
+  },
+  "hash": "52a737b72d3ba9cc900caec94742ed2f25327909caf070cab41a47d7df531277"
+}

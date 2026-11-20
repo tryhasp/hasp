@@ -1,0 +1,38 @@
+{
+  "sourceLanguage": "en",
+  "version": "1.0",
+  "strings": {
+    "NSFaceIDUsageDescription": {
+      "localizations": {
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Face ID로 Hasp 보관함의 잠금을 풀어요."
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Unlock your Hasp vault with Face ID."
+          }
+        }
+      }
+    },
+    "NSCameraUsageDescription": {
+      "localizations": {
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "비상 키트의 QR 코드를 스캔하는 데만 카메라를 써요."
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Scan the QR code on your Hasp Emergency Kit."
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,134 @@
+{
+  "db_name": "SQLite",
+  "query": "DELETE FROM items WHERE vault_id = ? AND item_id = ? AND ver = ? AND epoch = ? RETURNING vault_id, item_id, ver, epoch, wire, h_item, tomb, size, seq, current",
+  "describe": {
+    "columns": [
+      {
+        "name": "vault_id",
+        "ordinal": 0,
+        "type_info": "Blob",
+        "origin": {
+          "Table": {
+            "table": "items",
+            "name": "vault_id"
+          }
+        }
+      },
+      {
+        "name": "item_id",
+        "ordinal": 1,
+        "type_info": "Blob",
+        "origin": {
+          "Table": {
+            "table": "items",
+            "name": "item_id"
+          }
+        }
+      },
+      {
+        "name": "ver",
+        "ordinal": 2,
+        "type_info": "Integer",
+        "origin": {
+          "Table": {
+            "table": "items",
+            "name": "ver"
+          }
+        }
+      },
+      {
+        "name": "epoch",
+        "ordinal": 3,
+        "type_info": "Integer",
+        "origin": {
+          "Table": {
+            "table": "items",
+            "name": "epoch"
+          }
+        }
+      },
+      {
+        "name": "wire",
+        "ordinal": 4,
+        "type_info": "Blob",
+        "origin": {
+          "Table": {
+            "table": "items",
+            "name": "wire"
+          }
+        }
+      },
+      {
+        "name": "h_item",
+        "ordinal": 5,
+        "type_info": "Blob",
+        "origin": {
+          "Table": {
+            "table": "items",
+            "name": "h_item"
+          }
+        }
+      },
+      {
+        "name": "tomb",
+        "ordinal": 6,
+        "type_info": "Integer",
+        "origin": {
+          "Table": {
+            "table": "items",
+            "name": "tomb"
+          }
+        }
+      },
+      {
+        "name": "size",
+        "ordinal": 7,
+        "type_info": "Integer",
+        "origin": {
+          "Table": {
+            "table": "items",
+            "name": "size"
+          }
+        }
+      },
+      {
+        "name": "seq",
+        "ordinal": 8,
+        "type_info": "Integer",
+        "origin": {
+          "Table": {
+            "table": "items",
+            "name": "seq"
+          }
+        }
+      },
+      {
+        "name": "current",
+        "ordinal": 9,
+        "type_info": "Integer",
+        "origin": {
+          "Table": {
+            "table": "items",
+            "name": "current"
+          }
+        }
+      }
+    ],
+    "parameters": {
+      "Right": 4
+    },
+    "nullable": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+    ]
+  },
+  "hash": "dd43bee1491c5068d0e542f531a04c4142c321b143632f391e954637239e14bd"
+}

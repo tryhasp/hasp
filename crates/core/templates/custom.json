@@ -1,0 +1,16 @@
+{
+  "id": "custom",
+  "version": 1,
+  "name": {
+    "en": "Custom",
+    "ko": "사용자 지정"
+  },
+  "icon": "square",
+  "sections": [],
+  "capabilities": {
+    "autofill": "none",
+    "supports_urls": true,
+    "supports_passkeys": true,
+    "supports_apps": true
+  }
+}

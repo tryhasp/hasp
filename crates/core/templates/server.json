@@ -1,0 +1,138 @@
+{
+  "id": "server",
+  "version": 1,
+  "name": {
+    "en": "Server",
+    "ko": "서버"
+  },
+  "icon": "server",
+  "import_codes": {
+    "1pux": "110"
+  },
+  "sections": [
+    {
+      "key": "server",
+      "fields": [
+        {
+          "key": "url",
+          "label": {
+            "en": "URL",
+            "ko": "URL"
+          },
+          "kind": "url"
+        },
+        {
+          "key": "username",
+          "label": {
+            "en": "username",
+            "ko": "사용자 이름"
+          },
+          "kind": "text",
+          "purpose": "username"
+        },
+        {
+          "key": "password",
+          "label": {
+            "en": "password",
+            "ko": "비밀번호"
+          },
+          "kind": "concealed",
+          "purpose": "password"
+        },
+        {
+          "key": "hostname",
+          "label": {
+            "en": "hostname",
+            "ko": "호스트 이름"
+          },
+          "kind": "text",
+          "purpose": "hostname"
+        }
+      ]
+    },
+    {
+      "key": "admin",
+      "title": {
+        "en": "Admin Console",
+        "ko": "관리 콘솔"
+      },
+      "fields": [
+        {
+          "key": "admin-url",
+          "label": {
+            "en": "admin console URL",
+            "ko": "관리 콘솔 URL"
+          },
+          "kind": "url"
+        },
+        {
+          "key": "admin-username",
+          "label": {
+            "en": "admin console username",
+            "ko": "관리 콘솔 사용자 이름"
+          },
+          "kind": "text"
+        },
+        {
+          "key": "admin-password",
+          "label": {
+            "en": "admin console password",
+            "ko": "관리 콘솔 비밀번호"
+          },
+          "kind": "concealed"
+        }
+      ]
+    },
+    {
+      "key": "hosting",
+      "title": {
+        "en": "Hosting Provider",
+        "ko": "호스팅 업체"
+      },
+      "fields": [
+        {
+          "key": "provider-name",
+          "label": {
+            "en": "name",
+            "ko": "업체 이름"
+          },
+          "kind": "text"
+        },
+        {
+          "key": "provider-website",
+          "label": {
+            "en": "website",
+            "ko": "웹사이트"
+          },
+          "kind": "url"
+        },
+        {
+          "key": "support-url",
+          "label": {
+            "en": "support URL",
+            "ko": "지원 URL"
+          },
+          "kind": "url"
+        },
+        {
+          "key": "support-phone",
+          "label": {
+            "en": "support phone",
+            "ko": "지원 전화"
+          },
+          "kind": "phone"
+        }
+      ]
+    }
+  ],
+  "capabilities": {
+    "autofill": "none",
+    "watchtower": [
+      "vulnerable",
+      "reused",
+      "weak",
+      "insecure-url"
+    ],
+    "supports_urls": true
+  }
+}

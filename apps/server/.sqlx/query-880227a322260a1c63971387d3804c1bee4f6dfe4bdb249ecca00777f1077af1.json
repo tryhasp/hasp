@@ -1,0 +1,12 @@
+{
+  "db_name": "SQLite",
+  "query": "INSERT INTO self_wraps (account_id, vault_id, epoch, wrap) VALUES (?, ?, ?, ?) ON CONFLICT (account_id, vault_id, epoch) DO UPDATE SET wrap = excluded.wrap",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Right": 4
+    },
+    "nullable": []
+  },
+  "hash": "880227a322260a1c63971387d3804c1bee4f6dfe4bdb249ecca00777f1077af1"
+}

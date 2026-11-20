@@ -1,0 +1,96 @@
+{
+  "id": "medical-record",
+  "version": 1,
+  "name": {
+    "en": "Medical Record",
+    "ko": "의료 기록"
+  },
+  "icon": "heart",
+  "import_codes": {
+    "1pux": "113"
+  },
+  "sections": [
+    {
+      "key": "visit",
+      "fields": [
+        {
+          "key": "date",
+          "label": {
+            "en": "date",
+            "ko": "날짜"
+          },
+          "kind": "date"
+        },
+        {
+          "key": "location",
+          "label": {
+            "en": "location",
+            "ko": "장소"
+          },
+          "kind": "text"
+        },
+        {
+          "key": "provider",
+          "label": {
+            "en": "healthcare professional",
+            "ko": "의료진"
+          },
+          "kind": "text"
+        },
+        {
+          "key": "patient",
+          "label": {
+            "en": "patient",
+            "ko": "환자"
+          },
+          "kind": "text",
+          "purpose": "name"
+        },
+        {
+          "key": "reason",
+          "label": {
+            "en": "reason for visit",
+            "ko": "방문 사유"
+          },
+          "kind": "text"
+        }
+      ]
+    },
+    {
+      "key": "medication",
+      "title": {
+        "en": "Medication",
+        "ko": "약물"
+      },
+      "fields": [
+        {
+          "key": "medication",
+          "label": {
+            "en": "medication",
+            "ko": "약 이름"
+          },
+          "kind": "text"
+        },
+        {
+          "key": "dosage",
+          "label": {
+            "en": "dosage",
+            "ko": "복용량"
+          },
+          "kind": "text"
+        },
+        {
+          "key": "medication-notes",
+          "label": {
+            "en": "notes",
+            "ko": "메모"
+          },
+          "kind": "text"
+        }
+      ]
+    }
+  ],
+  "capabilities": {
+    "autofill": "none"
+  }
+}

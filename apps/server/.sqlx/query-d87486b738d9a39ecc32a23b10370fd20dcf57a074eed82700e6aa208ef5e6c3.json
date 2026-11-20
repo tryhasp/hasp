@@ -1,0 +1,12 @@
+{
+  "db_name": "SQLite",
+  "query": "INSERT INTO session_tokens (token_hash, session_id) VALUES (?, ?) ON CONFLICT (token_hash) DO UPDATE SET session_id = excluded.session_id",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Right": 2
+    },
+    "nullable": []
+  },
+  "hash": "d87486b738d9a39ecc32a23b10370fd20dcf57a074eed82700e6aa208ef5e6c3"
+}

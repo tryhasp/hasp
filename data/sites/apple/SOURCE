@@ -1,0 +1,3 @@
+apple/password-manager-resources commit 8a7fed384b20b023ccaedd4dd35ba01111f554d9 (main, fetched 2026-11-18)
+files: quirks/{password-rules,shared-credentials,shared-credentials-historical,change-password-URLs,websites-that-append-2fa-to-password}.json
+license: MIT (LICENSE.md)

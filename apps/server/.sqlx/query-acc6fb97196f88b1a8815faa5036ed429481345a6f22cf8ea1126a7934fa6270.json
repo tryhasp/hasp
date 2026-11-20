@@ -1,0 +1,62 @@
+{
+  "db_name": "SQLite",
+  "query": "SELECT vault_id, rver, roster, seq FROM rosters WHERE vault_id = ? AND rver = ?",
+  "describe": {
+    "columns": [
+      {
+        "name": "vault_id",
+        "ordinal": 0,
+        "type_info": "Blob",
+        "origin": {
+          "Table": {
+            "table": "rosters",
+            "name": "vault_id"
+          }
+        }
+      },
+      {
+        "name": "rver",
+        "ordinal": 1,
+        "type_info": "Integer",
+        "origin": {
+          "Table": {
+            "table": "rosters",
+            "name": "rver"
+          }
+        }
+      },
+      {
+        "name": "roster",
+        "ordinal": 2,
+        "type_info": "Blob",
+        "origin": {
+          "Table": {
+            "table": "rosters",
+            "name": "roster"
+          }
+        }
+      },
+      {
+        "name": "seq",
+        "ordinal": 3,
+        "type_info": "Integer",
+        "origin": {
+          "Table": {
+            "table": "rosters",
+            "name": "seq"
+          }
+        }
+      }
+    ],
+    "parameters": {
+      "Right": 2
+    },
+    "nullable": [
+      false,
+      false,
+      false,
+      false
+    ]
+  },
+  "hash": "acc6fb97196f88b1a8815faa5036ed429481345a6f22cf8ea1126a7934fa6270"
+}

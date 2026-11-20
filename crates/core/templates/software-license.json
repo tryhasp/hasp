@@ -1,0 +1,147 @@
+{
+  "id": "software-license",
+  "version": 1,
+  "name": {
+    "en": "Software License",
+    "ko": "소프트웨어 라이선스"
+  },
+  "icon": "disc",
+  "import_codes": {
+    "1pux": "100"
+  },
+  "sections": [
+    {
+      "key": "license",
+      "fields": [
+        {
+          "key": "version",
+          "label": {
+            "en": "version",
+            "ko": "버전"
+          },
+          "kind": "text"
+        },
+        {
+          "key": "license-key",
+          "label": {
+            "en": "license key",
+            "ko": "라이선스 키"
+          },
+          "kind": "concealed"
+        },
+        {
+          "key": "licensed-to",
+          "label": {
+            "en": "licensed to",
+            "ko": "사용자"
+          },
+          "kind": "text"
+        },
+        {
+          "key": "registered-email",
+          "label": {
+            "en": "registered email",
+            "ko": "등록 이메일"
+          },
+          "kind": "email",
+          "purpose": "email"
+        },
+        {
+          "key": "company",
+          "label": {
+            "en": "company",
+            "ko": "회사"
+          },
+          "kind": "text",
+          "purpose": "organization"
+        }
+      ]
+    },
+    {
+      "key": "publisher",
+      "title": {
+        "en": "Publisher",
+        "ko": "배포사"
+      },
+      "fields": [
+        {
+          "key": "publisher",
+          "label": {
+            "en": "publisher",
+            "ko": "배포사"
+          },
+          "kind": "text"
+        },
+        {
+          "key": "website",
+          "label": {
+            "en": "website",
+            "ko": "웹사이트"
+          },
+          "kind": "url"
+        },
+        {
+          "key": "support-email",
+          "label": {
+            "en": "support email",
+            "ko": "지원 이메일"
+          },
+          "kind": "email"
+        },
+        {
+          "key": "download-page",
+          "label": {
+            "en": "download page",
+            "ko": "다운로드 페이지"
+          },
+          "kind": "url"
+        }
+      ]
+    },
+    {
+      "key": "order",
+      "title": {
+        "en": "Order",
+        "ko": "주문"
+      },
+      "fields": [
+        {
+          "key": "purchase-date",
+          "label": {
+            "en": "purchase date",
+            "ko": "구매일"
+          },
+          "kind": "date"
+        },
+        {
+          "key": "order-number",
+          "label": {
+            "en": "order number",
+            "ko": "주문 번호"
+          },
+          "kind": "text"
+        },
+        {
+          "key": "order-total",
+          "label": {
+            "en": "order total",
+            "ko": "주문 금액"
+          },
+          "kind": "text"
+        },
+        {
+          "key": "retail-price",
+          "label": {
+            "en": "retail price",
+            "ko": "정가"
+          },
+          "kind": "text"
+        }
+      ]
+    }
+  ],
+  "capabilities": {
+    "autofill": "none",
+    "supports_urls": true
+  }
+}

@@ -1,0 +1,5 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><title>sign in</title></head><body>
+<div id="root"><form id="s1"><input id="u" name="username" autocomplete="username"><button type="button" id="next">Continue</button></form></div>
+<script>
+document.addEventListener("click",(e)=>{if(e.target&&e.target.id==="next"){setTimeout(()=>{document.getElementById("root").innerHTML='<form id="s2"><input id="p" type="password" name="password" autocomplete="current-password"><button type="button" id="go">Sign in</button></form>'},100)}});
+</script></body></html>

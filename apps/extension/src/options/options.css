@@ -1,0 +1,79 @@
+@import '../ui/base.css';
+
+body {
+  max-width: var(--size-settings-width);
+  margin: 0 auto;
+  padding: var(--space-s24) var(--space-s32);
+}
+
+h1 {
+  font-size: var(--type-title-settings-size);
+  font-weight: var(--font-weight-semibold);
+  margin-bottom: var(--space-s16);
+}
+
+section {
+  background: var(--color-group);
+  border-radius: var(--radius-group);
+  padding: var(--space-s16) var(--space-s20);
+  margin-bottom: var(--space-s16);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-s12);
+}
+
+h2 {
+  font-size: var(--type-body-strong-size);
+  font-weight: var(--font-weight-semibold);
+}
+
+.line {
+  display: flex;
+  align-items: center;
+  gap: var(--space-s12);
+}
+
+.line label.key {
+  width: 220px;
+  flex: none;
+}
+
+.line .field {
+  width: var(--size-settings-field-width);
+  height: var(--size-control-height-settings);
+}
+
+.glyphs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-s6);
+  width: 252px;
+}
+
+.glyph {
+  width: var(--size-glyph-button);
+  height: var(--size-glyph-button);
+  border: var(--border-hairline) solid var(--color-control-border);
+  border-radius: var(--radius-card);
+  display: grid;
+  place-items: center;
+}
+
+.glyph svg {
+  width: var(--size-glyph-button);
+  height: var(--size-glyph-button);
+  padding: var(--space-s10);
+  fill: currentColor;
+}
+
+.glyph[aria-checked='true'] {
+  background: var(--color-accent);
+  border-color: var(--color-accent);
+  color: var(--color-on-accent);
+}
+
+.preview {
+  display: flex;
+  align-items: center;
+  gap: var(--space-s14);
+}

@@ -1,0 +1,124 @@
+{
+  "id": "passport",
+  "version": 1,
+  "name": {
+    "en": "Passport",
+    "ko": "여권"
+  },
+  "icon": "passport",
+  "import_codes": {
+    "1pux": "106"
+  },
+  "sections": [
+    {
+      "key": "passport",
+      "fields": [
+        {
+          "key": "type",
+          "label": {
+            "en": "type",
+            "ko": "종류"
+          },
+          "kind": "text"
+        },
+        {
+          "key": "issuing-country",
+          "label": {
+            "en": "issuing country",
+            "ko": "발행국"
+          },
+          "kind": "text",
+          "purpose": "country"
+        },
+        {
+          "key": "number",
+          "label": {
+            "en": "number",
+            "ko": "여권 번호"
+          },
+          "kind": "text",
+          "concealed": true
+        },
+        {
+          "key": "full-name",
+          "label": {
+            "en": "full name",
+            "ko": "이름"
+          },
+          "kind": "text",
+          "purpose": "name"
+        },
+        {
+          "key": "sex",
+          "label": {
+            "en": "sex",
+            "ko": "성별"
+          },
+          "kind": "menu",
+          "options": [
+            "Male",
+            "Female",
+            "Other"
+          ]
+        },
+        {
+          "key": "birth-date",
+          "label": {
+            "en": "birth date",
+            "ko": "생년월일"
+          },
+          "kind": "date",
+          "purpose": "birthday"
+        },
+        {
+          "key": "place-of-birth",
+          "label": {
+            "en": "place of birth",
+            "ko": "출생지"
+          },
+          "kind": "text"
+        },
+        {
+          "key": "nationality",
+          "label": {
+            "en": "nationality",
+            "ko": "국적"
+          },
+          "kind": "text"
+        },
+        {
+          "key": "issuing-authority",
+          "label": {
+            "en": "issuing authority",
+            "ko": "발행 기관"
+          },
+          "kind": "text"
+        },
+        {
+          "key": "issued-on",
+          "label": {
+            "en": "date of issue",
+            "ko": "발급일"
+          },
+          "kind": "date"
+        },
+        {
+          "key": "expiry-date",
+          "label": {
+            "en": "expiry date",
+            "ko": "만료일"
+          },
+          "kind": "date",
+          "expires_alert_default": true
+        }
+      ]
+    }
+  ],
+  "capabilities": {
+    "autofill": "none",
+    "watchtower": [
+      "expiring"
+    ],
+    "expiry_window_days": 300
+  }
+}

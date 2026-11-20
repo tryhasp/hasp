@@ -1,0 +1,40 @@
+{
+  "id": "social-security-number",
+  "version": 1,
+  "name": {
+    "en": "Social Security Number",
+    "ko": "사회보장번호"
+  },
+  "icon": "shield",
+  "import_codes": {
+    "1pux": "108"
+  },
+  "sections": [
+    {
+      "key": "number",
+      "fields": [
+        {
+          "key": "name",
+          "label": {
+            "en": "name",
+            "ko": "이름"
+          },
+          "kind": "text",
+          "purpose": "name"
+        },
+        {
+          "key": "number",
+          "label": {
+            "en": "number",
+            "ko": "번호"
+          },
+          "kind": "text",
+          "concealed": true
+        }
+      ]
+    }
+  ],
+  "capabilities": {
+    "autofill": "none"
+  }
+}

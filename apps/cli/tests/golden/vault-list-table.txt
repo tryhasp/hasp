@@ -1,0 +1,2 @@
+ID                                NAME     KIND     ROLE   MEMBERS  CONFIRMED  QUARANTINED
+<id>  Private  private  owner  1        true       false

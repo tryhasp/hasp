@@ -1,0 +1,12 @@
+{
+  "db_name": "SQLite",
+  "query": "INSERT INTO shares (vault_id, epoch, account_id, share, seq) VALUES (?, ?, ?, ?, ?) ON CONFLICT (vault_id, epoch, account_id) DO UPDATE SET share = excluded.share, seq = excluded.seq",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Right": 5
+    },
+    "nullable": []
+  },
+  "hash": "d7b1af1019a9c6c9b13b6335a3d303755d4c858bd7a5727e5d88af12b042e2d0"
+}

@@ -1,0 +1,50 @@
+{
+  "db_name": "SQLite",
+  "query": "SELECT att_id, idx, digest FROM attachment_chunks ORDER BY att_id, idx",
+  "describe": {
+    "columns": [
+      {
+        "name": "att_id",
+        "ordinal": 0,
+        "type_info": "Blob",
+        "origin": {
+          "Table": {
+            "table": "attachment_chunks",
+            "name": "att_id"
+          }
+        }
+      },
+      {
+        "name": "idx",
+        "ordinal": 1,
+        "type_info": "Integer",
+        "origin": {
+          "Table": {
+            "table": "attachment_chunks",
+            "name": "idx"
+          }
+        }
+      },
+      {
+        "name": "digest",
+        "ordinal": 2,
+        "type_info": "Blob",
+        "origin": {
+          "Table": {
+            "table": "attachment_chunks",
+            "name": "digest"
+          }
+        }
+      }
+    ],
+    "parameters": {
+      "Right": 0
+    },
+    "nullable": [
+      false,
+      false,
+      false
+    ]
+  },
+  "hash": "cbcd073b58c421f16d5e982dc48f3d01f744e85cad7aaca680e433e53373c6d6"
+}

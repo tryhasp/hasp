@@ -1,0 +1,113 @@
+{
+  "id": "database",
+  "version": 1,
+  "name": {
+    "en": "Database",
+    "ko": "데이터베이스"
+  },
+  "icon": "database",
+  "import_codes": {
+    "1pux": "102"
+  },
+  "sections": [
+    {
+      "key": "database",
+      "fields": [
+        {
+          "key": "type",
+          "label": {
+            "en": "type",
+            "ko": "종류"
+          },
+          "kind": "menu",
+          "options": [
+            "PostgreSQL",
+            "MySQL",
+            "MariaDB",
+            "Microsoft SQL",
+            "Oracle",
+            "SQLite",
+            "MongoDB",
+            "Redis",
+            "Other"
+          ]
+        },
+        {
+          "key": "server",
+          "label": {
+            "en": "server",
+            "ko": "서버"
+          },
+          "kind": "text",
+          "purpose": "hostname"
+        },
+        {
+          "key": "port",
+          "label": {
+            "en": "port",
+            "ko": "포트"
+          },
+          "kind": "text"
+        },
+        {
+          "key": "database",
+          "label": {
+            "en": "database",
+            "ko": "데이터베이스"
+          },
+          "kind": "text"
+        },
+        {
+          "key": "username",
+          "label": {
+            "en": "username",
+            "ko": "사용자 이름"
+          },
+          "kind": "text",
+          "purpose": "username"
+        },
+        {
+          "key": "password",
+          "label": {
+            "en": "password",
+            "ko": "비밀번호"
+          },
+          "kind": "concealed",
+          "purpose": "password"
+        },
+        {
+          "key": "sid",
+          "label": {
+            "en": "SID",
+            "ko": "SID"
+          },
+          "kind": "text"
+        },
+        {
+          "key": "alias",
+          "label": {
+            "en": "alias",
+            "ko": "별칭"
+          },
+          "kind": "text"
+        },
+        {
+          "key": "options",
+          "label": {
+            "en": "connection options",
+            "ko": "연결 옵션"
+          },
+          "kind": "text"
+        }
+      ]
+    }
+  ],
+  "capabilities": {
+    "autofill": "none",
+    "watchtower": [
+      "vulnerable",
+      "reused",
+      "weak"
+    ]
+  }
+}

@@ -1,0 +1,92 @@
+{
+  "id": "membership",
+  "version": 1,
+  "name": {
+    "en": "Membership",
+    "ko": "멤버십"
+  },
+  "icon": "badge",
+  "import_codes": {
+    "1pux": "105"
+  },
+  "sections": [
+    {
+      "key": "membership",
+      "fields": [
+        {
+          "key": "group",
+          "label": {
+            "en": "group",
+            "ko": "단체"
+          },
+          "kind": "text"
+        },
+        {
+          "key": "website",
+          "label": {
+            "en": "website",
+            "ko": "웹사이트"
+          },
+          "kind": "url"
+        },
+        {
+          "key": "phone",
+          "label": {
+            "en": "telephone",
+            "ko": "전화번호"
+          },
+          "kind": "phone"
+        },
+        {
+          "key": "member-name",
+          "label": {
+            "en": "member name",
+            "ko": "회원 이름"
+          },
+          "kind": "text",
+          "purpose": "name"
+        },
+        {
+          "key": "member-id",
+          "label": {
+            "en": "member ID",
+            "ko": "회원 번호"
+          },
+          "kind": "text"
+        },
+        {
+          "key": "member-since",
+          "label": {
+            "en": "member since",
+            "ko": "가입일"
+          },
+          "kind": "month-year"
+        },
+        {
+          "key": "expiry-date",
+          "label": {
+            "en": "expiry date",
+            "ko": "만료일"
+          },
+          "kind": "month-year",
+          "expires_alert_default": true
+        },
+        {
+          "key": "pin",
+          "label": {
+            "en": "PIN",
+            "ko": "PIN"
+          },
+          "kind": "concealed"
+        }
+      ]
+    }
+  ],
+  "capabilities": {
+    "autofill": "none",
+    "watchtower": [
+      "expiring"
+    ],
+    "expiry_window_days": 60
+  }
+}

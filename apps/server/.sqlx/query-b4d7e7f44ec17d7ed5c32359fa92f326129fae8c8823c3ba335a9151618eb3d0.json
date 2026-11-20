@@ -1,0 +1,12 @@
+{
+  "db_name": "SQLite",
+  "query": "INSERT INTO vaults (vault_id, kind, owner, head_seq, head_hash, rver, epoch, state, dissolve, created) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?) ON CONFLICT (vault_id) DO UPDATE SET kind = excluded.kind, owner = excluded.owner, head_seq = excluded.head_seq, head_hash = excluded.head_hash, rver = excluded.rver, epoch = excluded.epoch, state = excluded.state, dissolve = excluded.dissolve, created = excluded.created",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Right": 10
+    },
+    "nullable": []
+  },
+  "hash": "b4d7e7f44ec17d7ed5c32359fa92f326129fae8c8823c3ba335a9151618eb3d0"
+}

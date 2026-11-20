@@ -1,0 +1,3 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><title>sign in</title></head><body>
+<div id="root"><form id="f"><input id="u" name="username" autocomplete="username"><input id="p" type="password" name="password"><button type="submit">Sign in</button></form></div>
+<script>document.getElementById("f").addEventListener("submit",(e)=>{e.preventDefault();setTimeout(()=>{document.getElementById("root").innerHTML="<p>Welcome</p>"},150)});</script></body></html>

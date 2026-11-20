@@ -1,0 +1,38 @@
+{
+  "db_name": "SQLite",
+  "query": "SELECT token_hash, session_id FROM session_tokens WHERE (token_hash) >= (?) AND (token_hash) <= (?) ORDER BY token_hash",
+  "describe": {
+    "columns": [
+      {
+        "name": "token_hash",
+        "ordinal": 0,
+        "type_info": "Blob",
+        "origin": {
+          "Table": {
+            "table": "session_tokens",
+            "name": "token_hash"
+          }
+        }
+      },
+      {
+        "name": "session_id",
+        "ordinal": 1,
+        "type_info": "Blob",
+        "origin": {
+          "Table": {
+            "table": "session_tokens",
+            "name": "session_id"
+          }
+        }
+      }
+    ],
+    "parameters": {
+      "Right": 2
+    },
+    "nullable": [
+      false,
+      false
+    ]
+  },
+  "hash": "5357082bd7afdbce364bd08576aacb9dc2d780b5d30e14862bd6e3a546bf50ee"
+}

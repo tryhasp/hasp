@@ -1,0 +1,110 @@
+{
+  "db_name": "SQLite",
+  "query": "SELECT invite_id, vault_id, inviter, role, expires, state, invitee, accept FROM invites WHERE invite_id = ?",
+  "describe": {
+    "columns": [
+      {
+        "name": "invite_id",
+        "ordinal": 0,
+        "type_info": "Blob",
+        "origin": {
+          "Table": {
+            "table": "invites",
+            "name": "invite_id"
+          }
+        }
+      },
+      {
+        "name": "vault_id",
+        "ordinal": 1,
+        "type_info": "Blob",
+        "origin": {
+          "Table": {
+            "table": "invites",
+            "name": "vault_id"
+          }
+        }
+      },
+      {
+        "name": "inviter",
+        "ordinal": 2,
+        "type_info": "Blob",
+        "origin": {
+          "Table": {
+            "table": "invites",
+            "name": "inviter"
+          }
+        }
+      },
+      {
+        "name": "role",
+        "ordinal": 3,
+        "type_info": "Integer",
+        "origin": {
+          "Table": {
+            "table": "invites",
+            "name": "role"
+          }
+        }
+      },
+      {
+        "name": "expires",
+        "ordinal": 4,
+        "type_info": "Integer",
+        "origin": {
+          "Table": {
+            "table": "invites",
+            "name": "expires"
+          }
+        }
+      },
+      {
+        "name": "state",
+        "ordinal": 5,
+        "type_info": "Integer",
+        "origin": {
+          "Table": {
+            "table": "invites",
+            "name": "state"
+          }
+        }
+      },
+      {
+        "name": "invitee",
+        "ordinal": 6,
+        "type_info": "Blob",
+        "origin": {
+          "Table": {
+            "table": "invites",
+            "name": "invitee"
+          }
+        }
+      },
+      {
+        "name": "accept",
+        "ordinal": 7,
+        "type_info": "Blob",
+        "origin": {
+          "Table": {
+            "table": "invites",
+            "name": "accept"
+          }
+        }
+      }
+    ],
+    "parameters": {
+      "Right": 1
+    },
+    "nullable": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      true,
+      true
+    ]
+  },
+  "hash": "8da25544593e64f0f5883f10bf29c4310e04f4f99c37d94a96d203ab475d5dd9"
+}

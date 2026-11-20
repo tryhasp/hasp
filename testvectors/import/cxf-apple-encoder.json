@@ -1,0 +1,102 @@
+{
+  "accounts" : [
+    {
+      "collections" : [
+        {
+          "id" : "BQ",
+          "items" : [
+            {
+              "item" : "AQID"
+            }
+          ],
+          "title" : "Work"
+        }
+      ],
+      "email" : "e@x.com",
+      "fullName" : "U",
+      "id" : "CQk",
+      "items" : [
+        {
+          "creationAt" : 1700000000,
+          "credentials" : [
+            {
+              "password" : {
+                "fieldType" : "concealed-string",
+                "value" : "pw123"
+              },
+              "type" : "basic-auth",
+              "username" : {
+                "fieldType" : "string",
+                "value" : "alice"
+              }
+            },
+            {
+              "algorithm" : "sha1",
+              "digits" : 6,
+              "issuer" : "Ex",
+              "period" : 30,
+              "secret" : "AEBAGBAFAYDQQCIK",
+              "type" : "totp",
+              "username" : "alice"
+            },
+            {
+              "credentialId" : "AQIDBA",
+              "key" : "MIGHAgEAMBMGByqGSM49AgEGCCqGSM49AwEHBG0wawIBAQQgDy6HVGZo1WvABGtdfObziOYd2VXdLKyrCsomiYxASr2hRANCAATVDeEJZwbRpKntvTADAzR5Z6RzQXXz14tj7k_9Wt59hVAHjKrcEarBG0aUOooiHGv5q_q3w3EJUfwa6JD1FGLZ",
+              "rpId" : "example.com",
+              "type" : "passkey",
+              "userDisplayName" : "Alice",
+              "userHandle" : "Bwc",
+              "username" : "alice"
+            },
+            {
+              "expiryDate" : {
+                "fieldType" : "year-month",
+                "value" : "2030-12"
+              },
+              "fullName" : {
+                "fieldType" : "string",
+                "value" : "A B"
+              },
+              "number" : {
+                "fieldType" : "string",
+                "value" : "4111111111111111"
+              },
+              "type" : "credit-card"
+            },
+            {
+              "content" : {
+                "fieldType" : "string",
+                "value" : "hello"
+              },
+              "type" : "note"
+            }
+          ],
+          "favorite" : true,
+          "id" : "AQID",
+          "modifiedAt" : 1700000100,
+          "scope" : {
+            "androidApps" : [
+
+            ],
+            "urls" : [
+              "https:\/\/example.com"
+            ]
+          },
+          "subtitle" : "me",
+          "tags" : [
+            "a"
+          ],
+          "title" : "Example"
+        }
+      ],
+      "username" : "u"
+    }
+  ],
+  "exporterDisplayName" : "Passwords",
+  "exporterRpId" : "com.apple.Passwords",
+  "timestamp" : 1700000200,
+  "version" : {
+    "major" : 1,
+    "minor" : 0
+  }
+}

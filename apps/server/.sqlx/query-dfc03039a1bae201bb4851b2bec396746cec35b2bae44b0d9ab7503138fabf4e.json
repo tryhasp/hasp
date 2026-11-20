@@ -1,0 +1,74 @@
+{
+  "db_name": "SQLite",
+  "query": "SELECT vault_id, epoch, account_id, share, seq FROM shares WHERE vault_id = ? AND epoch = ? AND account_id = ?",
+  "describe": {
+    "columns": [
+      {
+        "name": "vault_id",
+        "ordinal": 0,
+        "type_info": "Blob",
+        "origin": {
+          "Table": {
+            "table": "shares",
+            "name": "vault_id"
+          }
+        }
+      },
+      {
+        "name": "epoch",
+        "ordinal": 1,
+        "type_info": "Integer",
+        "origin": {
+          "Table": {
+            "table": "shares",
+            "name": "epoch"
+          }
+        }
+      },
+      {
+        "name": "account_id",
+        "ordinal": 2,
+        "type_info": "Blob",
+        "origin": {
+          "Table": {
+            "table": "shares",
+            "name": "account_id"
+          }
+        }
+      },
+      {
+        "name": "share",
+        "ordinal": 3,
+        "type_info": "Blob",
+        "origin": {
+          "Table": {
+            "table": "shares",
+            "name": "share"
+          }
+        }
+      },
+      {
+        "name": "seq",
+        "ordinal": 4,
+        "type_info": "Integer",
+        "origin": {
+          "Table": {
+            "table": "shares",
+            "name": "seq"
+          }
+        }
+      }
+    ],
+    "parameters": {
+      "Right": 3
+    },
+    "nullable": [
+      false,
+      false,
+      false,
+      false,
+      false
+    ]
+  },
+  "hash": "dfc03039a1bae201bb4851b2bec396746cec35b2bae44b0d9ab7503138fabf4e"
+}

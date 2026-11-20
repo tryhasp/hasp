@@ -1,0 +1,127 @@
+name: ci
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+concurrency:
+  group: ci-${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+env:
+  SQLX_OFFLINE: "true"
+  CARGO_INCREMENTAL: "0"
+
+jobs:
+  changes:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions:
+      contents: read
+      pull-requests: read
+    outputs:
+      apple: ${{ steps.filter.outputs.apple }}
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: dorny/paths-filter@ceb8a2b8f2d89434be7ff52d3de7ec3738c5cc9d # v4.0.3
+        id: filter
+        with:
+          filters: |
+            apple:
+              - 'apps/apple/**'
+              - 'crates/uniffi/**'
+              - 'crates/core/**'
+              - 'crates/crypto/**'
+              - 'crates/proto/**'
+              - 'testvectors/**'
+              - 'crates/nmh/**'
+              - 'crates/boundary/**'
+              - 'crates/wasm/**'
+              - 'apps/extension/**'
+              - 'packages/**'
+              - 'design/**'
+              - 'mise.toml'
+              - 'pnpm-lock.yaml'
+              - '.github/workflows/ci.yml'
+
+  core:
+    runs-on: ubuntu-latest
+    env:
+      MISE_DISABLE_TOOLS: node,pnpm,xcodegen,cargo:wasm-bindgen-cli
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: jdx/mise-action@d5574b52816a478f9d4e6529a3f6ff17a8a36785 # v5.2.8
+        with:
+          cache_key_prefix: mise-core
+      - uses: Swatinem/rust-cache@d1527c8f67ef9af357290475d4af4b0fab8f12e0 # v2.9.3
+        with:
+          shared-key: core
+      - run: mise exec -- rustup toolchain install 1.98.0 --profile minimal -c clippy -c rustfmt
+      - run: mise run check
+
+  e2e:
+    runs-on: ubuntu-latest
+    env:
+      MISE_DISABLE_TOOLS: node,pnpm,xcodegen,cargo:wasm-bindgen-cli,cargo-deny
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: jdx/mise-action@d5574b52816a478f9d4e6529a3f6ff17a8a36785 # v5.2.8
+        with:
+          cache_key_prefix: mise-e2e
+      - uses: Swatinem/rust-cache@d1527c8f67ef9af357290475d4af4b0fab8f12e0 # v2.9.3
+        with:
+          shared-key: e2e
+      - run: mise exec -- rustup toolchain install 1.98.0 --profile minimal -c clippy -c rustfmt
+      - run: mise run e2e
+
+  ts:
+    runs-on: ubuntu-latest
+    env:
+      MISE_DISABLE_TOOLS: xcodegen,cargo-deny,aqua:nextest-rs/nextest/cargo-nextest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: jdx/mise-action@d5574b52816a478f9d4e6529a3f6ff17a8a36785 # v5.2.8
+        with:
+          cache_key_prefix: mise-ts
+      - uses: Swatinem/rust-cache@d1527c8f67ef9af357290475d4af4b0fab8f12e0 # v2.9.3
+        with:
+          shared-key: ts
+      - run: mise exec -- rustup toolchain install 1.98.0 --profile minimal -c clippy -c rustfmt -t wasm32-unknown-unknown
+      - run: mise run ts-check
+
+  apple:
+    needs: changes
+    if: needs.changes.outputs.apple == 'true'
+    runs-on: xcode-27
+    env:
+      DEVELOPER_DIR: /Applications/Xcode_27.2.app
+      MISE_DISABLE_TOOLS: cargo-deny,aqua:nextest-rs/nextest/cargo-nextest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: jdx/mise-action@d5574b52816a478f9d4e6529a3f6ff17a8a36785 # v5.2.8
+        with:
+          cache_key_prefix: mise-apple
+      - uses: Swatinem/rust-cache@d1527c8f67ef9af357290475d4af4b0fab8f12e0 # v2.9.3
+        with:
+          shared-key: apple
+      - run: mise exec -- rustup toolchain install 1.98.0 --profile minimal -c clippy -c rustfmt -t aarch64-apple-darwin -t aarch64-apple-ios -t aarch64-apple-ios-sim -t wasm32-unknown-unknown
+      - run: mise run apple-check
+

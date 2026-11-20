@@ -1,0 +1,17 @@
+msrv = "1.98"
+allow-unwrap-in-tests = true
+allow-expect-in-tests = true
+allow-panic-in-tests = true
+allow-indexing-slicing-in-tests = true
+allow-dbg-in-tests = true
+allow-print-in-tests = true
+too-many-arguments-threshold = 5
+doc-valid-idents = ["..", "UniFFI", "XChaCha20", "XChaCha20Poly1305", "Argon2id", "WebAssembly", "WebAuthn"]
+disallowed-methods = [
+    { path = "std::mem::forget", reason = "skips Drop, so secrets are never zeroized" },
+    { path = "std::thread::sleep", reason = "blocks the executor; use tokio::time or an injected clock" },
+]
+disallowed-types = [
+    { path = "std::collections::HashMap", reason = "iteration order is random; use BTreeMap for anything encoded or hashed" },
+    { path = "std::collections::HashSet", reason = "iteration order is random; use BTreeSet for anything encoded or hashed" },
+]

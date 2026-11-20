@@ -1,0 +1,101 @@
+{
+  "id": "wireless-router",
+  "version": 1,
+  "name": {
+    "en": "Wireless Router",
+    "ko": "무선 공유기"
+  },
+  "icon": "wifi",
+  "import_codes": {
+    "1pux": "109"
+  },
+  "sections": [
+    {
+      "key": "router",
+      "fields": [
+        {
+          "key": "base-station-name",
+          "label": {
+            "en": "base station name",
+            "ko": "공유기 이름"
+          },
+          "kind": "text"
+        },
+        {
+          "key": "base-station-password",
+          "label": {
+            "en": "base station password",
+            "ko": "공유기 비밀번호"
+          },
+          "kind": "concealed",
+          "purpose": "password"
+        },
+        {
+          "key": "server",
+          "label": {
+            "en": "server / IP address",
+            "ko": "서버 / IP 주소"
+          },
+          "kind": "text",
+          "purpose": "hostname"
+        },
+        {
+          "key": "airport-id",
+          "label": {
+            "en": "AirPort ID",
+            "ko": "AirPort ID"
+          },
+          "kind": "text"
+        },
+        {
+          "key": "network-name",
+          "label": {
+            "en": "network name",
+            "ko": "네트워크 이름"
+          },
+          "kind": "text"
+        },
+        {
+          "key": "wireless-security",
+          "label": {
+            "en": "wireless security",
+            "ko": "보안 방식"
+          },
+          "kind": "menu",
+          "options": [
+            "None",
+            "WEP",
+            "WPA",
+            "WPA2-Personal",
+            "WPA3-Personal",
+            "WPA2-Enterprise",
+            "WPA3-Enterprise"
+          ]
+        },
+        {
+          "key": "wireless-password",
+          "label": {
+            "en": "wireless network password",
+            "ko": "Wi-Fi 비밀번호"
+          },
+          "kind": "concealed"
+        },
+        {
+          "key": "attached-storage-password",
+          "label": {
+            "en": "attached storage password",
+            "ko": "저장장치 비밀번호"
+          },
+          "kind": "concealed"
+        }
+      ]
+    }
+  ],
+  "capabilities": {
+    "autofill": "none",
+    "watchtower": [
+      "reused",
+      "weak"
+    ]
+  }
+}

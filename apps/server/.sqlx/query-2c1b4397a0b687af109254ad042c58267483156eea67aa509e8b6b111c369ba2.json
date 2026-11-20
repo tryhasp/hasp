@@ -1,0 +1,12 @@
+{
+  "db_name": "SQLite",
+  "query": "INSERT INTO items (vault_id, item_id, ver, epoch, wire, h_item, tomb, size, seq, current) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?) ON CONFLICT (vault_id, item_id, ver, epoch) DO UPDATE SET wire = excluded.wire, h_item = excluded.h_item, tomb = excluded.tomb, size = excluded.size, seq = excluded.seq, current = excluded.current",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Right": 10
+    },
+    "nullable": []
+  },
+  "hash": "2c1b4397a0b687af109254ad042c58267483156eea67aa509e8b6b111c369ba2"
+}

@@ -1,0 +1,12 @@
+{
+  "db_name": "SQLite",
+  "query": "INSERT INTO enrol_channels (esid, account_id, session_id, expires, state, slots, attempts) VALUES (?, ?, ?, ?, ?, ?, ?) ON CONFLICT (esid) DO UPDATE SET account_id = excluded.account_id, session_id = excluded.session_id, expires = excluded.expires, state = excluded.state, slots = excluded.slots, attempts = excluded.attempts",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Right": 7
+    },
+    "nullable": []
+  },
+  "hash": "0b34edcf6ba6b413f5b54894c85c50138c1da72d6096e1e3eaba49c07788682f"
+}

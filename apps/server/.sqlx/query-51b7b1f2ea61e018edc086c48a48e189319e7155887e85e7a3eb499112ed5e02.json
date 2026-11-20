@@ -1,0 +1,12 @@
+{
+  "db_name": "SQLite",
+  "query": "INSERT INTO attachments (att_id, vault_id, size, chunks, state, created, refs) VALUES (?, ?, ?, ?, ?, ?, ?) ON CONFLICT (att_id) DO UPDATE SET vault_id = excluded.vault_id, size = excluded.size, chunks = excluded.chunks, state = excluded.state, created = excluded.created, refs = excluded.refs",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Right": 7
+    },
+    "nullable": []
+  },
+  "hash": "51b7b1f2ea61e018edc086c48a48e189319e7155887e85e7a3eb499112ed5e02"
+}

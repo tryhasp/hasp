@@ -1,0 +1,86 @@
+[graph]
+all-features = true
+
+[advisories]
+unmaintained = "workspace"
+yanked = "deny"
+ignore = [
+    { id = "RUSTSEC-2026-0387", reason = "crypto-bigint 0.5.5 enters only as elliptic-curve 0.13 trait bounds (opaque-ke 4.0.1, voprf); the ristretto255 path uses curve25519-dalek scalars and ExpandMsgXmd, calls no crypto-bigint arithmetic, and the advisory names UintRef and BoxedMontyForm, which 0.5.5 lacks; no fix exists in the 0.5 line; drop with opaque-ke 5 (elliptic-curve 0.14, crypto-bigint 0.7); expires 2026-12-18" },
+    { id = "RUSTSEC-2026-0459", reason = "libsqlite3-sys 0.37.0 (bundled SQLite below 3.54) is the newest sqlx-sqlite 0.9.0 accepts (<0.38); the flaw needs a database file paired with a crafted -wal file written by an attacker, and haspd creates its data directory 0700 and every file in it 0600 (database, -wal, snapshots, backups) and refuses a server.key readable by others, so no other user can plant a -wal, and VACUUM INTO snapshots carry no -wal; sqlx 0.9.1 accepts libsqlite3-sys 0.39.1 but is under the 7-day age rule until 2026-11-25; bump both then; expires 2026-11-25" },
+]
+
+[licenses]
+private = { ignore = true }
+confidence-threshold = 0.9
+allow = [
+    "Apache-2.0",
+    "MIT",
+    "BSD-3-Clause",
+    "MPL-2.0",
+    "CC0-1.0",
+    "Unicode-3.0",
+    "Zlib",
+    "ISC",
+    "CDLA-Permissive-2.0",
+]
+
+[bans]
+multiple-versions = "deny"
+wildcards = "deny"
+allow-wildcard-paths = true
+highlight = "all"
+skip = [
+    { crate = "syn@2", reason = "zeroize_derive and thiserror-impl on syn 2 while others use syn 3; expires with the next zeroize release" },
+    { crate = "digest@0.10", reason = "opaque-ke 4.0.1 on RustCrypto 0.10 generation; ends with opaque-ke 5" },
+    { crate = "block-buffer@0.10", reason = "opaque-ke 4.0.1 on RustCrypto 0.10 generation; ends with opaque-ke 5" },
+    { crate = "crypto-common@0.1", reason = "opaque-ke 4.0.1 on RustCrypto 0.10 generation; ends with opaque-ke 5" },
+    { crate = "hkdf@0.12", reason = "opaque-ke 4.0.1 on RustCrypto 0.10 generation; ends with opaque-ke 5" },
+    { crate = "hmac@0.12", reason = "opaque-ke 4.0.1 on RustCrypto 0.10 generation; ends with opaque-ke 5" },
+    { crate = "sha2@0.10", reason = "opaque-ke 4.0.1 (voprf) on RustCrypto 0.10 generation; hasp-crypto names it as sha2-legacy for the OPAQUE suite; ends with opaque-ke 5" },
+    { crate = "curve25519-dalek@4", reason = "opaque-ke 4.0.1 and voprf on curve25519-dalek 4; ed25519-dalek 3 uses 5; ends with opaque-ke 5" },
+    { crate = "fiat-crypto@0.2", reason = "curve25519-dalek 4 (opaque-ke 4.0.1); ends with opaque-ke 5" },
+    { crate = "cpufeatures@0.2", reason = "RustCrypto 0.10 generation crates via opaque-ke 4.0.1; ends with opaque-ke 5" },
+    { crate = "rand_core@0.6", reason = "opaque-ke 4.0.1 and curve25519-dalek 4 on rand_core 0.6; ends with opaque-ke 5" },
+    { crate = "base64@0.22", reason = "axum 0.8.9 and sqlx-core 0.9.0 on base64 0.22 while hyper-util is on 0.23; ends with their next releases" },
+    { crate = "sha1@0.10", reason = "axum 0.8.9 and tungstenite 0.29.0 on the RustCrypto 0.10 generation for the WebSocket handshake; ends with their next releases" },
+    { crate = "rand@0.9", reason = "tungstenite 0.29.0 (axum WebSocket, hasp-net) on rand 0.9; ends with its next release" },
+    { crate = "rand_core@0.9", reason = "tungstenite 0.29.0 via rand 0.9; ends with its next release" },
+    { crate = "getrandom@0.3", reason = "tungstenite 0.29.0 via rand 0.9; ends with its next release" },
+    { crate = "r-efi@5", reason = "getrandom 0.3 on r-efi 5 while getrandom 0.4 uses 6; ends with the getrandom 0.3 skip" },
+    { crate = "getrandom@0.2", reason = "ring 0.17.14 (the rustls crypto provider of hasp-net) names getrandom 0.2; ends with a ring release on getrandom 0.3 or later" },
+    { crate = "windows-sys@0.52", reason = "ring 0.17.14 (hasp-net) on windows-sys 0.52; ends with the next ring release" },
+    { crate = "hashbrown@0.15", reason = "indexmap 2.11.2 under the bolero dev-dependency uses 0.15 while sqlx-core via hashlink 0.11 uses 0.16; ends with the next bolero bump" },
+    { crate = "base16ct@0.2", reason = "opaque-ke 4.0.1 (elliptic-curve 0.13) next to p256 0.14 (elliptic-curve 0.14) in hasp-crypto; ends with opaque-ke 5" },
+    { crate = "const-oid@0.9", reason = "opaque-ke 4.0.1 (elliptic-curve 0.13) next to p256 0.14 (elliptic-curve 0.14) in hasp-crypto; ends with opaque-ke 5" },
+    { crate = "crypto-bigint@0.5", reason = "opaque-ke 4.0.1 (elliptic-curve 0.13) next to p256 0.14 (elliptic-curve 0.14) in hasp-crypto; ends with opaque-ke 5" },
+    { crate = "der@0.7", reason = "opaque-ke 4.0.1 (elliptic-curve 0.13) next to p256 0.14 (elliptic-curve 0.14) in hasp-crypto; ends with opaque-ke 5" },
+    { crate = "elliptic-curve@0.13", reason = "opaque-ke 4.0.1 (elliptic-curve 0.13) next to p256 0.14 (elliptic-curve 0.14) in hasp-crypto; ends with opaque-ke 5" },
+    { crate = "ff@0.13", reason = "opaque-ke 4.0.1 (elliptic-curve 0.13) next to p256 0.14 (elliptic-curve 0.14) in hasp-crypto; ends with opaque-ke 5" },
+    { crate = "group@0.13", reason = "opaque-ke 4.0.1 (elliptic-curve 0.13) next to p256 0.14 (elliptic-curve 0.14) in hasp-crypto; ends with opaque-ke 5" },
+    { crate = "sec1@0.7", reason = "opaque-ke 4.0.1 (elliptic-curve 0.13) next to p256 0.14 (elliptic-curve 0.14) in hasp-crypto; ends with opaque-ke 5" },
+    { crate = "winnow@0.7", reason = "uniffi_macros 0.32.2 pulls toml 0.9.6 with winnow 0.7 and 1.0 side by side; hasp-uniffi only; ends with the next uniffi bump" },
+]
+deny = [
+    { crate = "sha2", wrappers = ["hasp-crypto", "ed25519-dalek", "hpke", "voprf", "sqlx-core", "sqlx-macros-core", "p256"], reason = "primitives are imported only by hasp-crypto" },
+    { crate = "sha1", wrappers = ["hasp-crypto", "axum", "tungstenite"], reason = "primitives are imported only by hasp-crypto; axum and tungstenite hash the WebSocket handshake key (RFC 6455), not secrets" },
+    { crate = "hkdf", wrappers = ["hasp-crypto", "opaque-ke", "hpke"], reason = "primitives are imported only by hasp-crypto" },
+    { crate = "hmac", wrappers = ["hasp-crypto", "hkdf", "opaque-ke", "rfc6979"], reason = "primitives are imported only by hasp-crypto" },
+    { crate = "argon2", wrappers = ["hasp-crypto"], reason = "primitives are imported only by hasp-crypto" },
+    { crate = "chacha20poly1305", wrappers = ["hasp-crypto", "hpke"], reason = "primitives are imported only by hasp-crypto" },
+    { crate = "ed25519-dalek", wrappers = ["hasp-crypto"], reason = "primitives are imported only by hasp-crypto" },
+    { crate = "x25519-dalek", wrappers = ["hasp-crypto", "x-wing", "hpke"], reason = "primitives are imported only by hasp-crypto" },
+    { crate = "ml-kem", wrappers = ["hpke", "x-wing"], reason = "primitives are imported only by hasp-crypto" },
+    { crate = "x-wing", wrappers = ["hasp-crypto", "hpke"], reason = "primitives are imported only by hasp-crypto" },
+    { crate = "hpke", wrappers = ["hasp-crypto"], reason = "primitives are imported only by hasp-crypto" },
+    { crate = "opaque-ke", wrappers = ["hasp-crypto"], reason = "primitives are imported only by hasp-crypto" },
+    { crate = "p256", wrappers = ["hasp-crypto"], reason = "primitives are imported only by hasp-crypto" },
+    { crate = "ecdsa", wrappers = ["p256"], reason = "primitives are imported only by hasp-crypto" },
+    { crate = "openssl", reason = "no C TLS stack" },
+    { crate = "native-tls", reason = "rustls only" },
+]
+
+[sources]
+unknown-registry = "deny"
+unknown-git = "deny"
+allow-registry = ["https://github.com/rust-lang/crates.io-index"]
+allow-git = []

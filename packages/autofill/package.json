@@ -1,0 +1,24 @@
+{
+  "name": "@hasp/autofill",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts",
+    "./glyphs": "./src/menu/glyphs.ts"
+  },
+  "scripts": {
+    "e2e": "playwright test",
+    "e2e:install": "playwright install chromium firefox webkit",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "zod": "catalog:"
+  },
+  "devDependencies": {
+    "@playwright/test": "catalog:",
+    "@types/node": "catalog:",
+    "vite": "catalog:",
+    "vitest": "catalog:"
+  }
+}

@@ -1,0 +1,1 @@
+{"data":[{"category":"login","favourite":false,"id":"<id>","modified":1000000,"pending":false,"subtitle":"","tags":[],"title":"GitHub","vault":"Private"}],"schema_version":1}

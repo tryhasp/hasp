@@ -1,0 +1,113 @@
+{
+  "id": "driver-license",
+  "version": 1,
+  "name": {
+    "en": "Driver License",
+    "ko": "운전면허증"
+  },
+  "icon": "car",
+  "import_codes": {
+    "1pux": "103"
+  },
+  "sections": [
+    {
+      "key": "license",
+      "fields": [
+        {
+          "key": "full-name",
+          "label": {
+            "en": "full name",
+            "ko": "이름"
+          },
+          "kind": "text",
+          "purpose": "name"
+        },
+        {
+          "key": "address",
+          "label": {
+            "en": "address",
+            "ko": "주소"
+          },
+          "kind": "address",
+          "purpose": "street-address"
+        },
+        {
+          "key": "birth-date",
+          "label": {
+            "en": "birth date",
+            "ko": "생년월일"
+          },
+          "kind": "date",
+          "purpose": "birthday"
+        },
+        {
+          "key": "height",
+          "label": {
+            "en": "height",
+            "ko": "키"
+          },
+          "kind": "text"
+        },
+        {
+          "key": "number",
+          "label": {
+            "en": "number",
+            "ko": "면허 번호"
+          },
+          "kind": "text",
+          "concealed": true
+        },
+        {
+          "key": "class",
+          "label": {
+            "en": "license class",
+            "ko": "면허 종류"
+          },
+          "kind": "text"
+        },
+        {
+          "key": "conditions",
+          "label": {
+            "en": "conditions / restrictions",
+            "ko": "조건"
+          },
+          "kind": "text"
+        },
+        {
+          "key": "state",
+          "label": {
+            "en": "state",
+            "ko": "주 / 도"
+          },
+          "kind": "text",
+          "purpose": "region"
+        },
+        {
+          "key": "country",
+          "label": {
+            "en": "country",
+            "ko": "국가"
+          },
+          "kind": "text",
+          "purpose": "country"
+        },
+        {
+          "key": "expiry-date",
+          "label": {
+            "en": "expiry date",
+            "ko": "만료일"
+          },
+          "kind": "date",
+          "expires_alert_default": true
+        }
+      ]
+    }
+  ],
+  "capabilities": {
+    "autofill": "none",
+    "watchtower": [
+      "expiring"
+    ],
+    "expiry_window_days": 60
+  }
+}

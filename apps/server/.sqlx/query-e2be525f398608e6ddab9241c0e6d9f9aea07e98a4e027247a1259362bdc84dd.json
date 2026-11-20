@@ -1,0 +1,62 @@
+{
+  "db_name": "SQLite",
+  "query": "SELECT account_id, vault_id, epoch, wrap FROM self_wraps WHERE account_id = ? AND vault_id = ? AND epoch = ?",
+  "describe": {
+    "columns": [
+      {
+        "name": "account_id",
+        "ordinal": 0,
+        "type_info": "Blob",
+        "origin": {
+          "Table": {
+            "table": "self_wraps",
+            "name": "account_id"
+          }
+        }
+      },
+      {
+        "name": "vault_id",
+        "ordinal": 1,
+        "type_info": "Blob",
+        "origin": {
+          "Table": {
+            "table": "self_wraps",
+            "name": "vault_id"
+          }
+        }
+      },
+      {
+        "name": "epoch",
+        "ordinal": 2,
+        "type_info": "Integer",
+        "origin": {
+          "Table": {
+            "table": "self_wraps",
+            "name": "epoch"
+          }
+        }
+      },
+      {
+        "name": "wrap",
+        "ordinal": 3,
+        "type_info": "Blob",
+        "origin": {
+          "Table": {
+            "table": "self_wraps",
+            "name": "wrap"
+          }
+        }
+      }
+    ],
+    "parameters": {
+      "Right": 3
+    },
+    "nullable": [
+      false,
+      false,
+      false,
+      false
+    ]
+  },
+  "hash": "e2be525f398608e6ddab9241c0e6d9f9aea07e98a4e027247a1259362bdc84dd"
+}

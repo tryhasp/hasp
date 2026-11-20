@@ -1,0 +1,86 @@
+{
+  "db_name": "SQLite",
+  "query": "DELETE FROM notices WHERE account_id = ? AND notice_id = ? RETURNING account_id, notice_id, kind, created, vault_id, at",
+  "describe": {
+    "columns": [
+      {
+        "name": "account_id",
+        "ordinal": 0,
+        "type_info": "Blob",
+        "origin": {
+          "Table": {
+            "table": "notices",
+            "name": "account_id"
+          }
+        }
+      },
+      {
+        "name": "notice_id",
+        "ordinal": 1,
+        "type_info": "Integer",
+        "origin": {
+          "Table": {
+            "table": "notices",
+            "name": "notice_id"
+          }
+        }
+      },
+      {
+        "name": "kind",
+        "ordinal": 2,
+        "type_info": "Integer",
+        "origin": {
+          "Table": {
+            "table": "notices",
+            "name": "kind"
+          }
+        }
+      },
+      {
+        "name": "created",
+        "ordinal": 3,
+        "type_info": "Integer",
+        "origin": {
+          "Table": {
+            "table": "notices",
+            "name": "created"
+          }
+        }
+      },
+      {
+        "name": "vault_id",
+        "ordinal": 4,
+        "type_info": "Blob",
+        "origin": {
+          "Table": {
+            "table": "notices",
+            "name": "vault_id"
+          }
+        }
+      },
+      {
+        "name": "at",
+        "ordinal": 5,
+        "type_info": "Integer",
+        "origin": {
+          "Table": {
+            "table": "notices",
+            "name": "at"
+          }
+        }
+      }
+    ],
+    "parameters": {
+      "Right": 2
+    },
+    "nullable": [
+      false,
+      false,
+      false,
+      false,
+      true,
+      true
+    ]
+  },
+  "hash": "24f5be81ba0753056ef40d5b0bf48d8cb702f6afaf6a9a36a97d81a90a1f8745"
+}

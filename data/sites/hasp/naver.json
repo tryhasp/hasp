@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "entries": [
+    {
+      "match": {
+        "domain": "naver.com"
+      },
+      "change_password_url": "https://nid.naver.com/user2/help/myInfo.nhn?m=viewChangePasswd",
+      "sources": [
+        "https://github.com/apple/password-manager-resources/blob/8a7fed384b20b023ccaedd4dd35ba01111f554d9/quirks/change-password-URLs.json"
+      ]
+    }
+  ]
+}

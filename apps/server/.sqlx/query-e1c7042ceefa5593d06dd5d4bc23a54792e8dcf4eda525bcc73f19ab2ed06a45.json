@@ -1,0 +1,62 @@
+{
+  "db_name": "SQLite",
+  "query": "SELECT vault_id, seq, manifest, author FROM manifests WHERE (vault_id, seq) >= (?, ?) AND (vault_id, seq) <= (?, ?) ORDER BY vault_id DESC, seq DESC LIMIT 1",
+  "describe": {
+    "columns": [
+      {
+        "name": "vault_id",
+        "ordinal": 0,
+        "type_info": "Blob",
+        "origin": {
+          "Table": {
+            "table": "manifests",
+            "name": "vault_id"
+          }
+        }
+      },
+      {
+        "name": "seq",
+        "ordinal": 1,
+        "type_info": "Integer",
+        "origin": {
+          "Table": {
+            "table": "manifests",
+            "name": "seq"
+          }
+        }
+      },
+      {
+        "name": "manifest",
+        "ordinal": 2,
+        "type_info": "Blob",
+        "origin": {
+          "Table": {
+            "table": "manifests",
+            "name": "manifest"
+          }
+        }
+      },
+      {
+        "name": "author",
+        "ordinal": 3,
+        "type_info": "Blob",
+        "origin": {
+          "Table": {
+            "table": "manifests",
+            "name": "author"
+          }
+        }
+      }
+    ],
+    "parameters": {
+      "Right": 4
+    },
+    "nullable": [
+      false,
+      false,
+      false,
+      false
+    ]
+  },
+  "hash": "e1c7042ceefa5593d06dd5d4bc23a54792e8dcf4eda525bcc73f19ab2ed06a45"
+}

@@ -1,0 +1,12 @@
+{
+  "db_name": "SQLite",
+  "query": "INSERT INTO memberships (account_id, vault_id) VALUES (?, ?) ON CONFLICT (account_id, vault_id) DO NOTHING",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Right": 2
+    },
+    "nullable": []
+  },
+  "hash": "a304df15d27d297f7dfb44acda5917ae8b811d3088592bf9a062ee67f33ae669"
+}

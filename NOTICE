@@ -1,0 +1,12 @@
+Hasp
+Copyright 2026 the Hasp contributors
+
+Licensed under the Apache License, Version 2.0, except apps/server, which is licensed under the GNU Affero General Public License, version 3 only.
+
+Third-party material is listed here as it is added.
+
+apple/password-manager-resources (data/sites/apple): MIT License, Copyright 2020 - 2026 Apple Inc. Full text in data/sites/apple/LICENSE.md.
+
+Mozilla Public Suffix List (data/sites/psl/public_suffix_list.dat): Mozilla Public License 2.0, https://mozilla.org/MPL/2.0/. The file is unmodified; its source is https://publicsuffix.org/list/public_suffix_list.dat.
+
+EFF Large Wordlist for Passphrases (crates/core/src/generator/eff_large_wordlist.txt): Electronic Frontier Foundation, https://www.eff.org/dice, licensed under Creative Commons Attribution 3.0 United States (https://creativecommons.org/licenses/by/3.0/us/). The file is unmodified.

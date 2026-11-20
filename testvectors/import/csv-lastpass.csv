@@ -1,0 +1,3 @@
+url,username,password,totp,extra,name,grouping,fav
+https://lp.example.com,erin,pw5,JBSWY3DPEHPK3PXP,lp note,LastPass Site,Shopping,1
+http://sn,,,,"secret body",A secure note,Notes,0

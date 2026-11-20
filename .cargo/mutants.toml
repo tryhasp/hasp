@@ -1,0 +1,3 @@
+exclude_re = ["impl (Debug|Display) for", "as fmt::Debug", "fmt::Formatter"]
+timeout_multiplier = 6.0
+minimum_test_timeout = 60.0

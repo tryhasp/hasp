@@ -1,0 +1,211 @@
+{
+  "encrypted": false,
+  "folders": [
+    {
+      "id": "f1",
+      "name": "Work/Clients"
+    },
+    {
+      "id": "f2",
+      "name": "Finance"
+    }
+  ],
+  "items": [
+    {
+      "id": "b1",
+      "organizationId": null,
+      "folderId": "f1",
+      "type": 1,
+      "reprompt": 1,
+      "name": "Example Login",
+      "notes": "login note",
+      "favorite": true,
+      "fields": [
+        {
+          "name": "pin",
+          "value": "4321",
+          "type": 1,
+          "linkedId": null
+        },
+        {
+          "name": "tier",
+          "value": "gold",
+          "type": 0,
+          "linkedId": null
+        },
+        {
+          "name": "linked",
+          "value": null,
+          "type": 3,
+          "linkedId": 100
+        }
+      ],
+      "login": {
+        "uris": [
+          {
+            "match": null,
+            "uri": "https://example.com/login"
+          },
+          {
+            "match": 1,
+            "uri": "https://host.example.com"
+          },
+          {
+            "match": 3,
+            "uri": "https://exact.example.com/x"
+          },
+          {
+            "match": 5,
+            "uri": "https://never.example.com"
+          },
+          {
+            "match": 0,
+            "uri": "androidapp://com.example.app"
+          }
+        ],
+        "username": "alice",
+        "password": "pa55word",
+        "totp": "otpauth://totp/Ex:alice?secret=JBSWY3DPEHPK3PXP&issuer=Ex",
+        "fido2Credentials": [
+          {
+            "credentialId": "b3a1c9d2-0001-4000-8000-000000000001",
+            "keyType": "public-key",
+            "keyAlgorithm": "ECDSA",
+            "keyCurve": "P-256",
+            "keyValue": "MC4CAQAwBQYDK2VwBCIEIA",
+            "rpId": "passkey.example.com",
+            "rpName": "Passkey",
+            "userHandle": "BQYH",
+            "userName": "alice",
+            "userDisplayName": "Alice",
+            "counter": "0",
+            "discoverable": "true",
+            "creationDate": "2024-05-06T07:08:09.000Z"
+          }
+        ]
+      },
+      "passwordHistory": [
+        {
+          "lastUsedDate": "2024-01-02T03:04:05.000Z",
+          "password": "oldpass"
+        }
+      ],
+      "revisionDate": "2024-06-01T00:00:00.000Z",
+      "creationDate": "2024-01-01T00:00:00.000Z",
+      "deletedDate": null,
+      "collectionIds": null
+    },
+    {
+      "id": "b2",
+      "organizationId": null,
+      "folderId": null,
+      "type": 2,
+      "reprompt": 0,
+      "name": "A note",
+      "notes": "secret note body",
+      "favorite": false,
+      "secureNote": {
+        "type": 0
+      },
+      "revisionDate": "2024-06-01T00:00:00.000Z",
+      "creationDate": "2024-01-01T00:00:00.000Z",
+      "deletedDate": null,
+      "collectionIds": null
+    },
+    {
+      "id": "b3",
+      "organizationId": null,
+      "folderId": "f2",
+      "type": 3,
+      "reprompt": 0,
+      "name": "My Card",
+      "notes": null,
+      "favorite": false,
+      "card": {
+        "cardholderName": "Alice Example",
+        "brand": "Visa",
+        "number": "4111111111111111",
+        "expMonth": "12",
+        "expYear": "2030",
+        "code": "123"
+      },
+      "revisionDate": "2024-06-01T00:00:00.000Z",
+      "creationDate": "2024-01-01T00:00:00.000Z",
+      "deletedDate": null,
+      "collectionIds": null
+    },
+    {
+      "id": "b4",
+      "organizationId": null,
+      "folderId": null,
+      "type": 4,
+      "reprompt": 0,
+      "name": "Me",
+      "notes": null,
+      "favorite": false,
+      "identity": {
+        "title": "Ms",
+        "firstName": "Alice",
+        "middleName": "Q",
+        "lastName": "Example",
+        "address1": "1 Main St",
+        "address2": null,
+        "address3": null,
+        "city": "Springfield",
+        "state": "IL",
+        "postalCode": "12345",
+        "country": "US",
+        "company": "Example Inc",
+        "email": "alice@example.com",
+        "phone": "+1 555 0101",
+        "ssn": "000-00-0000",
+        "username": "alice",
+        "passportNumber": null,
+        "licenseNumber": null
+      },
+      "revisionDate": "2024-06-01T00:00:00.000Z",
+      "creationDate": "2024-01-01T00:00:00.000Z",
+      "deletedDate": null,
+      "collectionIds": null
+    },
+    {
+      "id": "b5",
+      "organizationId": null,
+      "folderId": null,
+      "type": 5,
+      "reprompt": 0,
+      "name": "SSH",
+      "notes": null,
+      "favorite": false,
+      "sshKey": {
+        "privateKey": "-----BEGIN OPENSSH PRIVATE KEY-----\nAAAA\n-----END OPENSSH PRIVATE KEY-----",
+        "publicKey": "ssh-ed25519 AAAA",
+        "keyFingerprint": "SHA256:abc"
+      },
+      "revisionDate": "2024-06-01T00:00:00.000Z",
+      "creationDate": "2024-01-01T00:00:00.000Z",
+      "deletedDate": null,
+      "collectionIds": null
+    },
+    {
+      "id": "b6",
+      "organizationId": null,
+      "folderId": null,
+      "type": 1,
+      "reprompt": 0,
+      "name": "Trashed",
+      "notes": null,
+      "favorite": false,
+      "login": {
+        "uris": [],
+        "username": "t",
+        "password": "p",
+        "totp": null
+      },
+      "revisionDate": "2024-06-01T00:00:00.000Z",
+      "creationDate": "2024-01-01T00:00:00.000Z",
+      "deletedDate": "2024-06-02T00:00:00.000Z",
+      "collectionIds": null
+    }
+  ]
+}

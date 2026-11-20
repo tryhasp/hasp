@@ -1,0 +1,119 @@
+{
+  "$schema": "./node_modules/oxlint/configuration_schema.json",
+  "plugins": ["typescript", "oxc", "import", "unicorn", "promise", "react", "vitest"],
+  "options": { "typeAware": true, "typeCheck": true, "reportUnusedDisableDirectives": "error" },
+  "categories": { "correctness": "error", "suspicious": "error" },
+  "env": { "browser": true, "es2024": true, "webextensions": true },
+  "rules": {
+    "typescript/no-floating-promises": "error",
+    "typescript/no-misused-promises": "error",
+    "typescript/await-thenable": "error",
+    "typescript/promise-function-async": "error",
+    "typescript/require-await": "error",
+    "typescript/return-await": ["error", "in-try-catch"],
+    "typescript/no-unsafe-argument": "error",
+    "typescript/no-unsafe-assignment": "error",
+    "typescript/no-unsafe-call": "error",
+    "typescript/no-unsafe-member-access": "error",
+    "typescript/no-unsafe-return": "error",
+    "typescript/no-unsafe-type-assertion": "error",
+    "typescript/no-unnecessary-condition": "error",
+    "typescript/no-unnecessary-type-assertion": "error",
+    "typescript/strict-void-return": "error",
+    "typescript/switch-exhaustiveness-check": "error",
+    "typescript/only-throw-error": "error",
+    "typescript/prefer-promise-reject-errors": "error",
+    "typescript/no-base-to-string": "error",
+    "typescript/restrict-template-expressions": "error",
+    "typescript/no-deprecated": "error",
+    "typescript/no-explicit-any": "error",
+    "typescript/no-non-null-assertion": "error",
+    "typescript/ban-ts-comment": [
+      "error",
+      { "ts-expect-error": "allow-with-description", "ts-ignore": true, "ts-nocheck": true }
+    ],
+    "typescript/consistent-type-imports": "error",
+    "typescript/consistent-type-definitions": ["error", "type"],
+    "typescript/no-import-type-side-effects": "error",
+    "typescript/no-namespace": "error",
+    "typescript/no-unsafe-enum-comparison": "error",
+    "eslint/no-eval": "error",
+    "eslint/no-implied-eval": "error",
+    "eslint/no-new-func": "error",
+    "eslint/no-script-url": "error",
+    "eslint/no-console": "error",
+    "eslint/no-inline-comments": "error",
+    "eslint/no-warning-comments": "error",
+    "eslint/eqeqeq": "error",
+    "typescript/consistent-return": "off",
+    "eslint/no-var": "error",
+    "eslint/prefer-const": "error",
+    "eslint/no-param-reassign": "error",
+    "eslint/no-restricted-globals": [
+      "error",
+      "chrome",
+      "browser",
+      "name",
+      "event",
+      "localStorage",
+      "sessionStorage"
+    ],
+    "eslint/no-restricted-imports": [
+      "error",
+      {
+        "paths": [
+          { "name": "webextension-polyfill", "message": "Use the platform module." },
+          { "name": "wxt/browser", "message": "Use the platform module." }
+        ],
+        "patterns": [
+          { "group": ["**/hasp-wasm/pkg/*"], "message": "Import the wasm client wrapper." }
+        ]
+      }
+    ],
+    "eslint/no-restricted-properties": [
+      "error",
+      { "property": "onMessage", "message": "Use the typed messaging module." },
+      { "property": "onConnect", "message": "Use the typed messaging module." },
+      { "property": "sendMessage", "message": "Use the typed messaging module." },
+      { "object": "window", "property": "postMessage", "message": "Never post to the page." },
+      { "property": "innerHTML", "message": "Build nodes with the DOM API." },
+      { "property": "outerHTML", "message": "Build nodes with the DOM API." },
+      { "property": "insertAdjacentHTML", "message": "Build nodes with the DOM API." },
+      { "property": "srcdoc", "message": "Use an extension-origin iframe src." }
+    ],
+    "import/no-cycle": "error",
+    "import/no-default-export": "error",
+    "react/react-in-jsx-scope": "off",
+    "react/rules-of-hooks": "error",
+    "react/exhaustive-deps": "error",
+    "react/no-danger": "error",
+    "react/jsx-no-target-blank": "error",
+    "react/no-array-index-key": "error",
+    "promise/no-multiple-resolved": "error"
+  },
+  "overrides": [
+    {
+      "files": ["**/*.config.ts", "**/*.d.ts", "**/entrypoints/**"],
+      "rules": { "import/no-default-export": "off" }
+    },
+    {
+      "files": ["**/src/platform/**"],
+      "rules": {
+        "eslint/no-restricted-globals": "off",
+        "eslint/no-restricted-imports": "off",
+        "eslint/no-restricted-properties": [
+          "error",
+          { "property": "innerHTML", "message": "Build nodes with the DOM API." }
+        ]
+      }
+    },
+    {
+      "files": ["**/*.test.ts", "**/*.test.tsx", "**/*.spec.ts"],
+      "rules": {
+        "typescript/no-unsafe-type-assertion": "off",
+        "typescript/no-non-null-assertion": "off"
+      }
+    }
+  ],
+  "ignorePatterns": ["dist", ".output", ".wxt", "**/generated/**", "node_modules"]
+}

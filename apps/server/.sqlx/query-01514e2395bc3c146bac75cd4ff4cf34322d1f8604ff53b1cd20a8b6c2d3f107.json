@@ -1,0 +1,26 @@
+{
+  "db_name": "SQLite",
+  "query": "SELECT session_id FROM sessions WHERE account_id = ?",
+  "describe": {
+    "columns": [
+      {
+        "name": "session_id",
+        "ordinal": 0,
+        "type_info": "Blob",
+        "origin": {
+          "Table": {
+            "table": "sessions",
+            "name": "session_id"
+          }
+        }
+      }
+    ],
+    "parameters": {
+      "Right": 1
+    },
+    "nullable": [
+      false
+    ]
+  },
+  "hash": "01514e2395bc3c146bac75cd4ff4cf34322d1f8604ff53b1cd20a8b6c2d3f107"
+}

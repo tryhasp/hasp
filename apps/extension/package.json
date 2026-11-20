@@ -1,0 +1,35 @@
+{
+  "name": "@hasp/extension",
+  "version": "0.2.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "wxt build",
+    "build:chrome": "wxt build -b chrome",
+    "build:firefox": "wxt build -b firefox",
+    "build:safari": "wxt build -b safari",
+    "e2e": "playwright test",
+    "postinstall": "wxt prepare",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit",
+    "check-bundles": "node scripts/check-bundles.ts"
+  },
+  "dependencies": {
+    "@hasp/autofill": "workspace:*",
+    "@hasp/design": "workspace:*",
+    "@hasp/wasm": "workspace:*",
+    "react": "catalog:",
+    "react-dom": "catalog:",
+    "zod": "catalog:"
+  },
+  "devDependencies": {
+    "@playwright/test": "catalog:",
+    "@types/chrome": "catalog:",
+    "@types/node": "catalog:",
+    "@types/react": "catalog:",
+    "@types/react-dom": "catalog:",
+    "vite": "catalog:",
+    "vitest": "catalog:",
+    "wxt": "catalog:"
+  }
+}

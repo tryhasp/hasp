@@ -1,0 +1,47 @@
+[package]
+name = "hasp-server"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license = "AGPL-3.0-only"
+repository.workspace = true
+publish.workspace = true
+
+[lib]
+name = "hasp_server"
+path = "src/lib.rs"
+
+[[bin]]
+name = "haspd"
+path = "src/main.rs"
+
+[features]
+testing = []
+
+[lints]
+workspace = true
+
+[dependencies]
+hasp-crypto.workspace = true
+hasp-proto.workspace = true
+thiserror.workspace = true
+sqlx.workspace = true
+axum.workspace = true
+clap.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+toml.workspace = true
+tracing.workspace = true
+url.workspace = true
+hyper = { version = "=1.12.0", default-features = false, features = ["http1", "server"] }
+hyper-util = { version = "=0.1.21", default-features = false, features = ["tokio"] }
+http-body-util = { version = "=0.1.5", default-features = false }
+tower = { version = "=0.5.3", default-features = false, features = ["util"] }
+tracing-subscriber.workspace = true
+zeroize.workspace = true
+tokio = { workspace = true, features = ["rt", "rt-multi-thread", "macros", "signal", "net", "time", "sync", "io-util"] }
+
+[dev-dependencies]
+futures-util = { version = "=0.3.34", default-features = false, features = ["sink", "std"] }
+tempfile = { version = "=3.27.0", default-features = false }
+tokio-tungstenite = { version = "=0.29.0", default-features = false, features = ["connect"] }

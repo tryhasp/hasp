@@ -1,0 +1,98 @@
+{
+  "db_name": "SQLite",
+  "query": "DELETE FROM attachments WHERE att_id = ? RETURNING att_id, vault_id, size, chunks, state, created, refs",
+  "describe": {
+    "columns": [
+      {
+        "name": "att_id",
+        "ordinal": 0,
+        "type_info": "Blob",
+        "origin": {
+          "Table": {
+            "table": "attachments",
+            "name": "att_id"
+          }
+        }
+      },
+      {
+        "name": "vault_id",
+        "ordinal": 1,
+        "type_info": "Blob",
+        "origin": {
+          "Table": {
+            "table": "attachments",
+            "name": "vault_id"
+          }
+        }
+      },
+      {
+        "name": "size",
+        "ordinal": 2,
+        "type_info": "Integer",
+        "origin": {
+          "Table": {
+            "table": "attachments",
+            "name": "size"
+          }
+        }
+      },
+      {
+        "name": "chunks",
+        "ordinal": 3,
+        "type_info": "Integer",
+        "origin": {
+          "Table": {
+            "table": "attachments",
+            "name": "chunks"
+          }
+        }
+      },
+      {
+        "name": "state",
+        "ordinal": 4,
+        "type_info": "Integer",
+        "origin": {
+          "Table": {
+            "table": "attachments",
+            "name": "state"
+          }
+        }
+      },
+      {
+        "name": "created",
+        "ordinal": 5,
+        "type_info": "Integer",
+        "origin": {
+          "Table": {
+            "table": "attachments",
+            "name": "created"
+          }
+        }
+      },
+      {
+        "name": "refs",
+        "ordinal": 6,
+        "type_info": "Integer",
+        "origin": {
+          "Table": {
+            "table": "attachments",
+            "name": "refs"
+          }
+        }
+      }
+    ],
+    "parameters": {
+      "Right": 1
+    },
+    "nullable": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+    ]
+  },
+  "hash": "351eef084468411cb27b7113506c02aacb9569f2d41ed14a510d52cb59c31ea8"
+}

@@ -1,0 +1,17 @@
+{
+  "id": "document",
+  "version": 1,
+  "name": {
+    "en": "Document",
+    "ko": "문서"
+  },
+  "icon": "file",
+  "import_codes": {
+    "1pux": "006"
+  },
+  "sections": [],
+  "capabilities": {
+    "autofill": "none",
+    "requires_attachment": true
+  }
+}

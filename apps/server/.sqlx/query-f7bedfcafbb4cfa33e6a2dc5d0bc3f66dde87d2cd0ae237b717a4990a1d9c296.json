@@ -1,0 +1,12 @@
+{
+  "db_name": "SQLite",
+  "query": "INSERT INTO recovery_enrolments (account_id, rgen, enrolment, rc_wrap, h_auth) VALUES (?, ?, ?, ?, ?) ON CONFLICT (account_id, rgen) DO UPDATE SET enrolment = excluded.enrolment, rc_wrap = excluded.rc_wrap, h_auth = excluded.h_auth",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Right": 5
+    },
+    "nullable": []
+  },
+  "hash": "f7bedfcafbb4cfa33e6a2dc5d0bc3f66dde87d2cd0ae237b717a4990a1d9c296"
+}

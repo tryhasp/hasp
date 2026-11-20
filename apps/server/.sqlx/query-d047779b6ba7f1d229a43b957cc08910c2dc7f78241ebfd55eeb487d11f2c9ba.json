@@ -1,0 +1,86 @@
+{
+  "db_name": "SQLite",
+  "query": "SELECT account_id, notice_id, kind, created, vault_id, at FROM notices WHERE (account_id, notice_id) >= (?, ?) AND (account_id, notice_id) <= (?, ?) ORDER BY account_id DESC, notice_id DESC LIMIT 1",
+  "describe": {
+    "columns": [
+      {
+        "name": "account_id",
+        "ordinal": 0,
+        "type_info": "Blob",
+        "origin": {
+          "Table": {
+            "table": "notices",
+            "name": "account_id"
+          }
+        }
+      },
+      {
+        "name": "notice_id",
+        "ordinal": 1,
+        "type_info": "Integer",
+        "origin": {
+          "Table": {
+            "table": "notices",
+            "name": "notice_id"
+          }
+        }
+      },
+      {
+        "name": "kind",
+        "ordinal": 2,
+        "type_info": "Integer",
+        "origin": {
+          "Table": {
+            "table": "notices",
+            "name": "kind"
+          }
+        }
+      },
+      {
+        "name": "created",
+        "ordinal": 3,
+        "type_info": "Integer",
+        "origin": {
+          "Table": {
+            "table": "notices",
+            "name": "created"
+          }
+        }
+      },
+      {
+        "name": "vault_id",
+        "ordinal": 4,
+        "type_info": "Blob",
+        "origin": {
+          "Table": {
+            "table": "notices",
+            "name": "vault_id"
+          }
+        }
+      },
+      {
+        "name": "at",
+        "ordinal": 5,
+        "type_info": "Integer",
+        "origin": {
+          "Table": {
+            "table": "notices",
+            "name": "at"
+          }
+        }
+      }
+    ],
+    "parameters": {
+      "Right": 4
+    },
+    "nullable": [
+      false,
+      false,
+      false,
+      false,
+      true,
+      true
+    ]
+  },
+  "hash": "d047779b6ba7f1d229a43b957cc08910c2dc7f78241ebfd55eeb487d11f2c9ba"
+}

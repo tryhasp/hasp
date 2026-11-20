@@ -1,0 +1,62 @@
+{
+  "db_name": "SQLite",
+  "query": "DELETE FROM self_wraps WHERE account_id = ? AND vault_id = ? AND epoch = ? RETURNING account_id, vault_id, epoch, wrap",
+  "describe": {
+    "columns": [
+      {
+        "name": "account_id",
+        "ordinal": 0,
+        "type_info": "Blob",
+        "origin": {
+          "Table": {
+            "table": "self_wraps",
+            "name": "account_id"
+          }
+        }
+      },
+      {
+        "name": "vault_id",
+        "ordinal": 1,
+        "type_info": "Blob",
+        "origin": {
+          "Table": {
+            "table": "self_wraps",
+            "name": "vault_id"
+          }
+        }
+      },
+      {
+        "name": "epoch",
+        "ordinal": 2,
+        "type_info": "Integer",
+        "origin": {
+          "Table": {
+            "table": "self_wraps",
+            "name": "epoch"
+          }
+        }
+      },
+      {
+        "name": "wrap",
+        "ordinal": 3,
+        "type_info": "Blob",
+        "origin": {
+          "Table": {
+            "table": "self_wraps",
+            "name": "wrap"
+          }
+        }
+      }
+    ],
+    "parameters": {
+      "Right": 3
+    },
+    "nullable": [
+      false,
+      false,
+      false,
+      false
+    ]
+  },
+  "hash": "2c71e949b1edec40a8aee64b9133ff973e5b074d0ca83bed260a59d2f0ba611e"
+}

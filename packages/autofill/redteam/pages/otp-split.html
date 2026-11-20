@@ -1,0 +1,7 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><title>code</title></head><body>
+<form id="f"><p>Enter the 6-digit code</p><div style="display:flex" id="cells"></div><button type="submit">Verify</button></form>
+<script>
+const c=document.getElementById("cells");
+for(let i=0;i<6;i++){const x=document.createElement("input");x.maxLength=1;x.inputMode="numeric";x.style.cssText="width:40px;height:44px;margin-right:8px";x.dataset.i=i;
+x.addEventListener("input",()=>{if(x.value&&x.nextElementSibling)x.nextElementSibling.focus()});c.append(x)}
+</script></body></html>

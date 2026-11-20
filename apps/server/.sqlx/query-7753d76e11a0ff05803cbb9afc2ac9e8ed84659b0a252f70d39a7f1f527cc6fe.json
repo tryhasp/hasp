@@ -1,0 +1,12 @@
+{
+  "db_name": "SQLite",
+  "query": "INSERT INTO accounts (account_id, login, notify_email, is_admin, state, cred_gen, created) VALUES (?, ?, ?, ?, ?, ?, ?) ON CONFLICT (account_id) DO UPDATE SET login = excluded.login, notify_email = excluded.notify_email, is_admin = excluded.is_admin, state = excluded.state, cred_gen = excluded.cred_gen, created = excluded.created",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Right": 7
+    },
+    "nullable": []
+  },
+  "hash": "7753d76e11a0ff05803cbb9afc2ac9e8ed84659b0a252f70d39a7f1f527cc6fe"
+}

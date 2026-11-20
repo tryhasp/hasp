@@ -1,0 +1,59 @@
+{
+  "id": "login",
+  "version": 1,
+  "name": {
+    "en": "Login",
+    "ko": "로그인"
+  },
+  "icon": "key",
+  "import_codes": {
+    "1pux": "001",
+    "bitwarden": "1"
+  },
+  "sections": [
+    {
+      "key": "credentials",
+      "fields": [
+        {
+          "key": "username",
+          "label": {
+            "en": "username",
+            "ko": "사용자 이름"
+          },
+          "kind": "text",
+          "purpose": "username"
+        },
+        {
+          "key": "password",
+          "label": {
+            "en": "password",
+            "ko": "비밀번호"
+          },
+          "kind": "concealed",
+          "purpose": "password"
+        },
+        {
+          "key": "otp",
+          "label": {
+            "en": "one-time password",
+            "ko": "일회용 비밀번호"
+          },
+          "kind": "otp",
+          "purpose": "totp"
+        }
+      ]
+    }
+  ],
+  "capabilities": {
+    "autofill": "login",
+    "watchtower": [
+      "vulnerable",
+      "reused",
+      "weak",
+      "insecure-url"
+    ],
+    "supports_urls": true,
+    "supports_passkeys": true,
+    "supports_apps": true
+  }
+}

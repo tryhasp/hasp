@@ -1,0 +1,38 @@
+[package]
+name = "hasp-crypto"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license = "Apache-2.0"
+repository.workspace = true
+publish.workspace = true
+
+[lints]
+workspace = true
+
+[dependencies]
+argon2 = { workspace = true, features = ["zeroize"] }
+chacha20poly1305.workspace = true
+ed25519-dalek.workspace = true
+p256.workspace = true
+x25519-dalek = { workspace = true, features = ["static_secrets"] }
+hkdf.workspace = true
+hmac.workspace = true
+sha1.workspace = true
+sha2.workspace = true
+sha2-legacy.workspace = true
+x-wing.workspace = true
+hpke = { workspace = true, features = ["x25519"] }
+opaque-ke = { workspace = true, features = ["ristretto255"] }
+getrandom.workspace = true
+secrecy.workspace = true
+zeroize.workspace = true
+subtle.workspace = true
+thiserror.workspace = true
+
+[features]
+testing = []
+
+[dev-dependencies]
+serde_json.workspace = true
+proptest.workspace = true

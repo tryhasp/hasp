@@ -1,0 +1,175 @@
+[tools]
+rust = "1.98.0"
+cargo-deny = "0.20.2"
+"aqua:nextest-rs/nextest/cargo-nextest" = "0.9.143"
+node = "24.20.0"
+pnpm = "11.25.0"
+xcodegen = "2.46.0"
+"cargo:wasm-bindgen-cli" = "0.2.130"
+
+[env]
+CARGO_TERM_COLOR = "always"
+HASP_BIN_DIR = "{{ get_env(name='CARGO_TARGET_DIR', default=config_root ~ '/target') }}/debug"
+
+[tasks.setup]
+description = "Fetch dependencies and generate the WASM and Swift bindings"
+run = [
+    "cargo fetch --locked",
+    "pnpm install --frozen-lockfile",
+    "scripts/wasm.sh",
+    "scripts/apple-xcframework.sh",
+]
+
+[tasks.no-testing-feature]
+description = "No production package enables the testing feature of crypto, proto, core or server"
+run = "scripts/no-testing-feature.sh"
+
+[tasks.check]
+description = "Rust gates: format, lint, tests, doc tests, supply chain"
+depends = ["test"]
+run = [
+    "cargo fmt --check",
+    "scripts/no-testing-feature.sh",
+    "scripts/check-deny-expiry.sh",
+    "cargo clippy --workspace --all-targets --all-features --locked -- -D warnings",
+    "cargo deny check",
+]
+
+[tasks.check-all]
+description = "Every gate of every language: Rust, TypeScript and Apple"
+depends = ["check", "ts-check", "ext-check", "apple-check", "design-check"]
+
+[tasks.design-tokens]
+description = "Regenerate the Swift and CSS design tokens from design/tokens.json"
+run = "node scripts/design-tokens.ts"
+
+[tasks.design-check]
+description = "Fail when the committed Swift and CSS tokens differ from what design/tokens.json generates"
+run = "node scripts/design-tokens.ts --check"
+
+[tasks.sqlx-prepare]
+description = "Regenerate the offline sqlx query cache in apps/server/.sqlx from the migrations"
+run = "scripts/sqlx-prepare.sh"
+
+[tasks.test]
+description = "Unit and doc tests"
+run = [
+    "cargo nextest run --workspace --locked --no-tests=pass",
+    "cargo test --doc --workspace --locked",
+]
+
+[tasks.e2e]
+description = "End-to-end scenarios: the real haspd and hasp binaries over HTTP and SQLite"
+run = "cargo nextest run --profile e2e --workspace --locked --no-tests=fail"
+
+[tasks.test-all]
+description = "The ignored tests on top of test"
+depends = ["test"]
+run = [
+  "cargo nextest run --workspace --locked --no-tests=pass --run-ignored ignored-only -E 'not test(e24)'",
+  "CARGO_PROFILE_RELEASE_DEBUG_ASSERTIONS=true cargo nextest run --release -p hasp-adversary --locked --run-ignored ignored-only -E 'test(e24)'",
+]
+
+[tasks.mutants]
+description = "Mutation testing: hasp-proto verifiers against proto and adversary tests, then hasp-crypto"
+run = [
+    "cargo mutants --package hasp-proto --file 'crates/proto/src/verify.rs' --file 'crates/proto/src/verify/*.rs' --test-package hasp-proto --test-package hasp-adversary --output run/mutants/proto --jobs 4",
+    "cargo mutants --package hasp-crypto --features testing --test-tool nextest --output run/mutants/crypto --jobs 4 -- --max-fail=1:immediate",
+]
+
+[tasks.wasm]
+description = "Build hasp-wasm and generate the TypeScript package with wasm-bindgen"
+run = "scripts/wasm.sh"
+
+[tasks.ts-check]
+description = "TypeScript gates for the WASM package: format, tsc, Oxlint, Vitest replay of the shared vectors and the fetch transport against the real haspd"
+depends = ["wasm"]
+run = [
+    "pnpm install --frozen-lockfile",
+    "pnpm exec oxfmt --check packages",
+    "pnpm -r typecheck",
+    "pnpm exec oxlint",
+    "cargo build --locked -p hasp-server -p hasp-cli",
+    "pnpm -r test",
+    "cargo clippy -p hasp-wasm --target wasm32-unknown-unknown --locked -- -D warnings",
+]
+
+[tasks.ext-check]
+description = "Browser extension: oxfmt, wxt builds for chrome, firefox and safari, bundle checks, and the Playwright suite against the real haspd"
+depends = ["wasm"]
+run = [
+    "pnpm install --frozen-lockfile",
+    "pnpm exec oxfmt --check apps/extension",
+    "pnpm --filter @hasp/extension typecheck",
+    "pnpm exec oxlint apps/extension",
+    "pnpm --filter @hasp/extension test",
+    "pnpm --filter @hasp/extension build:chrome",
+    "pnpm --filter @hasp/extension build:firefox",
+    "pnpm --filter @hasp/extension build:safari",
+    "pnpm --filter @hasp/extension check-bundles",
+    "cargo build --locked -p hasp-server -p hasp-cli",
+    "pnpm --filter @hasp/extension e2e",
+]
+
+[tasks.apple-xcframework]
+description = "Build the arm64 XCFramework (macOS, iOS device, iOS simulator) and regenerate the UniFFI Swift"
+run = "scripts/apple-xcframework.sh"
+
+[tasks.ext-safari]
+description = "Build the Safari web extension that the macOS app embeds"
+depends = ["wasm"]
+run = ["pnpm install --frozen-lockfile", "pnpm --filter @hasp/extension build:safari"]
+
+[tasks.template-labels]
+description = "Regenerate the Apple template field label catalog from the core category templates"
+run = "node scripts/template-labels.ts"
+
+[tasks.apple-check]
+description = "Swift gates: format, comment greps, SwiftPM tests, XcodeGen project, app and extension builds"
+depends = ["apple-xcframework", "ext-safari"]
+run = [
+    "scripts/swift-gates.sh",
+    "scripts/apple-i18n-check.sh",
+    "node scripts/template-labels.ts --check",
+    "scripts/apple-embed-helper-test.sh",
+    "swift build --package-path apps/apple/Packages/Hasp",
+    "swift test --package-path apps/apple/Packages/Hasp",
+    "xcodegen generate --spec apps/apple/project.yml",
+    "xcodebuild build -project apps/apple/Hasp.xcodeproj -scheme Hasp -destination 'generic/platform=macOS' -derivedDataPath run/dd-mac CODE_SIGNING_ALLOWED=NO",
+    "xcodebuild build -project apps/apple/Hasp.xcodeproj -scheme HaspPhone -destination 'generic/platform=iOS Simulator' -derivedDataPath run/dd CODE_SIGNING_ALLOWED=NO",
+]
+
+[tasks.apple-shots]
+description = "Launch the unsigned Debug app with a fixture account and write PNGs of each screen to run/m2-shots/app (debug-only launch flags)"
+depends = ["ext-safari"]
+run = "scripts/apple-shots.sh"
+
+[tasks.apple-ui]
+description = "Build, start the fixture haspd and run the XCUITest suite on this Mac (needs the one-time UI Automation approval)"
+depends = ["ext-safari"]
+run = "scripts/apple-ui.sh"
+
+[tasks.apple-ui-vm]
+description = "Run the XCUITest suite inside a Tart macOS VM (no approval prompt, desktop untouched); needs target/debug haspd and hasp; result bundle in run/apple-ui-vm/out, screenshots in run/m2-shots/vm"
+depends = ["ext-safari"]
+run = "scripts/apple-ui-vm.sh"
+
+[tasks.apple-signed]
+description = "Build a signed Debug Hasp.app (Apple Development identity, automatic signing, keychain group, app group, Safari extension, nmh helper) into run/signed"
+depends = ["ext-safari"]
+run = "scripts/apple-signed.sh"
+
+[tasks.ios-check]
+description = "iOS gates: Swift format and greps, package tests, XcodeGen project, iPhone app build for the Simulator"
+depends = ["apple-xcframework", "ext-safari"]
+run = [
+    "scripts/swift-gates.sh",
+    "scripts/apple-i18n-check.sh",
+    "swift test --package-path apps/apple/Packages/Hasp",
+    "xcodegen generate --spec apps/apple/project.yml",
+    "xcodebuild build -project apps/apple/Hasp.xcodeproj -scheme HaspPhone -destination 'generic/platform=iOS Simulator' -derivedDataPath run/dd-ios CODE_SIGNING_ALLOWED=NO",
+]
+
+[tasks.ios-ui]
+description = "Build the iPhone app, start the fixture haspd and run the XCUITest suite on the iOS Simulator; screenshots in run/m3-shots/ios"
+run = "scripts/ios-ui.sh"

@@ -1,0 +1,4 @@
+folder,favorite,type,name,notes,fields,reprompt,login_uri,login_username,login_password,login_totp
+Work,1,login,BW Site,,"pin: 9999
+tier: gold",0,https://bw.example.com,frank,pw6,
+,0,note,BW Note,note body,,0,,,,

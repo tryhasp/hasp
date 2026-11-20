@@ -1,0 +1,12 @@
+{
+  "db_name": "SQLite",
+  "query": "INSERT INTO opaque_records (account_id, record, cred_gen) VALUES (?, ?, ?) ON CONFLICT (account_id) DO UPDATE SET record = excluded.record, cred_gen = excluded.cred_gen",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Right": 3
+    },
+    "nullable": []
+  },
+  "hash": "57f77d2e98be3a4d46504b8b069d9a430a49f1ae2a420af9b81982762d69c79f"
+}

@@ -1,0 +1,22 @@
+[package]
+name = "hasp-adversary"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license = "Apache-2.0"
+repository.workspace = true
+publish.workspace = true
+
+[lints]
+workspace = true
+
+[dev-dependencies]
+hasp-crypto = { workspace = true, features = ["testing"] }
+hasp-proto = { workspace = true, features = ["testing"] }
+hasp-core = { workspace = true, features = ["testing"] }
+hasp-server = { path = "../../apps/server", version = "0.1.0", features = ["testing"] }
+hasp-boundary.workspace = true
+hasp-nmh = { path = "../nmh", version = "0.1.0", features = ["test-double"] }
+hasp-testsupport = { path = "../testsupport", version = "0.1.0" }
+secrecy.workspace = true
+tokio-util.workspace = true

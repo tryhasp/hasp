@@ -1,0 +1,12 @@
+{
+  "db_name": "SQLite",
+  "query": "INSERT INTO keysets (account_id, keyset) VALUES (?, ?) ON CONFLICT (account_id) DO UPDATE SET keyset = excluded.keyset",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Right": 2
+    },
+    "nullable": []
+  },
+  "hash": "50cdc8e8caec38606f1fbae9fbaac070106a12f8538ee760e464fc88b61a07ac"
+}

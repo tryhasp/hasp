@@ -1,0 +1,38 @@
+{
+  "db_name": "SQLite",
+  "query": "SELECT account_id, keyset FROM keysets WHERE account_id = ?",
+  "describe": {
+    "columns": [
+      {
+        "name": "account_id",
+        "ordinal": 0,
+        "type_info": "Blob",
+        "origin": {
+          "Table": {
+            "table": "keysets",
+            "name": "account_id"
+          }
+        }
+      },
+      {
+        "name": "keyset",
+        "ordinal": 1,
+        "type_info": "Blob",
+        "origin": {
+          "Table": {
+            "table": "keysets",
+            "name": "keyset"
+          }
+        }
+      }
+    ],
+    "parameters": {
+      "Right": 1
+    },
+    "nullable": [
+      false,
+      false
+    ]
+  },
+  "hash": "e7175ee7ff158b9cd1b749d94a5c05ee068a8e7bc22ece99411f76985dc1d32b"
+}

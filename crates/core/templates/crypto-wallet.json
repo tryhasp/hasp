@@ -1,0 +1,69 @@
+{
+  "id": "crypto-wallet",
+  "version": 1,
+  "name": {
+    "en": "Crypto Wallet",
+    "ko": "암호화폐 지갑"
+  },
+  "icon": "wallet",
+  "import_codes": {
+    "1pux": "115"
+  },
+  "sections": [
+    {
+      "key": "wallet",
+      "fields": [
+        {
+          "key": "recovery-phrase",
+          "label": {
+            "en": "recovery phrase",
+            "ko": "복구 구문"
+          },
+          "kind": "concealed"
+        },
+        {
+          "key": "wallet-address",
+          "label": {
+            "en": "wallet address",
+            "ko": "지갑 주소"
+          },
+          "kind": "text"
+        },
+        {
+          "key": "private-key",
+          "label": {
+            "en": "private key",
+            "ko": "개인 키"
+          },
+          "kind": "concealed"
+        },
+        {
+          "key": "password",
+          "label": {
+            "en": "password",
+            "ko": "비밀번호"
+          },
+          "kind": "concealed",
+          "purpose": "password"
+        },
+        {
+          "key": "pin",
+          "label": {
+            "en": "PIN",
+            "ko": "PIN"
+          },
+          "kind": "concealed"
+        }
+      ]
+    }
+  ],
+  "capabilities": {
+    "autofill": "none",
+    "watchtower": [
+      "vulnerable",
+      "reused",
+      "weak"
+    ],
+    "supports_urls": true
+  }
+}

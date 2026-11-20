@@ -1,0 +1,98 @@
+{
+  "db_name": "SQLite",
+  "query": "SELECT account_id, login, notify_email, is_admin, state, cred_gen, created FROM accounts WHERE (account_id) >= (?) AND (account_id) <= (?) ORDER BY account_id",
+  "describe": {
+    "columns": [
+      {
+        "name": "account_id",
+        "ordinal": 0,
+        "type_info": "Blob",
+        "origin": {
+          "Table": {
+            "table": "accounts",
+            "name": "account_id"
+          }
+        }
+      },
+      {
+        "name": "login",
+        "ordinal": 1,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "accounts",
+            "name": "login"
+          }
+        }
+      },
+      {
+        "name": "notify_email",
+        "ordinal": 2,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "accounts",
+            "name": "notify_email"
+          }
+        }
+      },
+      {
+        "name": "is_admin",
+        "ordinal": 3,
+        "type_info": "Integer",
+        "origin": {
+          "Table": {
+            "table": "accounts",
+            "name": "is_admin"
+          }
+        }
+      },
+      {
+        "name": "state",
+        "ordinal": 4,
+        "type_info": "Integer",
+        "origin": {
+          "Table": {
+            "table": "accounts",
+            "name": "state"
+          }
+        }
+      },
+      {
+        "name": "cred_gen",
+        "ordinal": 5,
+        "type_info": "Integer",
+        "origin": {
+          "Table": {
+            "table": "accounts",
+            "name": "cred_gen"
+          }
+        }
+      },
+      {
+        "name": "created",
+        "ordinal": 6,
+        "type_info": "Integer",
+        "origin": {
+          "Table": {
+            "table": "accounts",
+            "name": "created"
+          }
+        }
+      }
+    ],
+    "parameters": {
+      "Right": 2
+    },
+    "nullable": [
+      false,
+      false,
+      true,
+      false,
+      false,
+      false,
+      false
+    ]
+  },
+  "hash": "4c0c3d58d9641d1315185722a83a4be773e0d7116542d08b2bda2cdd1db34104"
+}

@@ -1,0 +1,98 @@
+{
+  "db_name": "SQLite",
+  "query": "SELECT esid, account_id, session_id, expires, state, slots, attempts FROM enrol_channels WHERE (esid) >= (?) AND (esid) <= (?) ORDER BY esid",
+  "describe": {
+    "columns": [
+      {
+        "name": "esid",
+        "ordinal": 0,
+        "type_info": "Blob",
+        "origin": {
+          "Table": {
+            "table": "enrol_channels",
+            "name": "esid"
+          }
+        }
+      },
+      {
+        "name": "account_id",
+        "ordinal": 1,
+        "type_info": "Blob",
+        "origin": {
+          "Table": {
+            "table": "enrol_channels",
+            "name": "account_id"
+          }
+        }
+      },
+      {
+        "name": "session_id",
+        "ordinal": 2,
+        "type_info": "Blob",
+        "origin": {
+          "Table": {
+            "table": "enrol_channels",
+            "name": "session_id"
+          }
+        }
+      },
+      {
+        "name": "expires",
+        "ordinal": 3,
+        "type_info": "Integer",
+        "origin": {
+          "Table": {
+            "table": "enrol_channels",
+            "name": "expires"
+          }
+        }
+      },
+      {
+        "name": "state",
+        "ordinal": 4,
+        "type_info": "Integer",
+        "origin": {
+          "Table": {
+            "table": "enrol_channels",
+            "name": "state"
+          }
+        }
+      },
+      {
+        "name": "slots",
+        "ordinal": 5,
+        "type_info": "Blob",
+        "origin": {
+          "Table": {
+            "table": "enrol_channels",
+            "name": "slots"
+          }
+        }
+      },
+      {
+        "name": "attempts",
+        "ordinal": 6,
+        "type_info": "Integer",
+        "origin": {
+          "Table": {
+            "table": "enrol_channels",
+            "name": "attempts"
+          }
+        }
+      }
+    ],
+    "parameters": {
+      "Right": 2
+    },
+    "nullable": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+    ]
+  },
+  "hash": "8ca4f6cc1b4bf52c483c5d14d39a90ef0bb6473dbb9286da72c8e0862e9f9853"
+}

@@ -1,0 +1,38 @@
+{
+  "db_name": "SQLite",
+  "query": "DELETE FROM keysets WHERE account_id = ? RETURNING account_id, keyset",
+  "describe": {
+    "columns": [
+      {
+        "name": "account_id",
+        "ordinal": 0,
+        "type_info": "Blob",
+        "origin": {
+          "Table": {
+            "table": "keysets",
+            "name": "account_id"
+          }
+        }
+      },
+      {
+        "name": "keyset",
+        "ordinal": 1,
+        "type_info": "Blob",
+        "origin": {
+          "Table": {
+            "table": "keysets",
+            "name": "keyset"
+          }
+        }
+      }
+    ],
+    "parameters": {
+      "Right": 1
+    },
+    "nullable": [
+      false,
+      false
+    ]
+  },
+  "hash": "2bc5d1adb27ff416d294746a0bd424c23ae9c152448ed9c1e47f15394c0d2fae"
+}

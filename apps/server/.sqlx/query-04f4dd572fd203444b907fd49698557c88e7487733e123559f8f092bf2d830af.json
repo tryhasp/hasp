@@ -1,0 +1,26 @@
+{
+  "db_name": "SQLite",
+  "query": "SELECT recovery_id FROM recovery_sessions WHERE account_id = ?",
+  "describe": {
+    "columns": [
+      {
+        "name": "recovery_id",
+        "ordinal": 0,
+        "type_info": "Blob",
+        "origin": {
+          "Table": {
+            "table": "recovery_sessions",
+            "name": "recovery_id"
+          }
+        }
+      }
+    ],
+    "parameters": {
+      "Right": 1
+    },
+    "nullable": [
+      false
+    ]
+  },
+  "hash": "04f4dd572fd203444b907fd49698557c88e7487733e123559f8f092bf2d830af"
+}

@@ -1,0 +1,146 @@
+{
+  "db_name": "SQLite",
+  "query": "SELECT session_id, account_id, token_hash, device_id, platform, label, created, last_seen, idle_expires, abs_expires, reauth_until FROM sessions WHERE session_id = ?",
+  "describe": {
+    "columns": [
+      {
+        "name": "session_id",
+        "ordinal": 0,
+        "type_info": "Blob",
+        "origin": {
+          "Table": {
+            "table": "sessions",
+            "name": "session_id"
+          }
+        }
+      },
+      {
+        "name": "account_id",
+        "ordinal": 1,
+        "type_info": "Blob",
+        "origin": {
+          "Table": {
+            "table": "sessions",
+            "name": "account_id"
+          }
+        }
+      },
+      {
+        "name": "token_hash",
+        "ordinal": 2,
+        "type_info": "Blob",
+        "origin": {
+          "Table": {
+            "table": "sessions",
+            "name": "token_hash"
+          }
+        }
+      },
+      {
+        "name": "device_id",
+        "ordinal": 3,
+        "type_info": "Blob",
+        "origin": {
+          "Table": {
+            "table": "sessions",
+            "name": "device_id"
+          }
+        }
+      },
+      {
+        "name": "platform",
+        "ordinal": 4,
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "sessions",
+            "name": "platform"
+          }
+        }
+      },
+      {
+        "name": "label",
+        "ordinal": 5,
+        "type_info": "Blob",
+        "origin": {
+          "Table": {
+            "table": "sessions",
+            "name": "label"
+          }
+        }
+      },
+      {
+        "name": "created",
+        "ordinal": 6,
+        "type_info": "Integer",
+        "origin": {
+          "Table": {
+            "table": "sessions",
+            "name": "created"
+          }
+        }
+      },
+      {
+        "name": "last_seen",
+        "ordinal": 7,
+        "type_info": "Integer",
+        "origin": {
+          "Table": {
+            "table": "sessions",
+            "name": "last_seen"
+          }
+        }
+      },
+      {
+        "name": "idle_expires",
+        "ordinal": 8,
+        "type_info": "Integer",
+        "origin": {
+          "Table": {
+            "table": "sessions",
+            "name": "idle_expires"
+          }
+        }
+      },
+      {
+        "name": "abs_expires",
+        "ordinal": 9,
+        "type_info": "Integer",
+        "origin": {
+          "Table": {
+            "table": "sessions",
+            "name": "abs_expires"
+          }
+        }
+      },
+      {
+        "name": "reauth_until",
+        "ordinal": 10,
+        "type_info": "Integer",
+        "origin": {
+          "Table": {
+            "table": "sessions",
+            "name": "reauth_until"
+          }
+        }
+      }
+    ],
+    "parameters": {
+      "Right": 1
+    },
+    "nullable": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      true,
+      false,
+      false,
+      false,
+      false,
+      false
+    ]
+  },
+  "hash": "9a769a30b5241dcabaed5770ee1d4f5b74087a53845cb8944d5ab0fb73de25ae"
+}

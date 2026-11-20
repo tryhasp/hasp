@@ -1,0 +1,668 @@
+{
+  "cases": [
+    {
+      "name": "ascii",
+      "note": "plain ASCII",
+      "scalars": [
+        99,
+        111,
+        114,
+        114,
+        101,
+        99,
+        116,
+        32,
+        104,
+        111,
+        114,
+        115,
+        101
+      ],
+      "utf8": "636f727265637420686f727365"
+    },
+    {
+      "name": "trim-ascii",
+      "note": "spaces, tab and newline around the text",
+      "scalars": [
+        32,
+        9,
+        112,
+        97,
+        115,
+        115,
+        32,
+        119,
+        111,
+        114,
+        100,
+        10,
+        32
+      ],
+      "utf8": "7061737320776f7264"
+    },
+    {
+      "name": "trim-ideographic-space",
+      "note": "U+3000 around the text",
+      "scalars": [
+        12288,
+        112,
+        119,
+        12288
+      ],
+      "utf8": "7077"
+    },
+    {
+      "name": "trim-nbsp",
+      "note": "U+00A0 around the text",
+      "scalars": [
+        160,
+        112,
+        119,
+        160
+      ],
+      "utf8": "7077"
+    },
+    {
+      "name": "trim-next-line",
+      "note": "U+0085 NEL around the text",
+      "scalars": [
+        133,
+        112,
+        119,
+        133
+      ],
+      "utf8": "7077"
+    },
+    {
+      "name": "trim-bom",
+      "note": "U+FEFF byte order mark before the text",
+      "scalars": [
+        65279,
+        112,
+        119
+      ],
+      "utf8": "7077"
+    },
+    {
+      "name": "trim-zero-width-space",
+      "note": "U+200B is not whitespace",
+      "scalars": [
+        8203,
+        112,
+        119,
+        8203
+      ],
+      "utf8": "7077"
+    },
+    {
+      "name": "trim-line-separator",
+      "note": "U+2028 around the text",
+      "scalars": [
+        8232,
+        112,
+        119,
+        8232
+      ],
+      "utf8": "7077"
+    },
+    {
+      "name": "trim-only-whitespace",
+      "note": "whitespace only",
+      "scalars": [
+        32,
+        12288,
+        9
+      ],
+      "utf8": ""
+    },
+    {
+      "name": "empty",
+      "note": "empty string",
+      "scalars": [],
+      "utf8": ""
+    },
+    {
+      "name": "korean-precomposed",
+      "note": "Hangul syllables U+BE44 U+BC00 U+BC88 U+D638 (NFC)",
+      "scalars": [
+        48708,
+        48128,
+        48264,
+        54840
+      ],
+      "utf8": "ebb984ebb080ebb288ed98b8"
+    },
+    {
+      "name": "korean-conjoining-jamo",
+      "note": "same word as conjoining jamo (NFD)",
+      "scalars": [
+        4359,
+        4469,
+        4358,
+        4469,
+        4527,
+        4359,
+        4453,
+        4523,
+        4370,
+        4457
+      ],
+      "utf8": "ebb984ebb080ebb288ed98b8"
+    },
+    {
+      "name": "korean-compat-jamo",
+      "note": "compatibility jamo U+3142 U+3163 U+3141 U+3163 U+3139",
+      "scalars": [
+        12610,
+        12643,
+        12609,
+        12643,
+        12601
+      ],
+      "utf8": "ebb984ebafb8e18485"
+    },
+    {
+      "name": "korean-mixed-latin",
+      "note": "Hangul with Latin and digits",
+      "scalars": [
+        54620,
+        44544,
+        80,
+        97,
+        115,
+        115,
+        49,
+        50,
+        51,
+        33
+      ],
+      "utf8": "ed959ceab8807061737331323321"
+    },
+    {
+      "name": "korean-halfwidth-jamo",
+      "note": "halfwidth Hangul U+FFA1 U+FFC2",
+      "scalars": [
+        65441,
+        65474
+      ],
+      "utf8": "eab080"
+    },
+    {
+      "name": "korean-syllable-lvt",
+      "note": "U+AC01 (LVT) and U+AC00 (LV)",
+      "scalars": [
+        44033,
+        44032
+      ],
+      "utf8": "eab081eab080"
+    },
+    {
+      "name": "fullwidth-latin",
+      "note": "fullwidth Latin and digits",
+      "scalars": [
+        65328,
+        65313,
+        65331,
+        65331,
+        65297,
+        65298,
+        65299
+      ],
+      "utf8": "70617373313233"
+    },
+    {
+      "name": "fullwidth-lower",
+      "note": "fullwidth lowercase",
+      "scalars": [
+        65360,
+        65345,
+        65363,
+        65363
+      ],
+      "utf8": "70617373"
+    },
+    {
+      "name": "ligature-fi",
+      "note": "U+FB01 fi ligature",
+      "scalars": [
+        64257,
+        108,
+        101
+      ],
+      "utf8": "66696c65"
+    },
+    {
+      "name": "ligature-ffi",
+      "note": "U+FB03 ffi ligature",
+      "scalars": [
+        64259,
+        99,
+        101
+      ],
+      "utf8": "6666696365"
+    },
+    {
+      "name": "circled-digits",
+      "note": "U+2460 to U+2462",
+      "scalars": [
+        9312,
+        9313,
+        9314
+      ],
+      "utf8": "313233"
+    },
+    {
+      "name": "superscript",
+      "note": "x followed by U+00B2",
+      "scalars": [
+        120,
+        178
+      ],
+      "utf8": "7832"
+    },
+    {
+      "name": "roman-numeral",
+      "note": "U+2163",
+      "scalars": [
+        8547
+      ],
+      "utf8": "6976"
+    },
+    {
+      "name": "arabic-ligature",
+      "note": "U+FDFA expands to 18 scalars",
+      "scalars": [
+        65018
+      ],
+      "utf8": "d8b5d984d98920d8a7d984d984d98720d8b9d984d98ad98720d988d8b3d984d985"
+    },
+    {
+      "name": "ohm-sign",
+      "note": "U+2126 OHM SIGN",
+      "scalars": [
+        8486
+      ],
+      "utf8": "cf89"
+    },
+    {
+      "name": "angstrom-sign",
+      "note": "U+212B ANGSTROM SIGN",
+      "scalars": [
+        8491
+      ],
+      "utf8": "c3a5"
+    },
+    {
+      "name": "latin-precomposed",
+      "note": "U+00E9",
+      "scalars": [
+        233
+      ],
+      "utf8": "c3a9"
+    },
+    {
+      "name": "latin-decomposed",
+      "note": "e U+0301",
+      "scalars": [
+        101,
+        769
+      ],
+      "utf8": "c3a9"
+    },
+    {
+      "name": "latin-capital-e-acute",
+      "note": "U+00C9",
+      "scalars": [
+        201
+      ],
+      "utf8": "c3a9"
+    },
+    {
+      "name": "combining-order",
+      "note": "a U+0323 U+0301 versus U+0301 U+0323 canonical ordering",
+      "scalars": [
+        97,
+        769,
+        803
+      ],
+      "utf8": "e1baa1cc81"
+    },
+    {
+      "name": "turkish-dotted-capital-i",
+      "note": "U+0130 I with dot above",
+      "scalars": [
+        304
+      ],
+      "utf8": "69cc87"
+    },
+    {
+      "name": "turkish-dotless-small-i",
+      "note": "U+0131 dotless i",
+      "scalars": [
+        305
+      ],
+      "utf8": "c4b1"
+    },
+    {
+      "name": "turkish-word-istanbul",
+      "note": "ISTANBUL with U+0130",
+      "scalars": [
+        304,
+        83,
+        84,
+        65,
+        78,
+        66,
+        85,
+        76
+      ],
+      "utf8": "69cc877374616e62756c"
+    },
+    {
+      "name": "turkish-word-kiraz",
+      "note": "KIRAZ with ASCII I",
+      "scalars": [
+        75,
+        73,
+        82,
+        65,
+        90
+      ],
+      "utf8": "6b6972617a"
+    },
+    {
+      "name": "german-sharp-s",
+      "note": "U+00DF",
+      "scalars": [
+        223
+      ],
+      "utf8": "7373"
+    },
+    {
+      "name": "german-capital-sharp-s",
+      "note": "U+1E9E",
+      "scalars": [
+        7838
+      ],
+      "utf8": "7373"
+    },
+    {
+      "name": "german-strasse",
+      "note": "STRASSE and Strasse with U+00DF",
+      "scalars": [
+        83,
+        116,
+        114,
+        97,
+        223,
+        101
+      ],
+      "utf8": "73747261737365"
+    },
+    {
+      "name": "greek-final-sigma",
+      "note": "ODYSSEUS with capital sigma at the end",
+      "scalars": [
+        927,
+        916,
+        933,
+        931,
+        931,
+        917,
+        933,
+        931
+      ],
+      "utf8": "cebfceb4cf85cf83cf83ceb5cf85cf83"
+    },
+    {
+      "name": "greek-small-final-sigma",
+      "note": "U+03C2",
+      "scalars": [
+        962
+      ],
+      "utf8": "cf83"
+    },
+    {
+      "name": "greek-sigma-alone",
+      "note": "U+03A3",
+      "scalars": [
+        931
+      ],
+      "utf8": "cf83"
+    },
+    {
+      "name": "cherokee",
+      "note": "U+13A0 and U+AB70",
+      "scalars": [
+        5024,
+        43888
+      ],
+      "utf8": "e18ea0e18ea0"
+    },
+    {
+      "name": "titlecase-digraph",
+      "note": "U+01C5",
+      "scalars": [
+        453
+      ],
+      "utf8": "64c5be"
+    },
+    {
+      "name": "long-s",
+      "note": "U+017F LATIN SMALL LETTER LONG S",
+      "scalars": [
+        383
+      ],
+      "utf8": "73"
+    },
+    {
+      "name": "kelvin-sign",
+      "note": "U+212A KELVIN SIGN",
+      "scalars": [
+        8490
+      ],
+      "utf8": "6b"
+    },
+    {
+      "name": "emoji",
+      "note": "U+1F510 with ascii",
+      "scalars": [
+        128272,
+        112,
+        119
+      ],
+      "utf8": "f09f94907077"
+    },
+    {
+      "name": "emoji-zwj-family",
+      "note": "man woman girl joined by ZWJ",
+      "scalars": [
+        128104,
+        8205,
+        128105,
+        8205,
+        128103
+      ],
+      "utf8": "f09f91a8f09f91a9f09f91a7"
+    },
+    {
+      "name": "emoji-skin-tone",
+      "note": "U+1F44D U+1F3FD",
+      "scalars": [
+        128077,
+        127997
+      ],
+      "utf8": "f09f918df09f8fbd"
+    },
+    {
+      "name": "unicode-16-cyrillic-tje",
+      "note": "U+1C89 added in Unicode 16.0",
+      "scalars": [
+        7305
+      ],
+      "utf8": "e1b28a"
+    },
+    {
+      "name": "unicode-16-garay",
+      "note": "U+10D50 GARAY CAPITAL LETTER A, added in Unicode 16.0",
+      "scalars": [
+        68944
+      ],
+      "utf8": "f090b5b0"
+    },
+    {
+      "name": "unicode-15-1-cjk",
+      "note": "U+2EBF0 added in Unicode 15.1",
+      "scalars": [
+        191472
+      ],
+      "utf8": "f0aeafb0"
+    },
+    {
+      "name": "unicode-17-sidetic",
+      "note": "U+10940 SIDETIC LETTER N01, added in Unicode 17.0",
+      "scalars": [
+        67904
+      ],
+      "utf8": "f090a580"
+    },
+    {
+      "name": "unicode-18-armenian",
+      "note": "U+0558 added in Unicode 18.0",
+      "scalars": [
+        1368
+      ],
+      "utf8": "d5a7"
+    },
+    {
+      "name": "zero-width-space-inside",
+      "note": "U+200B between letters is default-ignorable",
+      "scalars": [
+        112,
+        8203,
+        119
+      ],
+      "utf8": "7077"
+    },
+    {
+      "name": "soft-hyphen-inside",
+      "note": "U+00AD between letters is default-ignorable",
+      "scalars": [
+        112,
+        173,
+        119
+      ],
+      "utf8": "7077"
+    },
+    {
+      "name": "greek-iota-subscript",
+      "note": "U+1F88 capital alpha with psili and prosgegrammeni",
+      "scalars": [
+        8072
+      ],
+      "utf8": "e1bc80ceb9"
+    },
+    {
+      "name": "greek-iota-subscript-then-mark",
+      "note": "U+1F96 followed by U+0487",
+      "scalars": [
+        8086,
+        1159
+      ],
+      "utf8": "e1bca6ceb9d287"
+    },
+    {
+      "err": "Format",
+      "name": "unassigned-between-spaces",
+      "note": "U+0378 inside trimmed spaces",
+      "scalars": [
+        32,
+        888,
+        32
+      ]
+    },
+    {
+      "err": "Format",
+      "name": "unassigned",
+      "note": "U+0378 is unassigned",
+      "scalars": [
+        888
+      ]
+    },
+    {
+      "err": "Format",
+      "name": "noncharacter",
+      "note": "U+FDD0",
+      "scalars": [
+        64976
+      ]
+    },
+    {
+      "name": "private-use",
+      "note": "U+E000",
+      "scalars": [
+        57344
+      ],
+      "utf8": "ee8080"
+    },
+    {
+      "name": "cjk-compat",
+      "note": "U+F900 compatibility ideograph",
+      "scalars": [
+        63744
+      ],
+      "utf8": "e8b188"
+    },
+    {
+      "name": "halfwidth-katakana",
+      "note": "U+FF76 U+FF9E",
+      "scalars": [
+        65398,
+        65438
+      ],
+      "utf8": "e382ac"
+    },
+    {
+      "name": "mixed-case-ascii",
+      "note": "MiXeD CaSe",
+      "scalars": [
+        77,
+        105,
+        88,
+        101,
+        68,
+        32,
+        67,
+        97,
+        83,
+        101
+      ],
+      "utf8": "6d697865642063617365"
+    },
+    {
+      "name": "email-like",
+      "note": "User@Example.COM with fullwidth at-sign",
+      "scalars": [
+        85,
+        115,
+        101,
+        114,
+        65312,
+        69,
+        120,
+        97,
+        109,
+        112,
+        108,
+        101,
+        46,
+        67,
+        79,
+        77
+      ],
+      "utf8": "75736572406578616d706c652e636f6d"
+    }
+  ],
+  "generator": "hasp-replay: HASP_UPDATE_VECTORS=1 cargo test -p hasp-replay",
+  "rule": "trim (Unicode White_Space), reject unassigned, NFKC_Casefold, Unicode 18.0.0 (protocol 2.1)"
+}

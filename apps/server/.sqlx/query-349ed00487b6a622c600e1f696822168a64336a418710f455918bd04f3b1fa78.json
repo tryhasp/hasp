@@ -1,0 +1,50 @@
+{
+  "db_name": "SQLite",
+  "query": "DELETE FROM opaque_records WHERE account_id = ? RETURNING account_id, record, cred_gen",
+  "describe": {
+    "columns": [
+      {
+        "name": "account_id",
+        "ordinal": 0,
+        "type_info": "Blob",
+        "origin": {
+          "Table": {
+            "table": "opaque_records",
+            "name": "account_id"
+          }
+        }
+      },
+      {
+        "name": "record",
+        "ordinal": 1,
+        "type_info": "Blob",
+        "origin": {
+          "Table": {
+            "table": "opaque_records",
+            "name": "record"
+          }
+        }
+      },
+      {
+        "name": "cred_gen",
+        "ordinal": 2,
+        "type_info": "Integer",
+        "origin": {
+          "Table": {
+            "table": "opaque_records",
+            "name": "cred_gen"
+          }
+        }
+      }
+    ],
+    "parameters": {
+      "Right": 1
+    },
+    "nullable": [
+      false,
+      false,
+      false
+    ]
+  },
+  "hash": "349ed00487b6a622c600e1f696822168a64336a418710f455918bd04f3b1fa78"
+}

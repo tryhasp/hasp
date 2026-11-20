@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "entries": [
+    {
+      "match": {
+        "domain": "coupang.com"
+      },
+      "change_password_url": "https://login.coupang.com/login/userModify.pang",
+      "sources": [
+        "https://github.com/apple/password-manager-resources/blob/8a7fed384b20b023ccaedd4dd35ba01111f554d9/quirks/change-password-URLs.json"
+      ]
+    }
+  ]
+}

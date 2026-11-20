@@ -1,0 +1,38 @@
+{
+  "db_name": "SQLite",
+  "query": "DELETE FROM memberships WHERE account_id = ? AND vault_id = ? RETURNING account_id, vault_id",
+  "describe": {
+    "columns": [
+      {
+        "name": "account_id",
+        "ordinal": 0,
+        "type_info": "Blob",
+        "origin": {
+          "Table": {
+            "table": "memberships",
+            "name": "account_id"
+          }
+        }
+      },
+      {
+        "name": "vault_id",
+        "ordinal": 1,
+        "type_info": "Blob",
+        "origin": {
+          "Table": {
+            "table": "memberships",
+            "name": "vault_id"
+          }
+        }
+      }
+    ],
+    "parameters": {
+      "Right": 2
+    },
+    "nullable": [
+      false,
+      false
+    ]
+  },
+  "hash": "e7e38d7524d3488830c07a6bfde45353a67cc2e4933b14701743d7f4c334d728"
+}

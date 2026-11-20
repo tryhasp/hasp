@@ -1,0 +1,50 @@
+{
+  "db_name": "SQLite",
+  "query": "SELECT account_id, seq, record FROM account_records WHERE (account_id, seq) >= (?, ?) AND (account_id, seq) <= (?, ?) ORDER BY account_id, seq",
+  "describe": {
+    "columns": [
+      {
+        "name": "account_id",
+        "ordinal": 0,
+        "type_info": "Blob",
+        "origin": {
+          "Table": {
+            "table": "account_records",
+            "name": "account_id"
+          }
+        }
+      },
+      {
+        "name": "seq",
+        "ordinal": 1,
+        "type_info": "Integer",
+        "origin": {
+          "Table": {
+            "table": "account_records",
+            "name": "seq"
+          }
+        }
+      },
+      {
+        "name": "record",
+        "ordinal": 2,
+        "type_info": "Blob",
+        "origin": {
+          "Table": {
+            "table": "account_records",
+            "name": "record"
+          }
+        }
+      }
+    ],
+    "parameters": {
+      "Right": 4
+    },
+    "nullable": [
+      false,
+      false,
+      false
+    ]
+  },
+  "hash": "a0153f9c4c2ec394432598feab223e3c66c481cf705a58827e9c6f9ecbdde2ff"
+}

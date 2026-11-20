@@ -1,0 +1,15 @@
+{
+  "name": "hasp",
+  "private": true,
+  "type": "module",
+  "devDependencies": {
+    "oxfmt": "catalog:",
+    "oxlint": "catalog:",
+    "oxlint-tsgolint": "catalog:",
+    "typescript": "catalog:"
+  },
+  "engines": {
+    "node": ">=24.20.0"
+  },
+  "packageManager": "pnpm@11.25.0"
+}

@@ -1,0 +1,38 @@
+{
+  "db_name": "SQLite",
+  "query": "SELECT account_id, keyset FROM keysets WHERE (account_id) >= (?) AND (account_id) <= (?) ORDER BY account_id DESC LIMIT 1",
+  "describe": {
+    "columns": [
+      {
+        "name": "account_id",
+        "ordinal": 0,
+        "type_info": "Blob",
+        "origin": {
+          "Table": {
+            "table": "keysets",
+            "name": "account_id"
+          }
+        }
+      },
+      {
+        "name": "keyset",
+        "ordinal": 1,
+        "type_info": "Blob",
+        "origin": {
+          "Table": {
+            "table": "keysets",
+            "name": "keyset"
+          }
+        }
+      }
+    ],
+    "parameters": {
+      "Right": 2
+    },
+    "nullable": [
+      false,
+      false
+    ]
+  },
+  "hash": "11dd0ca423ae16c9b85947f2a2cf1bce2f786b4182415bd7c416ffe22613056f"
+}

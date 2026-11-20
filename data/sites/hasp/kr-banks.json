@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "entries": [
+    {
+      "match": { "domain": "kbstar.com" },
+      "quirks": { "blocks_autofill": true },
+      "sources": [
+        "https://obank.kbstar.com/quics?page=C019088&QSL=F",
+        "https://obank.kbstar.com/quics?page=C040629"
+      ]
+    },
+    {
+      "match": { "domain": "wooribank.com" },
+      "quirks": { "blocks_autofill": true },
+      "sources": [
+        "https://spib.wooribank.com/pib/Dream?withyou=CMLGN0001",
+        "https://spot.wooribank.com/pot/Dream?withyou=CQSCT0001"
+      ]
+    },
+    {
+      "match": { "domain": "kebhana.com" },
+      "sources": ["https://www.kebhana.com"]
+    },
+    {
+      "match": { "domain": "ibk.co.kr" },
+      "sources": ["https://www.ibk.co.kr"]
+    }
+  ]
+}

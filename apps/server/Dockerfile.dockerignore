@@ -1,0 +1,13 @@
+**
+!Cargo.toml
+!Cargo.lock
+!deny.toml
+!clippy.toml
+!crates
+!apps/server
+!apps/cli
+!apps/apple
+!packages
+!testvectors
+**/target
+apps/apple/Packages/Hasp/Frameworks

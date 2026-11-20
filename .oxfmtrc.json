@@ -1,0 +1,29 @@
+{
+  "$schema": "./node_modules/oxfmt/configuration_schema.json",
+  "printWidth": 100,
+  "singleQuote": true,
+  "sortImports": {},
+  "sortPackageJson": true,
+  "ignorePatterns": [
+    "dist",
+    ".output",
+    ".wxt",
+    "**/generated/**",
+    "pnpm-lock.yaml",
+    "packages/autofill/corpus/pages",
+    "packages/autofill/redteam/pages",
+    "packages/autofill/test-results",
+    "packages/autofill/e2e/dist",
+    "packages/autofill/playwright-report",
+    "packages/design/tokens.css",
+    "testvectors",
+    "**/.sqlx",
+    "crates/core/templates",
+    "**/Generated",
+    "packages/wasm/generated",
+    "*.toml",
+    "*.md",
+    "*.yml",
+    "*.yaml"
+  ]
+}

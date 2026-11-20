@@ -1,0 +1,2 @@
+ID                                VAULT    TITLE   CATEGORY  SUBTITLE  TAGS  FAVOURITE  MODIFIED  PENDING
+<id>  Private  GitHub  login                     false      1000000   false

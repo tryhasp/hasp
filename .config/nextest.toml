@@ -1,0 +1,6 @@
+[profile.default]
+default-filter = "not package(hasp-e2e)"
+
+[profile.e2e]
+default-filter = "package(hasp-e2e)"
+slow-timeout = { period = "60s", terminate-after = 5 }

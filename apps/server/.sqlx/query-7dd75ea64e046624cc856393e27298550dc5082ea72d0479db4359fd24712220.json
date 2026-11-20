@@ -1,0 +1,62 @@
+{
+  "db_name": "SQLite",
+  "query": "SELECT att_id, idx, len, digest FROM attachment_chunks WHERE (att_id, idx) >= (?, ?) AND (att_id, idx) <= (?, ?) ORDER BY att_id DESC, idx DESC LIMIT 1",
+  "describe": {
+    "columns": [
+      {
+        "name": "att_id",
+        "ordinal": 0,
+        "type_info": "Blob",
+        "origin": {
+          "Table": {
+            "table": "attachment_chunks",
+            "name": "att_id"
+          }
+        }
+      },
+      {
+        "name": "idx",
+        "ordinal": 1,
+        "type_info": "Integer",
+        "origin": {
+          "Table": {
+            "table": "attachment_chunks",
+            "name": "idx"
+          }
+        }
+      },
+      {
+        "name": "len",
+        "ordinal": 2,
+        "type_info": "Integer",
+        "origin": {
+          "Table": {
+            "table": "attachment_chunks",
+            "name": "len"
+          }
+        }
+      },
+      {
+        "name": "digest",
+        "ordinal": 3,
+        "type_info": "Blob",
+        "origin": {
+          "Table": {
+            "table": "attachment_chunks",
+            "name": "digest"
+          }
+        }
+      }
+    ],
+    "parameters": {
+      "Right": 4
+    },
+    "nullable": [
+      false,
+      false,
+      false,
+      false
+    ]
+  },
+  "hash": "7dd75ea64e046624cc856393e27298550dc5082ea72d0479db4359fd24712220"
+}

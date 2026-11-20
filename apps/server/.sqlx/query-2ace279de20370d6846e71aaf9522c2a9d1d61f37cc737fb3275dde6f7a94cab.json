@@ -1,0 +1,50 @@
+{
+  "db_name": "SQLite",
+  "query": "SELECT account_id, seq, record FROM account_records WHERE account_id = ? AND seq = ?",
+  "describe": {
+    "columns": [
+      {
+        "name": "account_id",
+        "ordinal": 0,
+        "type_info": "Blob",
+        "origin": {
+          "Table": {
+            "table": "account_records",
+            "name": "account_id"
+          }
+        }
+      },
+      {
+        "name": "seq",
+        "ordinal": 1,
+        "type_info": "Integer",
+        "origin": {
+          "Table": {
+            "table": "account_records",
+            "name": "seq"
+          }
+        }
+      },
+      {
+        "name": "record",
+        "ordinal": 2,
+        "type_info": "Blob",
+        "origin": {
+          "Table": {
+            "table": "account_records",
+            "name": "record"
+          }
+        }
+      }
+    ],
+    "parameters": {
+      "Right": 2
+    },
+    "nullable": [
+      false,
+      false,
+      false
+    ]
+  },
+  "hash": "2ace279de20370d6846e71aaf9522c2a9d1d61f37cc737fb3275dde6f7a94cab"
+}

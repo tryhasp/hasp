@@ -1,0 +1,194 @@
+{
+  "id": "identity",
+  "version": 1,
+  "name": {
+    "en": "Identity",
+    "ko": "신원 정보"
+  },
+  "icon": "id-card",
+  "import_codes": {
+    "1pux": "004",
+    "bitwarden": "4"
+  },
+  "sections": [
+    {
+      "key": "identification",
+      "title": {
+        "en": "Identification",
+        "ko": "신원"
+      },
+      "fields": [
+        {
+          "key": "first-name",
+          "label": {
+            "en": "first name",
+            "ko": "이름"
+          },
+          "kind": "text",
+          "purpose": "given-name"
+        },
+        {
+          "key": "initial",
+          "label": {
+            "en": "initial",
+            "ko": "중간 이름"
+          },
+          "kind": "text"
+        },
+        {
+          "key": "last-name",
+          "label": {
+            "en": "last name",
+            "ko": "성"
+          },
+          "kind": "text",
+          "purpose": "family-name"
+        },
+        {
+          "key": "gender",
+          "label": {
+            "en": "gender",
+            "ko": "성별"
+          },
+          "kind": "menu",
+          "options": [
+            "Male",
+            "Female",
+            "Other"
+          ]
+        },
+        {
+          "key": "birth-date",
+          "label": {
+            "en": "birth date",
+            "ko": "생년월일"
+          },
+          "kind": "date",
+          "purpose": "birthday"
+        },
+        {
+          "key": "occupation",
+          "label": {
+            "en": "occupation",
+            "ko": "직업"
+          },
+          "kind": "text"
+        },
+        {
+          "key": "company",
+          "label": {
+            "en": "company",
+            "ko": "회사"
+          },
+          "kind": "text",
+          "purpose": "organization"
+        },
+        {
+          "key": "department",
+          "label": {
+            "en": "department",
+            "ko": "부서"
+          },
+          "kind": "text"
+        },
+        {
+          "key": "job-title",
+          "label": {
+            "en": "job title",
+            "ko": "직함"
+          },
+          "kind": "text"
+        }
+      ]
+    },
+    {
+      "key": "address",
+      "title": {
+        "en": "Address",
+        "ko": "주소"
+      },
+      "fields": [
+        {
+          "key": "address",
+          "label": {
+            "en": "address",
+            "ko": "주소"
+          },
+          "kind": "address",
+          "purpose": "street-address"
+        },
+        {
+          "key": "default-phone",
+          "label": {
+            "en": "default phone",
+            "ko": "기본 전화"
+          },
+          "kind": "phone",
+          "purpose": "phone"
+        },
+        {
+          "key": "home-phone",
+          "label": {
+            "en": "home",
+            "ko": "집 전화"
+          },
+          "kind": "phone"
+        },
+        {
+          "key": "cell-phone",
+          "label": {
+            "en": "cell",
+            "ko": "휴대전화"
+          },
+          "kind": "phone"
+        },
+        {
+          "key": "business-phone",
+          "label": {
+            "en": "business",
+            "ko": "회사 전화"
+          },
+          "kind": "phone"
+        }
+      ]
+    },
+    {
+      "key": "internet",
+      "title": {
+        "en": "Internet Details",
+        "ko": "인터넷 정보"
+      },
+      "fields": [
+        {
+          "key": "username",
+          "label": {
+            "en": "username",
+            "ko": "사용자 이름"
+          },
+          "kind": "text",
+          "purpose": "username"
+        },
+        {
+          "key": "email",
+          "label": {
+            "en": "email",
+            "ko": "이메일"
+          },
+          "kind": "email",
+          "purpose": "email"
+        },
+        {
+          "key": "website",
+          "label": {
+            "en": "website",
+            "ko": "웹사이트"
+          },
+          "kind": "url"
+        }
+      ]
+    }
+  ],
+  "capabilities": {
+    "autofill": "identity"
+  }
+}

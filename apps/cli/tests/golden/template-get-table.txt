@@ -1,0 +1,4 @@
+KEY       LABEL              KIND       PURPOSE   REQUIRED
+username  username           text       username  false
+password  password           concealed  password  false
+otp       one-time password  otp        totp      false

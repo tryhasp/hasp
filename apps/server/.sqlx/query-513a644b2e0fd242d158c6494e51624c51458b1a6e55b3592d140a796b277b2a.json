@@ -1,0 +1,12 @@
+{
+  "db_name": "SQLite",
+  "query": "INSERT INTO attachment_chunks (att_id, idx, len, digest) VALUES (?, ?, ?, ?) ON CONFLICT (att_id, idx) DO UPDATE SET len = excluded.len, digest = excluded.digest",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Right": 4
+    },
+    "nullable": []
+  },
+  "hash": "513a644b2e0fd242d158c6494e51624c51458b1a6e55b3592d140a796b277b2a"
+}

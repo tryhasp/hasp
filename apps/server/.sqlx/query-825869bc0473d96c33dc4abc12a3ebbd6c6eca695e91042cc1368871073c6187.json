@@ -1,0 +1,38 @@
+{
+  "db_name": "SQLite",
+  "query": "SELECT len, digest FROM attachment_chunks WHERE att_id = ? AND idx = ?",
+  "describe": {
+    "columns": [
+      {
+        "name": "len",
+        "ordinal": 0,
+        "type_info": "Integer",
+        "origin": {
+          "Table": {
+            "table": "attachment_chunks",
+            "name": "len"
+          }
+        }
+      },
+      {
+        "name": "digest",
+        "ordinal": 1,
+        "type_info": "Blob",
+        "origin": {
+          "Table": {
+            "table": "attachment_chunks",
+            "name": "digest"
+          }
+        }
+      }
+    ],
+    "parameters": {
+      "Right": 2
+    },
+    "nullable": [
+      false,
+      false
+    ]
+  },
+  "hash": "825869bc0473d96c33dc4abc12a3ebbd6c6eca695e91042cc1368871073c6187"
+}

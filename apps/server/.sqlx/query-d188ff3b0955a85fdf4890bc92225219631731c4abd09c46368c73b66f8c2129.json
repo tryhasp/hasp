@@ -1,0 +1,134 @@
+{
+  "db_name": "SQLite",
+  "query": "SELECT vault_id, kind, owner, head_seq, head_hash, rver, epoch, state, dissolve, created FROM vaults WHERE (vault_id) >= (?) AND (vault_id) <= (?) ORDER BY vault_id",
+  "describe": {
+    "columns": [
+      {
+        "name": "vault_id",
+        "ordinal": 0,
+        "type_info": "Blob",
+        "origin": {
+          "Table": {
+            "table": "vaults",
+            "name": "vault_id"
+          }
+        }
+      },
+      {
+        "name": "kind",
+        "ordinal": 1,
+        "type_info": "Integer",
+        "origin": {
+          "Table": {
+            "table": "vaults",
+            "name": "kind"
+          }
+        }
+      },
+      {
+        "name": "owner",
+        "ordinal": 2,
+        "type_info": "Blob",
+        "origin": {
+          "Table": {
+            "table": "vaults",
+            "name": "owner"
+          }
+        }
+      },
+      {
+        "name": "head_seq",
+        "ordinal": 3,
+        "type_info": "Integer",
+        "origin": {
+          "Table": {
+            "table": "vaults",
+            "name": "head_seq"
+          }
+        }
+      },
+      {
+        "name": "head_hash",
+        "ordinal": 4,
+        "type_info": "Blob",
+        "origin": {
+          "Table": {
+            "table": "vaults",
+            "name": "head_hash"
+          }
+        }
+      },
+      {
+        "name": "rver",
+        "ordinal": 5,
+        "type_info": "Integer",
+        "origin": {
+          "Table": {
+            "table": "vaults",
+            "name": "rver"
+          }
+        }
+      },
+      {
+        "name": "epoch",
+        "ordinal": 6,
+        "type_info": "Integer",
+        "origin": {
+          "Table": {
+            "table": "vaults",
+            "name": "epoch"
+          }
+        }
+      },
+      {
+        "name": "state",
+        "ordinal": 7,
+        "type_info": "Integer",
+        "origin": {
+          "Table": {
+            "table": "vaults",
+            "name": "state"
+          }
+        }
+      },
+      {
+        "name": "dissolve",
+        "ordinal": 8,
+        "type_info": "Blob",
+        "origin": {
+          "Table": {
+            "table": "vaults",
+            "name": "dissolve"
+          }
+        }
+      },
+      {
+        "name": "created",
+        "ordinal": 9,
+        "type_info": "Integer",
+        "origin": {
+          "Table": {
+            "table": "vaults",
+            "name": "created"
+          }
+        }
+      }
+    ],
+    "parameters": {
+      "Right": 2
+    },
+    "nullable": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      true,
+      false
+    ]
+  },
+  "hash": "d188ff3b0955a85fdf4890bc92225219631731c4abd09c46368c73b66f8c2129"
+}

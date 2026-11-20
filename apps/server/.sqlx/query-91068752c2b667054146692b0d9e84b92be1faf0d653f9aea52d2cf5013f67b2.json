@@ -1,0 +1,38 @@
+{
+  "db_name": "SQLite",
+  "query": "SELECT account_id, vault_id FROM memberships WHERE (account_id, vault_id) >= (?, ?) AND (account_id, vault_id) <= (?, ?) ORDER BY account_id, vault_id",
+  "describe": {
+    "columns": [
+      {
+        "name": "account_id",
+        "ordinal": 0,
+        "type_info": "Blob",
+        "origin": {
+          "Table": {
+            "table": "memberships",
+            "name": "account_id"
+          }
+        }
+      },
+      {
+        "name": "vault_id",
+        "ordinal": 1,
+        "type_info": "Blob",
+        "origin": {
+          "Table": {
+            "table": "memberships",
+            "name": "vault_id"
+          }
+        }
+      }
+    ],
+    "parameters": {
+      "Right": 4
+    },
+    "nullable": [
+      false,
+      false
+    ]
+  },
+  "hash": "91068752c2b667054146692b0d9e84b92be1faf0d653f9aea52d2cf5013f67b2"
+}
