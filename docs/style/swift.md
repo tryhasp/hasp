@@ -291,7 +291,7 @@ public struct SecretBuffer: ~Copyable {
 
 ### `apps/apple/project.yml`
 
-One multiplatform target per product (`supportedDestinations`), so macOS and iOS share a definition. `[V]` Built for both destinations. Entitlements: both files carry `application-groups` and `keychain-access-groups`; the AutoFill one adds `com.apple.developer.authentication-services.autofill-credential-provider`. Set `APPLE_TEAM_ID` in the environment.
+One multiplatform target per product (`supportedDestinations`), so macOS and iOS share a definition. `[V]` Built for both destinations. Entitlements: both files carry `application-groups` and `keychain-access-groups`; the AutoFill extension and its containing app both carry `com.apple.developer.authentication-services.autofill-credential-provider`, otherwise iOS does not list the extension in Settings. Set `APPLE_TEAM_ID` in the environment.
 
 ```yaml
 name: Vault
